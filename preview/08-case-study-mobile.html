@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=390">
+<title>Kern — Case Study Mobile (390px)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="kern-preview.css">
+<style>
+  /* Mobile overrides */
+  .kern-nav { display: none; }
+  .kern-hamburger { display: flex; }
+  .kern-section { padding: var(--wp--preset--spacing--10) var(--wp--preset--spacing--4); }
+  .kern-site-header { padding: var(--wp--preset--spacing--4) var(--wp--preset--spacing--4); }
+
+  /* Case grid stacks on mobile */
+  .kern-case-grid { grid-template-columns: 1fr; gap: var(--wp--preset--spacing--8); }
+
+  /* Case title smaller on mobile */
+  .kern-case-title { font-size: var(--wp--preset--font-size--3xl) !important; }
+
+  /* Image grid becomes single column */
+  .kern-img-grid { grid-template-columns: 1fr !important; }
+
+  /* Post nav stacks */
+  .kern-post-nav { flex-direction: column; gap: var(--wp--preset--spacing--8); }
+
+  /* Footer stacks */
+  .kern-footer-row { flex-direction: column; gap: var(--wp--preset--spacing--5); }
+  .kern-footer-nav-links { flex-wrap: wrap; gap: var(--wp--preset--spacing--4); }
+  .kern-footer-bottom { flex-direction: column; gap: var(--wp--preset--spacing--2); }
+</style>
+</head>
+<body>
+<div class="kern-site">
+
+  <!-- Mobile header -->
+  <header class="kern-site-header">
+    <a class="kern-site-title-link" href="#">Meridian Studio</a>
+    <div class="kern-hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <main class="kern-main">
+
+    <!-- Case Study Lead — mobile stacked -->
+    <section class="kern-band--ground kern-section">
+
+      <!-- Top rule -->
+      <div style="display: flex; justify-content: space-between; align-items: baseline; padding-bottom: var(--wp--preset--spacing--6); border-bottom: 1px solid var(--wp--preset--color--studio-rule); margin-bottom: 0;">
+        <p class="is-style-kern-eyebrow">Case Study</p>
+        <p class="is-style-kern-annotation">01</p>
+      </div>
+
+      <!-- Stacked layout on mobile -->
+      <div style="padding-top: var(--wp--preset--spacing--8); display: flex; flex-direction: column; gap: var(--wp--preset--spacing--8);">
+
+        <!-- Title + summary -->
+        <div style="display: flex; flex-direction: column; gap: var(--wp--preset--spacing--5);">
+          <h1 class="kern-case-title" style="font-size: var(--wp--preset--font-size--3xl);">The Folio Press Identity System</h1>
+          <p style="font-family: var(--wp--preset--font-family--jakarta); font-size: var(--wp--preset--font-size--base); font-weight: 300; line-height: 1.6; color: var(--wp--preset--color--studio-ink);">
+            A 22-year-old literary imprint rebuilt from a single letterform outward. Identity, editorial grid, and series templates for a press that makes books that last.
+          </p>
+        </div>
+
+        <!-- Metadata: horizontal pairs on mobile -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--wp--preset--spacing--6);">
+
+          <div style="display: flex; flex-direction: column; gap: var(--wp--preset--spacing--1);">
+            <p class="is-style-kern-eyebrow">Client</p>
+            <p style="font-family: var(--wp--preset--font-family--jakarta); font-size: var(--wp--preset--font-size--sm); font-weight: 500; color: var(--wp--preset--color--studio-ink);">The Folio Press</p>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: var(--wp--preset--spacing--1);">
+            <p class="is-style-kern-eyebrow">Year</p>
+            <p style="font-family: var(--wp--preset--font-family--jakarta); font-size: var(--wp--preset--font-size--sm); font-weight: 500; color: var(--wp--preset--color--studio-ink);">2024</p>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: var(--wp--preset--spacing--1);">
+            <p class="is-style-kern-eyebrow">Services</p>
+            <p style="font-family: var(--wp--preset--font-family--jakarta); font-size: var(--wp--preset--font-size--sm); font-weight: 500; color: var(--wp--preset--color--studio-ink);">Brand Identity, Type Direction</p>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: var(--wp--preset--spacing--1);">
+            <p class="is-style-kern-eyebrow">Scope</p>
+            <p style="font-family: var(--wp--preset--font-family--jakarta); font-size: var(--wp--preset--font-size--sm); font-weight: 500; color: var(--wp--preset--color--studio-ink);">Wordmark, series templates, stationery</p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Hero image — full width on mobile -->
+      <div class="kern-img-placeholder" style="height: 260px; margin-top: var(--wp--preset--spacing--8);">
+        Project Hero — 390 × 260
+      </div>
+
+    </section>
+
+    <!-- Case body — mobile -->
+    <section class="kern-band--paper kern-section">
+
+      <h2 style="font-size: var(--wp--preset--font-size--2xl); margin-bottom: var(--wp--preset--spacing--5);">The Brief</h2>
+
+      <p style="margin-bottom: var(--wp--preset--spacing--5); color: var(--wp--preset--color--studio-ink);">
+        Literary publishers occupy a peculiar corner of the brand landscape. Their identity must signal authority without pomposity, tradition without staleness. The Folio Press had operated for 22 years on a wordmark drawn in-house in 2002.
+      </p>
+
+      <blockquote class="kern-quote">
+        "We wanted something that felt like it had always been there — like it was uncovered, not designed."
+      </blockquote>
+
+      <p style="margin-top: var(--wp--preset--spacing--5); color: var(--wp--preset--color--studio-ink);">
+        The brief was to establish an identity that the press could grow into over the next twenty years. Not a rebrand — a foundation.
+      </p>
+
+    </section>
+
+    <!-- Image: single column on mobile -->
+    <section class="kern-band--ground kern-section">
+      <div style="display: flex; flex-direction: column; gap: var(--wp--preset--spacing--3);">
+        <div class="kern-img-placeholder" style="height: 240px;">Detail — Stationery</div>
+        <div class="kern-img-placeholder" style="height: 240px;">Detail — Book Cover Series</div>
+        <div class="kern-img-placeholder" style="height: 200px;">Detail — Wordmark Construction</div>
+      </div>
+    </section>
+
+    <!-- Post navigation — stacked on mobile -->
+    <section class="kern-band--paper kern-section">
+      <div class="kern-post-nav">
+        <div>
+          <div class="kern-post-nav-label">&larr; Previous</div>
+          <div class="kern-post-nav-title">Verso Publishing Author Platform</div>
+        </div>
+        <div>
+          <div class="kern-post-nav-label">Next &rarr;</div>
+          <div class="kern-post-nav-title">North Type Foundry Specimen Site</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer — mobile -->
+  <footer class="kern-site-footer" style="padding: var(--wp--preset--spacing--10) var(--wp--preset--spacing--4) var(--wp--preset--spacing--8);">
+    <div class="kern-footer-row">
+      <div>
+        <div class="kern-footer-title">Meridian Studio</div>
+        <div class="kern-footer-sub">Type · Brand · Identity</div>
+      </div>
+      <nav class="kern-footer-nav-links">
+        <a href="#">Work</a>
+        <a href="#">Studio</a>
+        <a href="#">Brief</a>
+      </nav>
+    </div>
+    <hr class="kern-footer-hr" style="margin-block: var(--wp--preset--spacing--8);">
+    <div class="kern-footer-bottom">
+      <span>&copy; 2024 Meridian Studio</span>
+    <span>Built with WordPress &amp; <a href="https://thisismyurl.com/kern/">Kern</a></span>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!-- Footer template part for Kern.
+     Design principle: the footer reads like a colophon — the typographic
+     statement at the end of a book that names who made it. Dark band
+     (studio-press), site title in Fraunces light, a navigation row, and
+     a small copyright line. Nothing decorative. -->
+
+<!-- wp:group {"tagName":"footer","className":"kern-site-footer kern-band--press","style":{"spacing":{"padding":{"top":"var:preset|spacing|12","bottom":"var:preset|spacing|10","left":"var:preset|spacing|5","right":"var:preset|spacing|5"}}},"layout":{"type":"constrained","contentSize":"1440px"}} -->
+<footer class="wp-block-group kern-site-footer kern-band--press" style="padding-top:var(--wp--preset--spacing--12);padding-bottom:var(--wp--preset--spacing--10);padding-left:var(--wp--preset--spacing--5);padding-right:var(--wp--preset--spacing--5)">
+
+	<!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"center"},"style":{"spacing":{"blockGap":"var:preset|spacing|8"}}} -->
+	<div class="wp-block-group">
+
+		<!-- Studio name and tagline -->
+		<!-- wp:group {"layout":{"type":"default"},"style":{"spacing":{"blockGap":"var:preset|spacing|2"}}} -->
+		<div class="wp-block-group">
+			<!-- wp:site-title {"level":0,"isLink":true,"style":{"typography":{"fontFamily":"var:preset|font-family|fraunces","fontWeight":"300","fontSize":"var:preset|font-size|xl","letterSpacing":"-0.01em","textDecoration":"none"},"color":{"text":"var:preset|color|studio-paper"}}} /-->
+			<!-- wp:site-tagline {"style":{"typography":{"fontFamily":"var:preset|font-family|jakarta","fontSize":"var:preset|font-size|2xs","letterSpacing":"0.1em","textTransform":"uppercase"},"color":{"text":"var:preset|color|studio-rule"}}} /-->
+		</div>
+		<!-- /wp:group -->
+
+		<!-- Footer navigation -->
+		<!-- wp:navigation {"textColor":"studio-paper","style":{"typography":{"fontFamily":"var:preset|font-family|jakarta","fontSize":"var:preset|font-size|sm","letterSpacing":"0.03em"}},"layout":{"type":"flex","justifyContent":"right"}} /-->
+
+	</div>
+	<!-- /wp:group -->
+
+	<!-- Rule separator -->
+	<!-- wp:separator {"backgroundColor":"studio-press","style":{"spacing":{"margin":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|6"}},"color":{"background":"rgba(255,255,255,0.12)"}}} -->
+	<hr class="wp-block-separator has-alpha-channel-opacity has-studio-press-background-color has-background" style="margin-top:var(--wp--preset--spacing--10);margin-bottom:var(--wp--preset--spacing--6)" />
+	<!-- /wp:separator -->
+
+	<!-- Copyright line -->
+	<!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"},"style":{"spacing":{"blockGap":"var:preset|spacing|4"}}} -->
+	<div class="wp-block-group">
+		<!-- wp:paragraph {"className":"kern-copyright","style":{"typography":{"fontFamily":"var:preset|font-family|jakarta","fontSize":"var:preset|font-size|2xs","letterSpacing":"0.06em"},"color":{"text":"var:preset|color|studio-rule"}},"metadata":{"bindings":{"content":{"source":"kern/copyright"}}}} -->
+		<p class="kern-copyright has-studio-rule-color has-text-color" style="font-family:var(--wp--preset--font-family--jakarta);font-size:var(--wp--preset--font-size--2xs);letter-spacing:0.06em"></p>
+		<!-- /wp:paragraph -->
+		<!-- wp:paragraph {"style":{"typography":{"fontFamily":"var:preset|font-family|jakarta","fontSize":"var:preset|font-size|2xs","letterSpacing":"0.06em"},"color":{"text":"var:preset|color|studio-rule"}}} -->
+		<p class="has-studio-rule-color has-text-color" style="font-family:var(--wp--preset--font-family--jakarta);font-size:var(--wp--preset--font-size--2xs);letter-spacing:0.06em">Built with <a href="https://wordpress.org" style="color:inherit">WordPress</a> &amp; Kern</p>
+		<!-- /wp:paragraph -->
+	</div>
+	<!-- /wp:group -->
+
+</footer>
+<!-- /wp:group -->

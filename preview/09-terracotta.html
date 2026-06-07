@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1200">
+<title>Kern — Terracotta Variant (Warm Earth Palette)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="kern-preview.css">
+<style>
+  /*
+   * TERRACOTTA PALETTE — warm earth tones, rust-clay accent.
+   * Kern makes this a 5-minute change: override the --wp--preset--color-- tokens.
+   * The structural CSS (spacing, layout, typography) is unchanged.
+   * This demonstrates how the same theme serves a ceramics studio,
+   * a small-batch publisher, or any brand with a warm, artisanal identity.
+   */
+  :root {
+    --wp--preset--color--studio-black:      #1c1208;
+    --wp--preset--color--studio-ink:        #2d1e10;
+    --wp--preset--color--studio-mid:        #8a6a52;
+    --wp--preset--color--studio-rule:       #dcc8b4;
+    --wp--preset--color--studio-ground:     #faf6f0;
+    --wp--preset--color--studio-paper:      #fffdf9;
+    --wp--preset--color--studio-press:      #7b3520;
+    --wp--preset--color--studio-press-tint: #f5e4da;
+  }
+</style>
+</head>
+<body>
+<div class="kern-site">
+
+  <header class="kern-site-header">
+    <a class="kern-site-title-link" href="#">Atelier Roux</a>
+    <nav class="kern-nav">
+      <a href="#">Work</a>
+      <a href="#">Studio</a>
+      <a href="#">Brief</a>
+    </nav>
+  </header>
+
+  <main class="kern-main">
+
+    <!-- Hero — terracotta ground -->
+    <section class="kern-specimen-director kern-band--ground kern-section" style="padding-bottom: var(--wp--preset--spacing--12); min-height: 520px; height: 520px; justify-content: flex-end;">
+      <div class="kern-constrained">
+        <p class="is-style-kern-eyebrow" style="margin-bottom: var(--wp--preset--spacing--5);">Céramique · Identité · Édition</p>
+        <h1 style="margin-bottom: var(--wp--preset--spacing--6);">Atelier<br>Roux</h1>
+        <p class="is-style-kern-annotation">Céramique artisanale et design d'identité — Montréal</p>
+      </div>
+    </section>
+
+    <!-- Works Directory — warm paper background -->
+    <section class="kern-band--paper kern-section" style="padding-top: var(--wp--preset--spacing--12);">
+      <div class="kern-constrained">
+
+        <div class="kern-section-header" style="margin-bottom: 0;">
+          <h2 class="is-style-kern-eyebrow">Projets récents</h2>
+          <p class="is-style-kern-annotation"><a href="#">Tous les projets &rarr;</a></p>
+        </div>
+
+        <div>
+          <div class="is-style-kern-directory-entry">
+            <div class="kern-entry-left">
+              <div class="kern-entry-title">Collection Terres Cuites — Identité</div>
+              <div class="kern-entry-cats">Identité de Marque</div>
+            </div>
+            <span class="kern-entry-year">2024</span>
+          </div>
+          <div class="is-style-kern-directory-entry">
+            <div class="kern-entry-left">
+              <div class="kern-entry-title">Maison Beaumont Catalogue Annuel</div>
+              <div class="kern-entry-cats">Édition · Impression</div>
+            </div>
+            <span class="kern-entry-year">2024</span>
+          </div>
+          <div class="is-style-kern-directory-entry">
+            <div class="kern-entry-left">
+              <div class="kern-entry-title">Galerie du Parc — Signalétique</div>
+              <div class="kern-entry-cats">Design Environnemental</div>
+            </div>
+            <span class="kern-entry-year">2023</span>
+          </div>
+          <div class="is-style-kern-directory-entry">
+            <div class="kern-entry-left">
+              <div class="kern-entry-title">Éditions du Nord — Système Éditorial</div>
+              <div class="kern-entry-cats">Identité · Direction de Type</div>
+            </div>
+            <span class="kern-entry-year">2023</span>
+          </div>
+          <div class="is-style-kern-directory-entry">
+            <div class="kern-entry-left">
+              <div class="kern-entry-title">Presse du Fleuve — Nouvelle Identité</div>
+              <div class="kern-entry-cats">Identité de Marque</div>
+            </div>
+            <span class="kern-entry-year">2022</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Studio bio — dark rust band -->
+    <section class="kern-band--press kern-section">
+      <div class="kern-constrained">
+
+        <div style="padding-bottom: var(--wp--preset--spacing--8); border-bottom: 1px solid rgba(255,255,255,0.2); margin-bottom: 0;">
+          <p class="is-style-kern-eyebrow" style="color: rgba(255,255,255,0.5) !important;">Atelier</p>
+        </div>
+
+        <div class="kern-cols-40-60" style="padding-top: var(--wp--preset--spacing--10);">
+          <div>
+            <div style="font-family: var(--wp--preset--font-family--fraunces); font-size: var(--wp--preset--font-size--3xl); font-weight: 300; letter-spacing: -0.02em; line-height: 1.1; color: var(--wp--preset--color--studio-paper);">Atelier<br>Roux</div>
+          </div>
+          <div>
+            <p style="font-family: var(--wp--preset--font-family--jakarta); font-size: var(--wp--preset--font-size--lg); font-weight: 300; line-height: 1.6; color: var(--wp--preset--color--studio-paper);">
+              Un studio indépendant spécialisé dans l'identité visuelle pour artisans, éditeurs et institutions culturelles. Chaque projet commence par la matière — la céramique, le papier, la typographie — et l'identité suit.
+            </p>
+            <div style="padding-top: var(--wp--preset--spacing--8); display: flex; flex-direction: column; gap: var(--wp--preset--spacing--5);">
+              <div>
+                <p class="is-style-kern-eyebrow" style="color: rgba(255,255,255,0.5) !important; margin-bottom: var(--wp--preset--spacing--1);">Clients</p>
+                <p style="font-family: var(--wp--preset--font-family--jakarta); font-size: var(--wp--preset--font-size--sm); color: var(--wp--preset--color--studio-paper);">Maison Beaumont · Galerie du Parc · Éditions du Nord · Presse du Fleuve</p>
+              </div>
+              <div>
+                <p class="is-style-kern-eyebrow" style="color: rgba(255,255,255,0.5) !important; margin-bottom: var(--wp--preset--spacing--1);">Basé à</p>
+                <p style="font-family: var(--wp--preset--font-family--jakarta); font-size: var(--wp--preset--font-size--sm); color: var(--wp--preset--color--studio-paper);">Montréal, Québec</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Palette note -->
+    <section class="kern-band--press-tint kern-section" style="padding-top: var(--wp--preset--spacing--10); padding-bottom: var(--wp--preset--spacing--10);">
+      <div class="kern-constrained">
+        <p class="is-style-kern-eyebrow" style="margin-bottom: var(--wp--preset--spacing--4);">About this palette</p>
+        <p style="font-family: var(--wp--preset--font-family--jakarta); font-size: var(--wp--preset--font-size--base); line-height: 1.7; color: var(--wp--preset--color--studio-ink); max-width: 65ch;">
+          <strong>Terracotta</strong> — studio-press: #7b3520 · studio-ground: #faf6f0 · studio-press-tint: #f5e4da. This palette swaps five CSS custom property values in theme.json. No template, pattern, or stylesheet changes required. The full theme structure, typography scale, and component library are inherited unchanged.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="kern-site-footer">
+    <div class="kern-footer-row">
+      <div>
+        <div class="kern-footer-title">Atelier Roux</div>
+        <div class="kern-footer-sub">Céramique · Identité · Édition</div>
+      </div>
+      <nav class="kern-footer-nav-links">
+        <a href="#">Travaux</a>
+        <a href="#">Atelier</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+    <hr class="kern-footer-hr">
+    <div class="kern-footer-bottom">
+      <span>&copy; 2024 Atelier Roux</span>
+      <span>Construit avec WordPress &amp; <a href="https://thisismyurl.com/kern/">Kern</a></span>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

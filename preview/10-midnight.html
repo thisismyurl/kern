@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1200">
+<title>Kern — Midnight Variant (Dark Mode Palette)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="kern-preview.css">
+<style>
+  /*
+   * MIDNIGHT PALETTE — near-black ground, warm gold accent.
+   * Same theme, same CSS, same HTML structure. Eight token overrides.
+   * A photography studio, a music label, a dark-arts press — any brand
+   * that needs the authority of high contrast without the bluntness of
+   * pure black-on-white.
+   *
+   * Gold accent (#c4922a) on near-black ground (#111111): contrast > 7:1.
+   * Mid colour (#8a8478) on ground (#111111): used only for decorative
+   * annotations, never for primary text — AA compliance maintained.
+   */
+  :root {
+    --wp--preset--color--studio-black:      #f0ede6;   /* Inverted: light for dark ground */
+    --wp--preset--color--studio-ink:        #d4cfc6;
+    --wp--preset--color--studio-mid:        #7a7872;
+    --wp--preset--color--studio-rule:       #2a2a2a;
+    --wp--preset--color--studio-ground:     #111111;
+    --wp--preset--color--studio-paper:      #1a1a1a;
+    --wp--preset--color--studio-press:      #c4922a;   /* Warm gold — accent */
+    --wp--preset--color--studio-press-tint: #201a0e;
+  }
+
+  /* On dark backgrounds, adjust eyebrow/annotation so they're legible */
+  .is-style-kern-eyebrow  { color: var(--wp--preset--color--studio-mid) !important; }
+  .is-style-kern-annotation { color: var(--wp--preset--color--studio-mid) !important; }
+
+  /* Site header on midnight ground */
+  .kern-site-header { border-bottom: 1px solid var(--wp--preset--color--studio-rule); }
+  .kern-nav a { color: var(--wp--preset--color--studio-black); }
+
+  /* Directory entries on dark paper */
+  .is-style-kern-directory-entry {
+    border-block-start-color: var(--wp--preset--color--studio-rule);
+  }
+  .is-style-kern-directory-entry:hover {
+    border-block-start-color: var(--wp--preset--color--studio-press);
+  }
+
+  /* The "dark band" is now the ground — flip footer to a deeper black */
+  .kern-site-footer { background: #0a0a0a; }
+
+  /* Press band (bio section) gets a deep charcoal */
+  .kern-band--press { background: #0d0d0d; }
+
+  /* Adjust link colors for dark mode */
+  a { color: var(--wp--preset--color--studio-press); }
+  a:hover { color: var(--wp--preset--color--studio-black); }
+</style>
+</head>
+<body>
+<div class="kern-site">
+
+  <header class="kern-site-header">
+    <a class="kern-site-title-link" href="#" style="color: var(--wp--preset--color--studio-black);">Vantage Press</a>
+    <nav class="kern-nav">
+      <a href="#">Catalogue</a>
+      <a href="#">Studio</a>
+      <a href="#">Submissions</a>
+    </nav>
+  </header>
+
+  <main class="kern-main">
+
+    <!-- Hero — midnight ground -->
+    <section class="kern-specimen-director kern-band--ground kern-section" style="padding-bottom: var(--wp--preset--spacing--12); min-height: 520px; height: 520px; justify-content: flex-end;">
+      <div class="kern-constrained">
+        <p class="is-style-kern-eyebrow" style="margin-bottom: var(--wp--preset--spacing--5);">Literary Press · Independent · Since 2011</p>
+        <h1 style="margin-bottom: var(--wp--preset--spacing--6); color: var(--wp--preset--color--studio-black);">Vantage<br>Press</h1>
+        <p class="is-style-kern-annotation">Publishing essays, fiction, and criticism with permanence in mind</p>
+      </div>
+    </section>
+
+    <!-- Catalogue / Works Directory -->
+    <section class="kern-band--paper kern-section" style="padding-top: var(--wp--preset--spacing--12);">
+      <div class="kern-constrained">
+
+        <div class="kern-section-header" style="margin-bottom: 0; border-bottom-color: var(--wp--preset--color--studio-rule);">
+          <h2 class="is-style-kern-eyebrow" style="color: var(--wp--preset--color--studio-mid) !important;">Recent Titles</h2>
+          <p class="is-style-kern-annotation"><a href="#" style="color: var(--wp--preset--color--studio-press);">Full catalogue &rarr;</a></p>
+        </div>
+
+        <div>
+          <div class="is-style-kern-directory-entry">
+            <div class="kern-entry-left">
+              <div class="kern-entry-title" style="color: var(--wp--preset--color--studio-black);">The Weight of Proof: Essays on Evidence</div>
+              <div class="kern-entry-cats" style="color: var(--wp--preset--color--studio-press);">Essays · Nonfiction</div>
+            </div>
+            <span class="kern-entry-year">2024</span>
+          </div>
+          <div class="is-style-kern-directory-entry">
+            <div class="kern-entry-left">
+              <div class="kern-entry-title" style="color: var(--wp--preset--color--studio-black);">Distances, a Novel</div>
+              <div class="kern-entry-cats" style="color: var(--wp--preset--color--studio-press);">Fiction</div>
+            </div>
+            <span class="kern-entry-year">2024</span>
+          </div>
+          <div class="is-style-kern-directory-entry">
+            <div class="kern-entry-left">
+              <div class="kern-entry-title" style="color: var(--wp--preset--color--studio-black);">On Time and Architecture: A Critical Reader</div>
+              <div class="kern-entry-cats" style="color: var(--wp--preset--color--studio-press);">Criticism · Architecture</div>
+            </div>
+            <span class="kern-entry-year">2023</span>
+          </div>
+          <div class="is-style-kern-directory-entry">
+            <div class="kern-entry-left">
+              <div class="kern-entry-title" style="color: var(--wp--preset--color--studio-black);">Field Notes from the Interior: Dispatches</div>
+              <div class="kern-entry-cats" style="color: var(--wp--preset--color--studio-press);">Nonfiction · Reportage</div>
+            </div>
+            <span class="kern-entry-year">2023</span>
+          </div>
+          <div class="is-style-kern-directory-entry">
+            <div class="kern-entry-left">
+              <div class="kern-entry-title" style="color: var(--wp--preset--color--studio-black);">The Paper Memory — Stories</div>
+              <div class="kern-entry-cats" style="color: var(--wp--preset--color--studio-press);">Fiction · Short Stories</div>
+            </div>
+            <span class="kern-entry-year">2022</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Publisher bio — deep dark band -->
+    <section class="kern-band--press kern-section">
+      <div class="kern-constrained">
+
+        <div style="padding-bottom: var(--wp--preset--spacing--8); border-bottom: 1px solid #2a2a2a; margin-bottom: 0;">
+          <p style="font-family: var(--wp--preset--font-family--jakarta); font-size: var(--wp--preset--font-size--2xs); font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #4a4a48;">About</p>
+        </div>
+
+        <div class="kern-cols-40-60" style="padding-top: var(--wp--preset--spacing--10);">
+          <div>
+            <div style="font-family: var(--wp--preset--font-family--fraunces); font-size: var(--wp--preset--font-size--3xl); font-weight: 300; letter-spacing: -0.02em; line-height: 1.1; color: #f0ede6;">Vantage<br>Press</div>
+          </div>
+          <div>
+            <p style="font-family: var(--wp--preset--font-family--jakarta); font-size: var(--wp--preset--font-size--lg); font-weight: 300; line-height: 1.6; color: #d4cfc6;">
+              An independent literary press committed to durable work. We publish books we expect to still be read in fifty years. Our editorial process is slow, our print runs are modest, and our backlist is the measure of everything we do.
+            </p>
+            <div style="padding-top: var(--wp--preset--spacing--8); display: flex; flex-direction: column; gap: var(--wp--preset--spacing--5);">
+              <div>
+                <p style="font-family: var(--wp--preset--font-family--jakarta); font-size: var(--wp--preset--font-size--2xs); font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #4a4a48; margin-bottom: var(--wp--preset--spacing--1);">Founded</p>
+                <p style="font-family: var(--wp--preset--font-family--jakarta); font-size: var(--wp--preset--font-size--sm); color: #d4cfc6;">2011, Montreal</p>
+              </div>
+              <div>
+                <p style="font-family: var(--wp--preset--font-family--jakarta); font-size: var(--wp--preset--font-size--2xs); font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #4a4a48; margin-bottom: var(--wp--preset--spacing--1);">Imprints</p>
+                <p style="font-family: var(--wp--preset--font-family--jakarta); font-size: var(--wp--preset--font-size--sm); color: #d4cfc6;">Vantage Essays · Vantage Fiction · Northern Editions</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Palette note -->
+    <section kern-band--press-tint" style="background: var(--wp--preset--color--studio-press-tint); padding: var(--wp--preset--spacing--10) var(--wp--preset--spacing--5);">
+      <div class="kern-constrained">
+        <p style="font-family: var(--wp--preset--font-family--jakarta); font-size: var(--wp--preset--font-size--2xs); font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--wp--preset--color--studio-press); margin-bottom: var(--wp--preset--spacing--4);">About this palette</p>
+        <p style="font-family: var(--wp--preset--font-family--jakarta); font-size: var(--wp--preset--font-size--base); line-height: 1.7; color: #d4cfc6; max-width: 65ch;">
+          <strong style="color: var(--wp--preset--color--studio-press);">Midnight</strong> — studio-ground: #111111 · studio-press: #c4922a (warm gold) · studio-paper: #1a1a1a. Color roles invert: ground becomes the dark canvas, press becomes the warm accent. The same eight CSS custom property overrides, nothing else changed.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="kern-site-footer" style="background: #0a0a0a;">
+    <div class="kern-footer-row">
+      <div>
+        <div class="kern-footer-title" style="color: #d4cfc6;">Vantage Press</div>
+        <div class="kern-footer-sub">Literary Press · Independent · Since 2011</div>
+      </div>
+      <nav class="kern-footer-nav-links">
+        <a href="#" style="color: #d4cfc6;">Catalogue</a>
+        <a href="#" style="color: #d4cfc6;">Studio</a>
+        <a href="#" style="color: #d4cfc6;">Submissions</a>
+      </nav>
+    </div>
+    <hr class="kern-footer-hr" style="border-color: #2a2a2a;">
+    <div class="kern-footer-bottom" style="color: #4a4a48;">
+      <span>&copy; 2024 Vantage Press</span>
+      <span>Built with WordPress &amp; <a href="https://thisismyurl.com/kern/" style="color: #4a4a48;">Kern</a></span>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

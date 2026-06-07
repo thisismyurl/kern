@@ -1,0 +1,107 @@
+<!-- Front page template for Kern.
+     The specimen-director layout: typography as hero, no photography required.
+     Structure: header → specimen-director hero → works-directory → footer.
+
+     This template is Kern's signature feature made visible: the front page
+     reads like a type foundry's specimen sheet. The studio name at display
+     scale IS the hero. No stock photo. No decorative mesh gradient. The type
+     does the work.
+
+     Pillar 10 (Beyond Pure): the most conventional choice here would be a
+     big hero photograph. We refused that choice on purpose. -->
+
+<!-- wp:template-part {"slug":"header"} /-->
+
+<!-- wp:group {"tagName":"main","id":"main-content","className":"kern-main","layout":{"type":"constrained","contentSize":"1440px"},"style":{"spacing":{"padding":{"bottom":"var:preset|spacing|20"}}}} -->
+<main id="main-content" class="wp-block-group kern-main" style="padding-bottom:var(--wp--preset--spacing--20)">
+
+	<!-- ================================================================
+	     SPECIMEN DIRECTOR HERO
+	     The studio name at display scale. Fraunces weight 300. No image.
+	     This is the "wait, where's the hero photo?" moment — it's a
+	     design decision, not an omission.
+	     ================================================================ -->
+	<!-- wp:group {"className":"kern-specimen-director kern-band--ground","style":{"spacing":{"padding":{"top":"var:preset|spacing|20","bottom":"var:preset|spacing|20","left":"var:preset|spacing|5","right":"var:preset|spacing|5"}}},"layout":{"type":"constrained","contentSize":"1440px"}} -->
+	<div class="wp-block-group kern-specimen-director kern-band--ground" style="padding-top:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--5);padding-right:var(--wp--preset--spacing--5)">
+
+		<!-- wp:group {"layout":{"type":"constrained","contentSize":"900px","justifyContent":"left"},"style":{"spacing":{"blockGap":"var:preset|spacing|5"}}} -->
+		<div class="wp-block-group">
+			<!-- Eyebrow: the discipline label. Small caps. -->
+			<!-- wp:paragraph {"className":"is-style-kern-eyebrow kern-eyebrow"} -->
+			<p class="is-style-kern-eyebrow kern-eyebrow">Brand Identity &middot; Type &middot; Design</p>
+			<!-- /wp:paragraph -->
+
+			<!-- The specimen headline. Display size. Weight 300. The statement. -->
+			<!-- wp:site-title {"level":1,"isLink":false,"style":{"typography":{"fontFamily":"var:preset|font-family|fraunces","fontSize":"var:preset|font-size|display","fontWeight":"300","letterSpacing":"-0.02em","lineHeight":"1.05"},"color":{"text":"var:preset|color|studio-black"}}} /-->
+
+			<!-- wp:site-tagline {"style":{"typography":{"fontFamily":"var:preset|font-family|jakarta","fontSize":"var:preset|font-size|lg","fontWeight":"300","lineHeight":"1.5"},"color":{"text":"var:preset|color|studio-ink"}}} /-->
+
+		</div>
+		<!-- /wp:group -->
+
+	</div>
+	<!-- /wp:group -->
+
+	<!-- ================================================================
+	     WORKS DIRECTORY
+	     Portfolio presented as a typographic index. No card grid. No
+	     thumbnails. Titles as primary navigation. The works-directory
+	     entry block style handles the visual treatment.
+	     ================================================================ -->
+	<!-- wp:group {"className":"kern-section","style":{"spacing":{"padding":{"top":"var:preset|spacing|16","bottom":"var:preset|spacing|16","left":"var:preset|spacing|5","right":"var:preset|spacing|5"}}},"layout":{"type":"constrained","contentSize":"1440px"}} -->
+	<div class="wp-block-group kern-section" style="padding-top:var(--wp--preset--spacing--16);padding-bottom:var(--wp--preset--spacing--16);padding-left:var(--wp--preset--spacing--5);padding-right:var(--wp--preset--spacing--5)">
+
+		<!-- Section header -->
+		<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between","verticalAlignment":"baseline"},"style":{"spacing":{"padding":{"bottom":"var:preset|spacing|6"},"blockGap":"var:preset|spacing|4"},"border":{"bottom":{"color":"var:preset|color|studio-rule","style":"solid","width":"1px"}}}} -->
+		<div class="wp-block-group" style="padding-bottom:var(--wp--preset--spacing--6);border-bottom:1px solid var(--wp--preset--color--studio-rule)">
+			<!-- wp:heading {"level":2,"fontSize":"sm","className":"is-style-kern-eyebrow","style":{"color":{"text":"var:preset|color|studio-mid"}}} -->
+			<h2 class="wp-block-heading has-sm-font-size is-style-kern-eyebrow has-studio-mid-color has-text-color">Selected Work</h2>
+			<!-- /wp:heading -->
+			<!-- wp:paragraph {"className":"is-style-kern-annotation"} -->
+			<p class="is-style-kern-annotation"><a href="#">All projects &rarr;</a></p>
+			<!-- /wp:paragraph -->
+		</div>
+		<!-- /wp:group -->
+
+		<!-- Works query: most recent 6 posts, presented as directory entries -->
+		<!-- wp:query {"queryId":1,"query":{"perPage":6,"postType":"post","order":"desc","orderBy":"date","inherit":false},"className":"kern-works-query","layout":{"type":"default"}} -->
+		<div class="wp-block-query kern-works-query">
+
+			<!-- wp:post-template {"layout":{"type":"default"}} -->
+
+				<!-- wp:group {"className":"is-style-kern-directory-entry kern-directory-entry","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between","verticalAlignment":"baseline"}} -->
+				<div class="wp-block-group is-style-kern-directory-entry kern-directory-entry">
+
+					<!-- Left: title + categories -->
+					<!-- wp:group {"layout":{"type":"default"},"style":{"spacing":{"blockGap":"var:preset|spacing|2"}}} -->
+					<div class="wp-block-group">
+						<!-- wp:post-title {"level":3,"isLink":true,"fontSize":"2xl","style":{"typography":{"fontFamily":"var:preset|font-family|fraunces","fontWeight":"400","letterSpacing":"-0.01em","textDecoration":"none"},"color":{"text":"var:preset|color|studio-black"}}} /-->
+						<!-- wp:post-terms {"term":"category","style":{"typography":{"fontFamily":"var:preset|font-family|jakarta","fontSize":"var:preset|font-size|2xs","fontWeight":"600","letterSpacing":"0.12em","textTransform":"uppercase"},"color":{"text":"var:preset|color|studio-press"}}} /-->
+					</div>
+					<!-- /wp:group -->
+
+					<!-- Right: year -->
+					<!-- wp:post-date {"format":"Y","style":{"typography":{"fontFamily":"var:preset|font-family|jakarta","fontSize":"var:preset|font-size|xs"},"color":{"text":"var:preset|color|studio-mid"}}} /-->
+
+				</div>
+				<!-- /wp:group -->
+
+			<!-- /wp:post-template -->
+
+			<!-- No-results: when the directory is empty, orient the editor -->
+			<!-- wp:query-no-results -->
+				<!-- wp:paragraph {"className":"is-style-kern-annotation","style":{"spacing":{"padding":{"top":"var:preset|spacing|8","bottom":"var:preset|spacing|8"}}}} -->
+				<p class="is-style-kern-annotation" style="padding-top:var(--wp--preset--spacing--8);padding-bottom:var(--wp--preset--spacing--8)">No work published yet. Add posts to populate the works directory.</p>
+				<!-- /wp:paragraph -->
+			<!-- /wp:query-no-results -->
+
+		</div>
+		<!-- /wp:query -->
+
+	</div>
+	<!-- /wp:group -->
+
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer"} /-->

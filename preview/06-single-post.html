@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1200">
+<title>Kern — Single Post Reading Layout</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="kern-preview.css">
+</head>
+<body>
+<div class="kern-site">
+
+  <header class="kern-site-header kern-band--paper">
+    <a class="kern-site-title-link" href="#">Meridian Studio</a>
+    <nav class="kern-nav">
+      <a href="#">Work</a>
+      <a href="#">Studio</a>
+      <a href="#">Brief</a>
+    </nav>
+  </header>
+
+  <main class="kern-main">
+
+    <!-- Post meta — eyebrow row -->
+    <section class="kern-band--paper kern-section" style="padding-bottom: 0; padding-top: var(--wp--preset--spacing--10);">
+      <div class="kern-constrained">
+        <div class="kern-reading">
+          <div class="kern-post-meta">
+            <span>Type Direction</span>
+            <span class="kern-post-meta-sep">·</span>
+            <span>18 March 2024</span>
+            <span class="kern-post-meta-sep">·</span>
+            <span>8 min read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Post title + featured image -->
+    <section class="kern-band--paper kern-section" style="padding-top: var(--wp--preset--spacing--6); padding-bottom: 0;">
+      <div class="kern-constrained">
+        <div class="kern-reading" style="margin-bottom: var(--wp--preset--spacing--10);">
+          <h1 style="font-size: var(--wp--preset--font-size--4xl); margin-bottom: var(--wp--preset--spacing--0);">
+            On the Optical Correction of Display Type
+          </h1>
+        </div>
+
+        <!-- Featured image: wide alignment (extends past reading measure) -->
+        <div class="kern-img-placeholder" style="height: 560px; max-width: 1040px; margin-inline: auto; margin-bottom: var(--wp--preset--spacing--12);">
+          Featured Image — 1040 × 560
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Post body -->
+    <section class="kern-band--paper kern-section" style="padding-top: 0; padding-bottom: var(--wp--preset--spacing--12);">
+      <div class="kern-constrained">
+        <div class="kern-reading">
+
+          <p style="margin-bottom: var(--wp--preset--spacing--5); color: var(--wp--preset--color--studio-ink); font-size: var(--wp--preset--font-size--md);">
+            The trained eye sees what the untrained eye feels. When a headline feels "off" — when the spacing seems inconsistent, when the right margin appears shorter than the left, when the optical centre sits above the geometric centre — the viewer doesn't identify the problem. They just disengage slightly. That disengage is the cost of skipping optical correction.
+          </p>
+
+          <p style="margin-bottom: var(--wp--preset--spacing--5); color: var(--wp--preset--color--studio-ink);">
+            Fraunces, the variable display font at the heart of this theme, invites optical correction more than most typefaces. Its WONK axis — the parameter that controls how "weird" the letter shapes become — means a single weight-value can produce radically different perceived densities depending on how the characters interact.
+          </p>
+
+          <h2 style="font-size: var(--wp--preset--font-size--2xl); margin-top: var(--wp--preset--spacing--10); margin-bottom: var(--wp--preset--spacing--6);">Why Display Type Misbehaves</h2>
+
+          <p style="margin-bottom: var(--wp--preset--spacing--5); color: var(--wp--preset--color--studio-ink);">
+            At body sizes, the human eye reads in word-shapes rather than letter-by-letter. Optical corrections at those sizes are handled by the hinting data embedded in the font file. At display sizes — anything above roughly 36pt — the reader shifts back to letter-by-letter perception, and every spacing irregularity becomes legible.
+          </p>
+
+          <p style="margin-bottom: var(--wp--preset--spacing--5); color: var(--wp--preset--color--studio-ink);">
+            The classic problem is round-to-flat spacing. An 'O' followed by an 'H' will appear to have more space between them than two 'H' characters set at the same tracked spacing, because the round exit of the 'O' creates a visual gap that the geometric spacing doesn't account for.
+          </p>
+
+          <blockquote class="kern-quote" style="margin-bottom: var(--wp--preset--spacing--6);">
+            The measure of good type design is not whether corrections are needed — it is whether the corrections are invisible once made.
+          </blockquote>
+
+          <h2 style="font-size: var(--wp--preset--font-size--2xl); margin-top: var(--wp--preset--spacing--10); margin-bottom: var(--wp--preset--spacing--6);">Practical Corrections for Variable Fonts</h2>
+
+          <p style="margin-bottom: var(--wp--preset--spacing--5); color: var(--wp--preset--color--studio-ink);">
+            Variable fonts complicate optical correction because the same string can have different spacing needs at different weight values. A headline set in Fraunces at weight 300 will kern differently than the same headline at weight 700 — not because the letterforms changed dramatically, but because the perceived weight of the strokes changes the perceived space between them.
+          </p>
+
+          <p style="margin-bottom: var(--wp--preset--spacing--5); color: var(--wp--preset--color--studio-ink);">
+            The practical workflow: set your headline at the final weight, zoom out until the text is roughly the size it will appear in print or on screen, and read it as a word-shape rather than a character string. Your eyes will catch what manual kerning tables miss.
+          </p>
+
+          <hr class="kern-separator" style="border: none; border-top: 1px solid var(--wp--preset--color--studio-rule); margin-block: var(--wp--preset--spacing--10);">
+
+          <p class="is-style-kern-annotation">
+            Filed under: <a href="#" style="color: var(--wp--preset--color--studio-press);">Type Direction</a> · <a href="#" style="color: var(--wp--preset--color--studio-press);">Practice</a>
+          </p>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Post navigation -->
+    <section class="kern-band--ground kern-section" style="padding-top: var(--wp--preset--spacing--10); padding-bottom: var(--wp--preset--spacing--10);">
+      <div class="kern-constrained">
+        <div class="kern-post-nav">
+          <div>
+            <div class="kern-post-nav-label">&larr; Previous</div>
+            <div class="kern-post-nav-title">On Choosing a Text Face for Long-Form Reading</div>
+          </div>
+          <div style="text-align: right;">
+            <div class="kern-post-nav-label">Next &rarr;</div>
+            <div class="kern-post-nav-title">Spacing as Voice: What Tracking Says About a Brand</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="kern-site-footer">
+    <div class="kern-footer-row">
+      <div>
+        <div class="kern-footer-title">Meridian Studio</div>
+        <div class="kern-footer-sub">Type · Brand · Identity</div>
+      </div>
+      <nav class="kern-footer-nav-links">
+        <a href="#">Work</a>
+        <a href="#">Studio</a>
+        <a href="#">Brief</a>
+      </nav>
+    </div>
+    <hr class="kern-footer-hr">
+    <div class="kern-footer-bottom">
+      <span>&copy; 2024 Meridian Studio</span>
+      <span>Built with WordPress &amp; <a href="https://thisismyurl.com/kern/">Kern</a></span>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

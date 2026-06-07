@@ -1,0 +1,42 @@
+/*
+Theme Name:         Kern
+Theme URI:          https://thisismyurl.com/kern/
+Author:             Christopher Ross
+Author URI:         https://thisismyurl.com/
+Description:        A typography-first full-site-editing theme for type foundries, brand identity studios, and independent designers. Named after the typographer's art of adjusting space between individual letter pairs — the invisible craft that makes type feel right. Features a type-specimen homepage that uses typography as the hero (no photography required), a working-brief contact pattern that reads like a real design brief, and a typeface-pairing showcase that demonstrates the theme's own fonts in foundry-specimen style. Built on the Colophon core: WCAG 2.2 AA accessible, Core Web Vitals optimised, self-hosted SIL OFL fonts, RTL-ready via CSS logical properties, zero plugin dependencies.
+Version:            1.6148
+Requires at least:  6.7
+Tested up to:       7.0
+Requires PHP:       8.1
+License:            GNU General Public License v2 or later
+License URI:        https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:        kern
+Tags:               portfolio, blog, one-column, custom-colors, custom-logo, custom-menu, editor-style, featured-images, full-site-editing, block-patterns, accessibility-ready, rtl-language-support, translation-ready, wide-blocks
+
+== Bundled Fonts ==
+
+Fraunces — https://github.com/undercasetype/Fraunces
+Copyright 2020 The Fraunces Project Authors (https://github.com/undercasetype/Fraunces)
+License: SIL Open Font License, Version 1.1 — https://scripts.sil.org/OFL
+
+Plus Jakarta Sans — https://github.com/tokotype/PlusJakartaSans
+Copyright 2020 The Plus Jakarta Sans Project Authors (https://github.com/tokotype/PlusJakartaSans)
+License: SIL Open Font License, Version 1.1 — https://scripts.sil.org/OFL
+*/
+
+/* =====================================================================
+   KERN STYLESHEET
+   ---------------------------------------------------------------------
+   This file is the WordPress-required theme identity header and nothing
+   more. Kern is built on the Colophon core, which loads its CSS from
+   discrete sheets in cascade order (see inc/assets.php):
+
+     assets/css/core/reset.css   [CORE]  @layer order + design-agnostic reset
+     assets/css/core/base.css    [CORE]  a11y scaffolding + --cl-* token contract
+     assets/css/skin.css         [SKIN]  Kern's layout, components, blocks, utilities
+
+   Block themes do not auto-enqueue style.css on the front end; this
+   header is read by WordPress for theme identity only.
+
+   Pillar 9 (Archaeological Records): every file carries a purpose header.
+   ===================================================================== */

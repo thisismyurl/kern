@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 810" role="img" aria-label="Placeholder hero image">
+  <rect width="1440" height="810" fill="#f5f3ee"/>
+  <rect x="660" y="375" width="120" height="60" rx="4" fill="#6b6b68" opacity="0.2"/>
+  <text x="720" y="415" font-family="Georgia, serif" font-size="16" fill="#6b6b68" text-anchor="middle" opacity="0.5">Replace with project photography</text>
+</svg>
