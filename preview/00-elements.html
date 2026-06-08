@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1280">
+<title>Kern — All Elements</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Plus+Jakarta+Sans:wght@300..800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="kern-preview.css">
+<style>
+  /* Page-local scaffolding for the element reference — not part of the theme. */
+  .el-pagenav {
+    position: sticky;
+    inset-block-start: 0;
+    z-index: 200;
+    background: var(--wp--preset--color--studio-press);
+    padding: 0.625rem var(--wp--preset--spacing--5);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .el-pagenav a {
+    font-family: var(--wp--preset--font-family--jakarta);
+    font-size: var(--wp--preset--font-size--2xs);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--wp--preset--color--studio-rule);
+  }
+  .el-pagenav a:hover { color: var(--wp--preset--color--studio-paper); }
+  .el-pagenav strong { color: var(--wp--preset--color--studio-paper); font-family: var(--wp--preset--font-family--fraunces); font-weight: 400; text-transform: none; font-size: var(--wp--preset--font-size--base); margin-inline-end: auto; }
+
+  .el-section { padding: var(--wp--preset--spacing--12) var(--wp--preset--spacing--5); background: var(--wp--preset--color--studio-ground); }
+  .el-section--paper { background: var(--wp--preset--color--studio-paper); }
+  .el-section__inner { max-width: 1440px; margin-inline: auto; }
+  .el-section__label {
+    font-family: var(--wp--preset--font-family--jakarta);
+    font-size: var(--wp--preset--font-size--2xs);
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--wp--preset--color--studio-press);
+    margin-bottom: var(--wp--preset--spacing--6);
+  }
+  .el-type-row { display: flex; align-items: baseline; gap: 1.5rem; padding-block: 0.5rem; border-bottom: 1px solid var(--wp--preset--color--studio-rule); }
+  .el-type-row__tag { flex: 0 0 5rem; font-family: 'IBM Plex Mono', monospace; font-size: var(--wp--preset--font-size--2xs); color: var(--wp--preset--color--studio-mid); }
+  .el-swatches { display: flex; flex-wrap: wrap; gap: 1rem; }
+  .el-swatch { width: 8.5rem; }
+  .el-swatch__chip { height: 4.5rem; border: 1px solid var(--wp--preset--color--studio-rule); }
+  .el-swatch__name { margin-top: 0.4rem; font-family: 'IBM Plex Mono', monospace; font-size: var(--wp--preset--font-size--2xs); color: var(--wp--preset--color--studio-mid); }
+  .el-btn-row { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+  .kern-btn--outline { background: transparent; color: var(--wp--preset--color--studio-press); border: 1.5px solid var(--wp--preset--color--studio-rule); }
+  .kern-btn--outline:hover { background: transparent; color: var(--wp--preset--color--studio-black); border-color: var(--wp--preset--color--studio-black); }
+  .kern-btn.is-disabled { opacity: 0.4; pointer-events: none; }
+  .el-prose p { font-family: var(--wp--preset--font-family--jakarta); line-height: 1.7; max-width: 720px; }
+  .el-prose a { color: var(--wp--preset--color--studio-press); text-decoration: underline; text-underline-offset: 0.14em; }
+  .el-stack-list ul, .el-stack-list ol { margin-block: 0.75rem; padding-inline-start: 1.5rem; font-family: var(--wp--preset--font-family--jakarta); }
+  .el-stack-list ul li { list-style: disc; margin-block: 0.35rem; line-height: 1.6; }
+  .el-stack-list ol li { list-style: decimal; margin-block: 0.35rem; line-height: 1.6; }
+  code.el-inline { background: var(--wp--preset--color--studio-press-tint); padding: 0.1rem 0.35rem; border-radius: 3px; font-family: 'IBM Plex Mono', monospace; font-size: 0.9em; }
+  pre.el-code {
+    background: var(--wp--preset--color--studio-black);
+    color: var(--wp--preset--color--studio-ground);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: var(--wp--preset--font-size--sm);
+    line-height: 1.7;
+    padding: var(--wp--preset--spacing--6);
+    overflow-x: auto;
+  }
+  .el-rule { border: none; border-top: 1px solid var(--wp--preset--color--studio-rule); }
+  .el-card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--wp--preset--spacing--8); }
+  .el-card { display: flex; flex-direction: column; gap: 0.75rem; }
+  .el-card .kern-img-placeholder { aspect-ratio: 3 / 2; }
+</style>
+</head>
+<body>
+
+<nav class="el-pagenav">
+  <strong>Kern — All Elements</strong>
+  <a href="#type">Type</a>
+  <a href="#color">Color</a>
+  <a href="#buttons">Buttons</a>
+  <a href="#links">Links &amp; Lists</a>
+  <a href="#quote">Blockquote</a>
+  <a href="#code">Code</a>
+  <a href="#rule">Separator</a>
+  <a href="#cards">Cards</a>
+</nav>
+
+<header class="kern-site-header">
+  <a class="kern-site-title-link" href="#">Mercer &amp; Type</a>
+  <nav class="kern-nav">
+    <a href="#">Foundry</a>
+    <a href="#">Specimens</a>
+    <a href="#">Studio</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<section class="el-section" id="type">
+  <div class="el-section__inner">
+    <p class="el-section__label">Typography Scale</p>
+    <div class="el-type-row"><span class="el-type-row__tag">Display</span><span class="is-style-kern-specimen-display" style="font-size:var(--wp--preset--font-size--4xl);">Aa</span></div>
+    <div class="el-type-row"><span class="el-type-row__tag">H1</span><h1 style="font-size:var(--wp--preset--font-size--4xl);">A foundry built on the curve</h1></div>
+    <div class="el-type-row"><span class="el-type-row__tag">H2</span><h2>Letterforms with a point of view</h2></div>
+    <div class="el-type-row"><span class="el-type-row__tag">H3</span><h3>Optical sizing across the range</h3></div>
+    <div class="el-type-row"><span class="el-type-row__tag">H4</span><h4>Supporting display heading</h4></div>
+    <div class="el-type-row"><span class="el-type-row__tag">H5</span><h5>Uppercase label tier</h5></div>
+    <div class="el-type-row"><span class="el-type-row__tag">H6</span><h6>Smallest label</h6></div>
+    <p style="margin-top:1.5rem;max-width:720px;font-family:var(--wp--preset--font-family--jakarta);line-height:1.7;">This is body text in Plus Jakarta Sans at the base size. Fraunces carries the display and title work; Jakarta keeps the running text clean and legible at reading sizes.</p>
+    <p class="is-style-kern-eyebrow" style="margin-top:1.25rem;">Eyebrow label · caption tier</p>
+    <p class="is-style-kern-annotation">Annotation and small text live here, one step below body, for metadata and asides.</p>
+  </div>
+</section>
+
+<section class="el-section el-section--paper" id="color">
+  <div class="el-section__inner">
+    <p class="el-section__label">Color Palette</p>
+    <div class="el-swatches">
+      <div class="el-swatch"><div class="el-swatch__chip" style="background:var(--wp--preset--color--studio-black)"></div><div class="el-swatch__name">studio-black</div></div>
+      <div class="el-swatch"><div class="el-swatch__chip" style="background:var(--wp--preset--color--studio-ink)"></div><div class="el-swatch__name">studio-ink</div></div>
+      <div class="el-swatch"><div class="el-swatch__chip" style="background:var(--wp--preset--color--studio-mid)"></div><div class="el-swatch__name">studio-mid</div></div>
+      <div class="el-swatch"><div class="el-swatch__chip" style="background:var(--wp--preset--color--studio-rule)"></div><div class="el-swatch__name">studio-rule</div></div>
+      <div class="el-swatch"><div class="el-swatch__chip" style="background:var(--wp--preset--color--studio-ground)"></div><div class="el-swatch__name">studio-ground</div></div>
+      <div class="el-swatch"><div class="el-swatch__chip" style="background:var(--wp--preset--color--studio-paper)"></div><div class="el-swatch__name">studio-paper</div></div>
+      <div class="el-swatch"><div class="el-swatch__chip" style="background:var(--wp--preset--color--studio-press)"></div><div class="el-swatch__name">studio-press</div></div>
+      <div class="el-swatch"><div class="el-swatch__chip" style="background:var(--wp--preset--color--studio-press-tint)"></div><div class="el-swatch__name">studio-press-tint</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="el-section" id="buttons">
+  <div class="el-section__inner">
+    <p class="el-section__label">Buttons</p>
+    <div class="el-btn-row">
+      <a class="kern-btn" href="#">Primary action</a>
+      <a class="kern-btn kern-btn--outline" href="#">Secondary action</a>
+      <a class="kern-btn is-disabled" href="#" aria-disabled="true">Disabled</a>
+    </div>
+  </div>
+</section>
+
+<section class="el-section el-section--paper" id="links">
+  <div class="el-section__inner el-prose el-stack-list">
+    <p class="el-section__label">Links &amp; Lists</p>
+    <p>A paragraph carries <a href="#">an inline link</a> the way a reader expects it — underlined, in the press blue, with a second <a href="#">link further along</a> to prove the pattern holds across a line of running text.</p>
+    <ul>
+      <li>Type families across five optical sizes</li>
+      <li>Custom lettering and wordmarks</li>
+      <li>Licensing for editorial use</li>
+      <li>Variable-font engineering</li>
+      <li>Specimen design and print</li>
+    </ul>
+    <ol>
+      <li>Sketch the skeleton by hand</li>
+      <li>Digitise and interpolate the masters</li>
+      <li>Hint and test across platforms</li>
+      <li>Ship the family with a specimen</li>
+    </ol>
+  </div>
+</section>
+
+<section class="el-section" id="quote">
+  <div class="el-section__inner">
+    <p class="el-section__label">Blockquote</p>
+    <blockquote class="kern-quote">
+      Kerning is the difference between a wordmark and a logo — the space carries the craft.
+      <footer style="font-style:normal;font-family:var(--wp--preset--font-family--jakarta);font-size:var(--wp--preset--font-size--xs);color:var(--wp--preset--color--studio-mid);margin-top:0.75rem;">— Lena Mercer, <cite>Foundry Notes</cite></footer>
+    </blockquote>
+  </div>
+</section>
+
+<section class="el-section el-section--paper" id="code">
+  <div class="el-section__inner el-prose">
+    <p class="el-section__label">Code</p>
+    <p>Bind the variable-font axis with a custom property like <code class="el-inline">--kern-opsz</code> and let the cascade resolve it.</p>
+    <pre class="el-code"><code>:root {
+  --kern-opsz: 48;
+}
+.specimen {
+  font-variation-settings: "opsz" var(--kern-opsz);
+}</code></pre>
+  </div>
+</section>
+
+<section class="el-section" id="rule">
+  <div class="el-section__inner">
+    <p class="el-section__label">Separator</p>
+    <hr class="el-rule">
+  </div>
+</section>
+
+<section class="el-section el-section--paper" id="cards">
+  <div class="el-section__inner">
+    <p class="el-section__label">Cards</p>
+    <div class="el-card-grid">
+      <article class="el-card">
+        <div class="kern-img-placeholder">Specimen</div>
+        <span class="kern-entry-cats">Serif · Variable</span>
+        <a class="kern-entry-title" href="#">Mercer Display</a>
+        <p class="is-style-kern-annotation">A high-contrast editorial serif across nine optical sizes.</p>
+      </article>
+      <article class="el-card">
+        <div class="kern-img-placeholder">Specimen</div>
+        <span class="kern-entry-cats">Sans · Grotesque</span>
+        <a class="kern-entry-title" href="#">Harbour Grotesk</a>
+        <p class="is-style-kern-annotation">A workhorse grotesque built for signage and interface.</p>
+      </article>
+      <article class="el-card">
+        <div class="kern-img-placeholder">Specimen</div>
+        <span class="kern-entry-cats">Mono · Fixed</span>
+        <a class="kern-entry-title" href="#">Plotter Mono</a>
+        <p class="is-style-kern-annotation">A monospace tuned for data tables and code listings.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<footer class="kern-site-footer">
+  <div class="kern-footer-row">
+    <div>
+      <p class="kern-footer-title">Mercer &amp; Type</p>
+      <p class="kern-footer-sub">Independent type foundry · Est. 2014</p>
+    </div>
+    <nav class="kern-footer-nav-links">
+      <a href="#">Foundry</a>
+      <a href="#">Specimens</a>
+      <a href="#">Studio</a>
+      <a href="#">Contact</a>
+    </nav>
+  </div>
+  <hr class="kern-footer-hr">
+  <div class="kern-footer-bottom">
+    <span>© 2026 Mercer &amp; Type</span>
+    <a href="#">Built with Kern</a>
+  </div>
+</footer>
+
+</body>
+</html>

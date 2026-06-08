@@ -5,7 +5,7 @@ Tags: portfolio, blog, one-column, custom-colors, custom-logo, custom-menu, edit
 Requires at least: 6.7
 Tested up to: 7.0
 Requires PHP: 8.1
-Stable tag: 1.6148
+Stable tag: 1.6148.1706
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -54,6 +54,9 @@ Go to Pages → Add New, insert the "Typeface Pairing Specimen" pattern, and pub
 The kern/brief pattern contains an HTML form stub. Connect it to a form plugin of your choice (Contact Form 7, Gravity Forms, Jetpack Forms) — the CSS treatment is on the wrapper, not the form engine.
 
 == Changelog ==
+
+= 1.6148.1706 =
+* Version timestamp suffix added per project versioning scheme.
 
 = 1.6148 =
 * Initial release.

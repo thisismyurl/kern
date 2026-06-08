@@ -39,7 +39,7 @@ const SLUG = 'kern';
 /**
  * Theme version — cache-bust for enqueued assets and the WordPress.org version.
  */
-const VERSION = '1.6148';
+const VERSION = '1.6148.1706';
 
 /**
  * Absolute filesystem path to the theme root (no trailing slash).

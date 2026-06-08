@@ -1,0 +1,62 @@
+{
+  "$schema": "https://schemas.wp.org/wp/6.7/theme.json",
+  "version": 3,
+  "title": "Editorial",
+  "settings": {
+    "custom": {
+      "colophon-light": "#f0f0ee",
+      "colophon-dark": "#1a1a1a",
+      "colophon-accent": "#2d5a88"
+    },
+    "color": {
+      "palette": [
+        {
+          "slug": "studio-black",
+          "color": "#1a1a1a",
+          "name": "Studio Black"
+        },
+        {
+          "slug": "studio-ink",
+          "color": "#2a2a2a",
+          "name": "Studio Ink"
+        },
+        {
+          "slug": "studio-mid",
+          "color": "#686868",
+          "name": "Studio Mid"
+        },
+        {
+          "slug": "studio-rule",
+          "color": "#d4d4d4",
+          "name": "Studio Rule"
+        },
+        {
+          "slug": "studio-ground",
+          "color": "#e8e8e8",
+          "name": "Studio Ground"
+        },
+        {
+          "slug": "studio-paper",
+          "color": "#f0f0ee",
+          "name": "Studio Paper"
+        },
+        {
+          "slug": "studio-press",
+          "color": "#2d5a88",
+          "name": "Studio Press"
+        },
+        {
+          "slug": "studio-press-tint",
+          "color": "#d8e4f0",
+          "name": "Studio Press Tint"
+        }
+      ]
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "var(--wp--preset--color--studio-ground)",
+      "text": "var(--wp--preset--color--studio-black)"
+    }
+  }
+}
