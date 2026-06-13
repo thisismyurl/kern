@@ -5,7 +5,7 @@ Tags: portfolio, blog, one-column, custom-colors, custom-logo, custom-menu, edit
 Requires at least: 6.7
 Tested up to: 7.0
 Requires PHP: 8.1
-Stable tag: 1.6148.1706
+Stable tag: 1.6163.2229
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -54,6 +54,17 @@ Go to Pages → Add New, insert the "Typeface Pairing Specimen" pattern, and pub
 The kern/brief pattern contains an HTML form stub. Connect it to a form plugin of your choice (Contact Form 7, Gravity Forms, Jetpack Forms) — the CSS treatment is on the wrapper, not the form engine.
 
 == Changelog ==
+
+= 1.6163.2229 =
+* Accessibility (WCAG 2.1 1.3.1): the archive and search titles are now explicit
+  h1 headings; the index template gains an h1 page heading; the blank-canvas page
+  template gains an empty, editor-fillable h1. (Front page and 404 already had one.)
+* Hardened comment-form attribute injection: a guarded preg_replace (single
+  replacement, null-check, no-match fallback) replaces a naive str_replace that
+  could double-inject or mangle markup.
+* oEmbed content width now reads theme.json contentSize (pixel-validated, 720px
+  fallback) instead of a hardcoded literal.
+* The Get started developer-guide URL is filterable via kern/developer_guide_url.
 
 = 1.6148.1706 =
 * Version timestamp suffix added per project versioning scheme.
