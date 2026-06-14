@@ -32,7 +32,7 @@
 	<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between","verticalAlignment":"baseline"},"style":{"spacing":{"padding":{"bottom":"var:preset|spacing|8"},"blockGap":"var:preset|spacing|4"},"border":{"bottom":{"color":"var:preset|color|studio-rule","style":"solid","width":"1px"}}}} -->
 	<div class="wp-block-group" style="padding-bottom:var(--wp--preset--spacing--8);border-bottom:1px solid var(--wp--preset--color--studio-rule)">
 		<!-- wp:paragraph {"className":"is-style-kern-eyebrow","style":{"color":{"text":"var:preset|color|studio-mid"}}} -->
-		<p class="is-style-kern-eyebrow has-studio-mid-color has-text-color">Case Study</p>
+		<p class="is-style-kern-eyebrow has-studio-mid-color has-text-color"><?php esc_html_e( 'Case Study', 'kern' ); ?></p>
 		<!-- /wp:paragraph -->
 		<!-- wp:paragraph {"className":"is-style-kern-annotation"} -->
 		<p class="is-style-kern-annotation">01</p>
@@ -48,11 +48,15 @@
 		<!-- Left: project title + summary -->
 		<!-- wp:group {"layout":{"type":"default"},"style":{"spacing":{"blockGap":"var:preset|spacing|6"}}} -->
 		<div class="wp-block-group">
+			<!-- Pattern-sourced h1: this case-study lead supplies the page's single
+			     h1 (the project title) when inserted on a page or post built from
+			     this pattern. Explicit level:1 keeps the heading hierarchy correct;
+			     the editor replaces "Project Title" with the real project name. -->
 			<!-- wp:heading {"level":1,"style":{"typography":{"fontFamily":"var:preset|font-family|fraunces","fontWeight":"300","fontSize":"var:preset|font-size|display","letterSpacing":"-0.02em","lineHeight":"1.05"},"color":{"text":"var:preset|color|studio-black"}}} -->
-			<h1 class="wp-block-heading" style="font-family:var(--wp--preset--font-family--fraunces);font-size:var(--wp--preset--font-size--display);font-weight:300;letter-spacing:-0.02em;line-height:1.05;color:var(--wp--preset--color--studio-black)">Project Title</h1>
+			<h1 class="wp-block-heading" style="font-family:var(--wp--preset--font-family--fraunces);font-size:var(--wp--preset--font-size--display);font-weight:300;letter-spacing:-0.02em;line-height:1.05;color:var(--wp--preset--color--studio-black)"><?php esc_html_e( 'Project Title', 'kern' ); ?></h1>
 			<!-- /wp:heading -->
 			<!-- wp:paragraph {"style":{"typography":{"fontFamily":"var:preset|font-family|jakarta","fontWeight":"300","fontSize":"var:preset|font-size|lg","lineHeight":"1.6"},"color":{"text":"var:preset|color|studio-ink"}}} -->
-			<p style="font-family:var(--wp--preset--font-family--jakarta);font-size:var(--wp--preset--font-size--lg);font-weight:300;line-height:1.6;color:var(--wp--preset--color--studio-ink)">A short summary of the project — what was the brief, what was the design challenge, what did we make. Two to three sentences. The full story continues below the hero image.</p>
+			<p style="font-family:var(--wp--preset--font-family--jakarta);font-size:var(--wp--preset--font-size--lg);font-weight:300;line-height:1.6;color:var(--wp--preset--color--studio-ink)"><?php esc_html_e( 'A short summary of the project — what was the brief, what was the design challenge, what did we make. Two to three sentences. The full story continues below the hero image.', 'kern' ); ?></p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:group -->
@@ -65,10 +69,10 @@
 			<!-- wp:group {"layout":{"type":"default"},"style":{"spacing":{"blockGap":"var:preset|spacing|1"}}} -->
 			<div class="wp-block-group">
 				<!-- wp:paragraph {"className":"is-style-kern-eyebrow","style":{"color":{"text":"var:preset|color|studio-mid"}}} -->
-				<p class="is-style-kern-eyebrow has-studio-mid-color has-text-color">Client</p>
+				<p class="is-style-kern-eyebrow has-studio-mid-color has-text-color"><?php esc_html_e( 'Client', 'kern' ); ?></p>
 				<!-- /wp:paragraph -->
 				<!-- wp:paragraph {"style":{"typography":{"fontFamily":"var:preset|font-family|jakarta","fontSize":"var:preset|font-size|sm","fontWeight":"500"},"color":{"text":"var:preset|color|studio-ink"}}} -->
-				<p style="font-family:var(--wp--preset--font-family--jakarta);font-size:var(--wp--preset--font-size--sm);font-weight:500;color:var(--wp--preset--color--studio-ink)">Client Name</p>
+				<p style="font-family:var(--wp--preset--font-family--jakarta);font-size:var(--wp--preset--font-size--sm);font-weight:500;color:var(--wp--preset--color--studio-ink)"><?php esc_html_e( 'Client Name', 'kern' ); ?></p>
 				<!-- /wp:paragraph -->
 			</div>
 			<!-- /wp:group -->
@@ -77,7 +81,7 @@
 			<!-- wp:group {"layout":{"type":"default"},"style":{"spacing":{"blockGap":"var:preset|spacing|1"}}} -->
 			<div class="wp-block-group">
 				<!-- wp:paragraph {"className":"is-style-kern-eyebrow","style":{"color":{"text":"var:preset|color|studio-mid"}}} -->
-				<p class="is-style-kern-eyebrow has-studio-mid-color has-text-color">Year</p>
+				<p class="is-style-kern-eyebrow has-studio-mid-color has-text-color"><?php esc_html_e( 'Year', 'kern' ); ?></p>
 				<!-- /wp:paragraph -->
 				<!-- wp:paragraph {"style":{"typography":{"fontFamily":"var:preset|font-family|jakarta","fontSize":"var:preset|font-size|sm","fontWeight":"500"},"color":{"text":"var:preset|color|studio-ink"}}} -->
 				<p style="font-family:var(--wp--preset--font-family--jakarta);font-size:var(--wp--preset--font-size--sm);font-weight:500;color:var(--wp--preset--color--studio-ink)">2024</p>
@@ -89,10 +93,10 @@
 			<!-- wp:group {"layout":{"type":"default"},"style":{"spacing":{"blockGap":"var:preset|spacing|1"}}} -->
 			<div class="wp-block-group">
 				<!-- wp:paragraph {"className":"is-style-kern-eyebrow","style":{"color":{"text":"var:preset|color|studio-mid"}}} -->
-				<p class="is-style-kern-eyebrow has-studio-mid-color has-text-color">Services</p>
+				<p class="is-style-kern-eyebrow has-studio-mid-color has-text-color"><?php esc_html_e( 'Services', 'kern' ); ?></p>
 				<!-- /wp:paragraph -->
 				<!-- wp:paragraph {"style":{"typography":{"fontFamily":"var:preset|font-family|jakarta","fontSize":"var:preset|font-size|sm","fontWeight":"500"},"color":{"text":"var:preset|color|studio-ink"}}} -->
-				<p style="font-family:var(--wp--preset--font-family--jakarta);font-size:var(--wp--preset--font-size--sm);font-weight:500;color:var(--wp--preset--color--studio-ink)">Brand Identity, Type Direction, Collateral</p>
+				<p style="font-family:var(--wp--preset--font-family--jakarta);font-size:var(--wp--preset--font-size--sm);font-weight:500;color:var(--wp--preset--color--studio-ink)"><?php esc_html_e( 'Brand Identity, Type Direction, Collateral', 'kern' ); ?></p>
 				<!-- /wp:paragraph -->
 			</div>
 			<!-- /wp:group -->

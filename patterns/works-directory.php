@@ -26,14 +26,23 @@
 <!-- wp:group {"className":"kern-section","style":{"spacing":{"padding":{"top":"var:preset|spacing|16","bottom":"var:preset|spacing|16","left":"var:preset|spacing|5","right":"var:preset|spacing|5"}}},"layout":{"type":"constrained","contentSize":"1440px"}} -->
 <div class="wp-block-group kern-section" style="padding-top:var(--wp--preset--spacing--16);padding-bottom:var(--wp--preset--spacing--16);padding-left:var(--wp--preset--spacing--5);padding-right:var(--wp--preset--spacing--5)">
 
-	<!-- Section header: label + "All projects" link as a pair -->
+	<!-- Section header: label + "All projects" link as a pair.
+	     The "All projects" target resolves at render time to the site's posts
+	     index — the page that actually lists every work entry — so the link is
+	     never a dead /work guess. It uses the reading-settings Posts page when
+	     one is assigned and falls back to the site home, both of which always
+	     exist. An editor can repoint it in the block editor. -->
+	<?php
+	$kern_posts_page = (int) get_option( 'page_for_posts' );
+	$kern_works_url  = $kern_posts_page ? get_permalink( $kern_posts_page ) : home_url( '/' );
+	?>
 	<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between","verticalAlignment":"baseline"},"style":{"spacing":{"padding":{"bottom":"var:preset|spacing|6"},"blockGap":"var:preset|spacing|4"},"border":{"bottom":{"color":"var:preset|color|studio-rule","style":"solid","width":"1px"}}}} -->
 	<div class="wp-block-group" style="padding-bottom:var(--wp--preset--spacing--6);border-bottom:1px solid var(--wp--preset--color--studio-rule)">
 		<!-- wp:heading {"level":2,"fontSize":"sm","className":"is-style-kern-eyebrow","style":{"color":{"text":"var:preset|color|studio-mid"}}} -->
-		<h2 class="wp-block-heading has-sm-font-size is-style-kern-eyebrow has-studio-mid-color has-text-color">Selected Work</h2>
+		<h2 class="wp-block-heading has-sm-font-size is-style-kern-eyebrow has-studio-mid-color has-text-color"><?php esc_html_e( 'Selected Work', 'kern' ); ?></h2>
 		<!-- /wp:heading -->
 		<!-- wp:paragraph {"className":"is-style-kern-annotation"} -->
-		<p class="is-style-kern-annotation"><a href="/work">All projects &rarr;</a></p>
+		<p class="is-style-kern-annotation"><a href="<?php echo esc_url( $kern_works_url ); ?>"><?php esc_html_e( 'All projects →', 'kern' ); ?></a></p>
 		<!-- /wp:paragraph -->
 	</div>
 	<!-- /wp:group -->
@@ -67,7 +76,7 @@
 		<!-- Empty state: orient the editor, not just a void -->
 		<!-- wp:query-no-results -->
 			<!-- wp:paragraph {"className":"is-style-kern-annotation","style":{"spacing":{"padding":{"top":"var:preset|spacing|8","bottom":"var:preset|spacing|8"}}}} -->
-			<p class="is-style-kern-annotation" style="padding-top:var(--wp--preset--spacing--8);padding-bottom:var(--wp--preset--spacing--8)">No work published yet. Add posts to populate the works directory.</p>
+			<p class="is-style-kern-annotation" style="padding-top:var(--wp--preset--spacing--8);padding-bottom:var(--wp--preset--spacing--8)"><?php esc_html_e( 'No work published yet. Add posts to populate the works directory.', 'kern' ); ?></p>
 			<!-- /wp:paragraph -->
 		<!-- /wp:query-no-results -->
 

@@ -31,7 +31,7 @@
 	<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between","verticalAlignment":"baseline"},"style":{"spacing":{"padding":{"bottom":"var:preset|spacing|8"},"blockGap":"var:preset|spacing|4"},"border":{"bottom":{"color":"var:preset|color|studio-press-tint","style":"solid","width":"1px"}}}} -->
 	<div class="wp-block-group" style="padding-bottom:var(--wp--preset--spacing--8);border-bottom:1px solid var(--wp--preset--color--studio-press-tint)">
 		<!-- wp:heading {"level":2,"fontSize":"sm","className":"is-style-kern-eyebrow","style":{"color":{"text":"var:preset|color|studio-press"}}} -->
-		<h2 class="wp-block-heading has-sm-font-size is-style-kern-eyebrow has-studio-press-color has-text-color">The Mark</h2>
+		<h2 class="wp-block-heading has-sm-font-size is-style-kern-eyebrow has-studio-press-color has-text-color"><?php esc_html_e( 'The Mark', 'kern' ); ?></h2>
 		<!-- /wp:heading -->
 	</div>
 	<!-- /wp:group -->

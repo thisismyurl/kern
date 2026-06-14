@@ -20,10 +20,21 @@
 namespace Kern;
 
 defined( 'ABSPATH' ) || exit;
-// Opt this theme into GitHub-release self-updates (see inc/github-updater.php).
-add_filter( 'kern/github_updater_repo', static function (): string {{
-	return 'thisismyurl/kern';
-}} );
+
+// Opt this theme into GitHub-release self-updates — but only when the updater
+// itself is present. The WordPress.org build strips inc/github-updater.php via
+// .distignore, so in the distributed theme this guard is false and the filter
+// never registers: the submitted package and the GitHub repo behave identically
+// (no self-updater), and a reviewer auditing the repo sees an inert opt-in, not
+// an active updater shadowing the directory's own update channel.
+if ( file_exists( __DIR__ . '/github-updater.php' ) ) {
+	add_filter(
+		'kern/github_updater_repo',
+		static function (): string {
+			return 'thisismyurl/kern';
+		}
+	);
+}
 
 /**
  * Register Kern's image crop sizes.

@@ -19,11 +19,11 @@
 		<!-- wp:column {"verticalAlignment":"top","width":"60%","className":"kern-studio-footer__brand"} -->
 		<div class="wp-block-column is-vertically-aligned-top kern-studio-footer__brand" style="flex-basis:60%">
 			<!-- wp:heading {"level":2,"className":"kern-studio-footer__name","style":{"typography":{"fontWeight":"400","lineHeight":"1.1","letterSpacing":"-0.01em"},"spacing":{"margin":{"top":"0","bottom":"var:preset|spacing|3"}}},"fontSize":"xl","fontFamily":"fraunces"} -->
-			<h2 class="wp-block-heading kern-studio-footer__name has-fraunces-font-family has-xl-font-size" style="margin-top:0;margin-bottom:var(--wp--preset--spacing--3);font-weight:400;letter-spacing:-0.01em;line-height:1.1">Kern Type Studio</h2>
+			<h2 class="wp-block-heading kern-studio-footer__name has-fraunces-font-family has-xl-font-size" style="margin-top:0;margin-bottom:var(--wp--preset--spacing--3);font-weight:400;letter-spacing:-0.01em;line-height:1.1"><?php esc_html_e( 'Kern Type Studio', 'kern' ); ?></h2>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"className":"kern-studio-footer__location","style":{"typography":{"fontWeight":"400","lineHeight":"1.6"},"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"studio-rule","fontSize":"sm","fontFamily":"jakarta"} -->
-			<p class="kern-studio-footer__location has-studio-rule-color has-text-color has-jakarta-font-family has-sm-font-size" style="margin-top:0;margin-bottom:0;font-weight:400;line-height:1.6">Toronto, Canada &middot; Drawing letters since 2009</p>
+			<p class="kern-studio-footer__location has-studio-rule-color has-text-color has-jakarta-font-family has-sm-font-size" style="margin-top:0;margin-bottom:0;font-weight:400;line-height:1.6"><?php esc_html_e( 'Toronto, Canada · Drawing letters since 2009', 'kern' ); ?></p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:column -->
@@ -46,8 +46,8 @@
 	<hr class="wp-block-separator has-text-color has-studio-ink-color has-alpha-channel-opacity has-studio-ink-background-color has-background kern-studio-footer__rule is-style-wide" style="margin-top:0;margin-bottom:var(--wp--preset--spacing--6)"/>
 	<!-- /wp:separator -->
 
-	<!-- wp:paragraph {"className":"kern-studio-footer__copyright","style":{"typography":{"fontWeight":"400","letterSpacing":"0.02em","lineHeight":"1.5"},"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"studio-mid","fontSize":"xs","fontFamily":"jakarta"} -->
-	<p class="kern-studio-footer__copyright has-studio-mid-color has-text-color has-jakarta-font-family has-xs-font-size" style="margin-top:0;margin-bottom:0;font-weight:400;letter-spacing:0.02em;line-height:1.5">&copy; 2026 Kern Type Studio. All letterforms drawn in-house.</p>
+	<!-- wp:paragraph {"className":"kern-studio-footer__copyright","style":{"typography":{"fontWeight":"400","letterSpacing":"0.02em","lineHeight":"1.5"},"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"studio-rule","fontSize":"xs","fontFamily":"jakarta"} -->
+	<p class="kern-studio-footer__copyright has-studio-rule-color has-text-color has-jakarta-font-family has-xs-font-size" style="margin-top:0;margin-bottom:0;font-weight:400;letter-spacing:0.02em;line-height:1.5"><?php esc_html_e( '© 2026 Kern Type Studio. All letterforms drawn in-house.', 'kern' ); ?></p>
 	<!-- /wp:paragraph -->
 
 </footer>

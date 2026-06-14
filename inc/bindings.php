@@ -5,9 +5,10 @@
  *
  * A static template part can't compute the current year, and hardcoding one is
  * a quiet way to look abandoned every January. So parts/footer.html binds its
- * copyright paragraph to the `colophon/copyright` source registered here (WP
- * 6.5+ block bindings) — one small, removable callback instead of a render
- * filter reinventing what the bindings API already does.
+ * copyright paragraph to the `SLUG . '/copyright'` source registered here (WP
+ * 6.5+ block bindings; resolves to `kern/copyright` for this theme) — one small,
+ * removable callback instead of a render filter reinventing what the bindings
+ * API already does.
  *
  * The "Built with …" credit binds to a second source so an integrator can
  * rewrite or drop it through a filter without editing a template. Both source

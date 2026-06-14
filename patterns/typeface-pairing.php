@@ -38,10 +38,10 @@
 	<!-- wp:group {"style":{"spacing":{"padding":{"bottom":"var:preset|spacing|8"},"blockGap":"0"},"border":{"bottom":{"color":"var:preset|color|studio-rule","style":"solid","width":"1px"}}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between","verticalAlignment":"baseline"}} -->
 	<div class="wp-block-group" style="padding-bottom:var(--wp--preset--spacing--8);border-bottom:1px solid var(--wp--preset--color--studio-rule)">
 		<!-- wp:heading {"level":2,"fontSize":"sm","className":"is-style-kern-eyebrow","style":{"color":{"text":"var:preset|color|studio-mid"}}} -->
-		<h2 class="wp-block-heading has-sm-font-size is-style-kern-eyebrow has-studio-mid-color has-text-color">Type System</h2>
+		<h2 class="wp-block-heading has-sm-font-size is-style-kern-eyebrow has-studio-mid-color has-text-color"><?php esc_html_e( 'Type System', 'kern' ); ?></h2>
 		<!-- /wp:heading -->
 		<!-- wp:paragraph {"className":"is-style-kern-annotation"} -->
-		<p class="is-style-kern-annotation">Fraunces &times; Plus Jakarta Sans</p>
+		<p class="is-style-kern-annotation"><?php esc_html_e( 'Fraunces × Plus Jakarta Sans', 'kern' ); ?></p>
 		<!-- /wp:paragraph -->
 	</div>
 	<!-- /wp:group -->
@@ -50,15 +50,15 @@
 	<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10"},"blockGap":"var:preset|spacing|4"},"border":{"bottom":{"color":"var:preset|color|studio-rule","style":"solid","width":"1px"}}},"layout":{"type":"default"}} -->
 	<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10);border-bottom:1px solid var(--wp--preset--color--studio-rule)">
 		<!-- wp:paragraph {"style":{"typography":{"fontFamily":"var:preset|font-family|fraunces","fontWeight":"300","fontSize":"var:preset|font-size|display","letterSpacing":"-0.02em","lineHeight":"1.05"},"color":{"text":"var:preset|color|studio-black"}}} -->
-		<p style="font-family:var(--wp--preset--font-family--fraunces);font-size:var(--wp--preset--font-size--display);font-weight:300;letter-spacing:-0.02em;line-height:1.05;color:var(--wp--preset--color--studio-black)">Display / Light</p>
+		<p style="font-family:var(--wp--preset--font-family--fraunces);font-size:var(--wp--preset--font-size--display);font-weight:300;letter-spacing:-0.02em;line-height:1.05;color:var(--wp--preset--color--studio-black)"><?php esc_html_e( 'Display / Light', 'kern' ); ?></p>
 		<!-- /wp:paragraph -->
 		<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between","verticalAlignment":"baseline"}} -->
 		<div class="wp-block-group">
 			<!-- wp:paragraph {"className":"is-style-kern-annotation"} -->
-			<p class="is-style-kern-annotation">Fraunces · Weight 300 · &minus;0.02em tracking · Studio name, page titles, pull quotes</p>
+			<p class="is-style-kern-annotation"><?php esc_html_e( 'Fraunces · Weight 300 · −0.02em tracking · Studio name, page titles, pull quotes', 'kern' ); ?></p>
 			<!-- /wp:paragraph -->
 			<!-- wp:paragraph {"className":"is-style-kern-annotation"} -->
-			<p class="is-style-kern-annotation">SIL OFL 1.1</p>
+			<p class="is-style-kern-annotation"><?php esc_html_e( 'SIL OFL 1.1', 'kern' ); ?></p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:group -->
@@ -69,15 +69,15 @@
 	<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10"},"blockGap":"var:preset|spacing|4"},"border":{"bottom":{"color":"var:preset|color|studio-rule","style":"solid","width":"1px"}}},"layout":{"type":"default"}} -->
 	<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10);border-bottom:1px solid var(--wp--preset--color--studio-rule)">
 		<!-- wp:paragraph {"style":{"typography":{"fontFamily":"var:preset|font-family|fraunces","fontWeight":"400","fontSize":"var:preset|font-size|2xl","letterSpacing":"-0.01em","lineHeight":"1.2"},"color":{"text":"var:preset|color|studio-black"}}} -->
-		<p style="font-family:var(--wp--preset--font-family--fraunces);font-size:var(--wp--preset--font-size--2xl);font-weight:400;letter-spacing:-0.01em;line-height:1.2;color:var(--wp--preset--color--studio-black)">Section Heading / Regular</p>
+		<p style="font-family:var(--wp--preset--font-family--fraunces);font-size:var(--wp--preset--font-size--2xl);font-weight:400;letter-spacing:-0.01em;line-height:1.2;color:var(--wp--preset--color--studio-black)"><?php esc_html_e( 'Section Heading / Regular', 'kern' ); ?></p>
 		<!-- /wp:paragraph -->
 		<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between","verticalAlignment":"baseline"}} -->
 		<div class="wp-block-group">
 			<!-- wp:paragraph {"className":"is-style-kern-annotation"} -->
-			<p class="is-style-kern-annotation">Fraunces · Weight 400 · &minus;0.01em tracking · H2, H3, post titles in archives</p>
+			<p class="is-style-kern-annotation"><?php esc_html_e( 'Fraunces · Weight 400 · −0.01em tracking · H2, H3, post titles in archives', 'kern' ); ?></p>
 			<!-- /wp:paragraph -->
 			<!-- wp:paragraph {"className":"is-style-kern-annotation"} -->
-			<p class="is-style-kern-annotation">Variable · wght 100&ndash;900</p>
+			<p class="is-style-kern-annotation"><?php esc_html_e( 'Variable · wght 100–900', 'kern' ); ?></p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:group -->
@@ -88,15 +88,15 @@
 	<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10"},"blockGap":"var:preset|spacing|4"},"border":{"bottom":{"color":"var:preset|color|studio-rule","style":"solid","width":"1px"}}},"layout":{"type":"default"}} -->
 	<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10);border-bottom:1px solid var(--wp--preset--color--studio-rule)">
 		<!-- wp:paragraph {"style":{"typography":{"fontFamily":"var:preset|font-family|jakarta","fontWeight":"400","fontSize":"var:preset|font-size|base","lineHeight":"1.7"},"color":{"text":"var:preset|color|studio-ink"}}} -->
-		<p style="font-family:var(--wp--preset--font-family--jakarta);font-size:var(--wp--preset--font-size--base);font-weight:400;line-height:1.7;color:var(--wp--preset--color--studio-ink)">Body copy lives here — Jakarta at base size, 1.7 line-height, studio-ink colour. Long-form prose in a design studio context should still prioritise readability. The font earns its rate at 1.7. Never drop it below 1.6 for paragraph text.</p>
+		<p style="font-family:var(--wp--preset--font-family--jakarta);font-size:var(--wp--preset--font-size--base);font-weight:400;line-height:1.7;color:var(--wp--preset--color--studio-ink)"><?php esc_html_e( 'Body copy lives here — Jakarta at base size, 1.7 line-height, studio-ink colour. Long-form prose in a design studio context should still prioritise readability. The font earns its rate at 1.7. Never drop it below 1.6 for paragraph text.', 'kern' ); ?></p>
 		<!-- /wp:paragraph -->
 		<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between","verticalAlignment":"baseline"}} -->
 		<div class="wp-block-group">
 			<!-- wp:paragraph {"className":"is-style-kern-annotation"} -->
-			<p class="is-style-kern-annotation">Plus Jakarta Sans · Weight 400 · 1.7 line-height · Body, navigation, labels</p>
+			<p class="is-style-kern-annotation"><?php esc_html_e( 'Plus Jakarta Sans · Weight 400 · 1.7 line-height · Body, navigation, labels', 'kern' ); ?></p>
 			<!-- /wp:paragraph -->
 			<!-- wp:paragraph {"className":"is-style-kern-annotation"} -->
-			<p class="is-style-kern-annotation">Variable · wght 200&ndash;800</p>
+			<p class="is-style-kern-annotation"><?php esc_html_e( 'Variable · wght 200–800', 'kern' ); ?></p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:group -->
@@ -107,15 +107,15 @@
 	<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10"},"blockGap":"var:preset|spacing|4"}},"layout":{"type":"default"}} -->
 	<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10)">
 		<!-- wp:paragraph {"className":"is-style-kern-eyebrow","style":{"typography":{"fontSize":"var:preset|font-size|sm"}}} -->
-		<p class="is-style-kern-eyebrow" style="font-size:var(--wp--preset--font-size--sm)">Section Label / Eyebrow</p>
+		<p class="is-style-kern-eyebrow" style="font-size:var(--wp--preset--font-size--sm)"><?php esc_html_e( 'Section Label / Eyebrow', 'kern' ); ?></p>
 		<!-- /wp:paragraph -->
 		<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between","verticalAlignment":"baseline"}} -->
 		<div class="wp-block-group">
 			<!-- wp:paragraph {"className":"is-style-kern-annotation"} -->
-			<p class="is-style-kern-annotation">Jakarta · Weight 600 · 0.12em tracking · Uppercase · Category labels, section eyebrows</p>
+			<p class="is-style-kern-annotation"><?php esc_html_e( 'Jakarta · Weight 600 · 0.12em tracking · Uppercase · Category labels, section eyebrows', 'kern' ); ?></p>
 			<!-- /wp:paragraph -->
 			<!-- wp:paragraph {"className":"is-style-kern-annotation"} -->
-			<p class="is-style-kern-annotation">kern-eyebrow block style</p>
+			<p class="is-style-kern-annotation"><?php esc_html_e( 'kern-eyebrow block style', 'kern' ); ?></p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:group -->

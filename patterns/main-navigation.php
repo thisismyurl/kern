@@ -18,11 +18,15 @@
 
 		<!-- wp:site-title {"level":0,"className":"kern-main-nav__wordmark","style":{"typography":{"fontStyle":"italic","fontWeight":"400","letterSpacing":"-0.01em","lineHeight":"1"}},"textColor":"studio-black","fontSize":"lg","fontFamily":"fraunces"} /-->
 
+		<!-- Demo nav links. Labels are wrapped in esc_html_e() so the starter
+		     wordmark menu is translatable; the #anchor URLs are in-page-section
+		     placeholders an editor repoints (or replaces the whole block with a
+		     real wp:navigation menu). -->
 		<!-- wp:navigation {"overlayMenu":"mobile","className":"kern-main-nav__links","style":{"typography":{"fontWeight":"500","letterSpacing":"0.01em"},"spacing":{"blockGap":"var:preset|spacing|7"}},"textColor":"studio-ink","fontSize":"sm","fontFamily":"jakarta","layout":{"type":"flex","justifyContent":"right","orientation":"horizontal"}} -->
-		<!-- wp:navigation-link {"label":"Work","url":"#work","kind":"custom","isTopLevelLink":true} /-->
-		<!-- wp:navigation-link {"label":"Type","url":"#type","kind":"custom","isTopLevelLink":true} /-->
-		<!-- wp:navigation-link {"label":"Studio","url":"#studio","kind":"custom","isTopLevelLink":true} /-->
-		<!-- wp:navigation-link {"label":"Contact","url":"#contact","kind":"custom","isTopLevelLink":true} /-->
+		<!-- wp:navigation-link {"label":"<?php esc_html_e( 'Work', 'kern' ); ?>","url":"#work","kind":"custom","isTopLevelLink":true} /-->
+		<!-- wp:navigation-link {"label":"<?php esc_html_e( 'Type', 'kern' ); ?>","url":"#type","kind":"custom","isTopLevelLink":true} /-->
+		<!-- wp:navigation-link {"label":"<?php esc_html_e( 'Studio', 'kern' ); ?>","url":"#studio","kind":"custom","isTopLevelLink":true} /-->
+		<!-- wp:navigation-link {"label":"<?php esc_html_e( 'Contact', 'kern' ); ?>","url":"#contact","kind":"custom","isTopLevelLink":true} /-->
 		<!-- /wp:navigation -->
 
 	</div>
