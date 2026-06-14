@@ -36,7 +36,7 @@
 	<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between","verticalAlignment":"baseline"},"style":{"spacing":{"padding":{"bottom":"var:preset|spacing|8"},"blockGap":"var:preset|spacing|4"},"border":{"bottom":{"color":"rgba(255,255,255,0.15)","style":"solid","width":"1px"}}}} -->
 	<div class="wp-block-group" style="padding-bottom:var(--wp--preset--spacing--8);border-bottom:1px solid rgba(255,255,255,0.15)">
 		<!-- wp:paragraph {"className":"is-style-kern-eyebrow","style":{"color":{"text":"var:preset|color|studio-rule"}}} -->
-		<p class="is-style-kern-eyebrow has-studio-rule-color has-text-color">Studio</p>
+		<p class="is-style-kern-eyebrow has-studio-rule-color has-text-color"><?php esc_html_e( 'Studio', 'kern' ); ?></p>
 		<!-- /wp:paragraph -->
 	</div>
 	<!-- /wp:group -->
@@ -57,7 +57,7 @@
 		<div class="wp-block-column" style="flex-basis:60%">
 
 			<!-- wp:paragraph {"style":{"typography":{"fontFamily":"var:preset|font-family|jakarta","fontWeight":"300","fontSize":"var:preset|font-size|lg","lineHeight":"1.6"},"color":{"text":"var:preset|color|studio-paper"}}} -->
-			<p style="font-family:var(--wp--preset--font-family--jakarta);font-size:var(--wp--preset--font-size--lg);font-weight:300;line-height:1.6;color:var(--wp--preset--color--studio-paper)">An independent type and brand studio. We work with publishers, cultural institutions, and independent brands to build visual languages that last. Each project begins with the letterform and works outward.</p>
+			<p style="font-family:var(--wp--preset--font-family--jakarta);font-size:var(--wp--preset--font-size--lg);font-weight:300;line-height:1.6;color:var(--wp--preset--color--studio-paper)"><?php esc_html_e( 'An independent type and brand studio. We work with publishers, cultural institutions, and independent brands to build visual languages that last. Each project begins with the letterform and works outward.', 'kern' ); ?></p>
 			<!-- /wp:paragraph -->
 
 			<!-- Credits / selected recognition -->
@@ -67,10 +67,10 @@
 				<!-- wp:group {"layout":{"type":"default"},"style":{"spacing":{"blockGap":"var:preset|spacing|1"}}} -->
 				<div class="wp-block-group">
 					<!-- wp:paragraph {"className":"is-style-kern-eyebrow","style":{"color":{"text":"var:preset|color|studio-rule"}}} -->
-					<p class="is-style-kern-eyebrow has-studio-rule-color has-text-color">Selected Work</p>
+					<p class="is-style-kern-eyebrow has-studio-rule-color has-text-color"><?php esc_html_e( 'Selected Work', 'kern' ); ?></p>
 					<!-- /wp:paragraph -->
 					<!-- wp:paragraph {"style":{"typography":{"fontFamily":"var:preset|font-family|jakarta","fontSize":"var:preset|font-size|sm"},"color":{"text":"var:preset|color|studio-paper"}}} -->
-					<p style="font-family:var(--wp--preset--font-family--jakarta);font-size:var(--wp--preset--font-size--sm);color:var(--wp--preset--color--studio-paper)">Meridian Quarterly · The Folio Press · North Type · Common Ground Books</p>
+					<p style="font-family:var(--wp--preset--font-family--jakarta);font-size:var(--wp--preset--font-size--sm);color:var(--wp--preset--color--studio-paper)"><?php esc_html_e( 'Meridian Quarterly · The Folio Press · North Type · Common Ground Books', 'kern' ); ?></p>
 					<!-- /wp:paragraph -->
 				</div>
 				<!-- /wp:group -->
@@ -78,10 +78,10 @@
 				<!-- wp:group {"layout":{"type":"default"},"style":{"spacing":{"blockGap":"var:preset|spacing|1"}}} -->
 				<div class="wp-block-group">
 					<!-- wp:paragraph {"className":"is-style-kern-eyebrow","style":{"color":{"text":"var:preset|color|studio-rule"}}} -->
-					<p class="is-style-kern-eyebrow has-studio-rule-color has-text-color">Based in</p>
+					<p class="is-style-kern-eyebrow has-studio-rule-color has-text-color"><?php esc_html_e( 'Based in', 'kern' ); ?></p>
 					<!-- /wp:paragraph -->
 					<!-- wp:paragraph {"style":{"typography":{"fontFamily":"var:preset|font-family|jakarta","fontSize":"var:preset|font-size|sm"},"color":{"text":"var:preset|color|studio-paper"}}} -->
-					<p style="font-family:var(--wp--preset--font-family--jakarta);font-size:var(--wp--preset--font-size--sm);color:var(--wp--preset--color--studio-paper)">Your City</p>
+					<p style="font-family:var(--wp--preset--font-family--jakarta);font-size:var(--wp--preset--font-size--sm);color:var(--wp--preset--color--studio-paper)"><?php esc_html_e( 'Your City', 'kern' ); ?></p>
 					<!-- /wp:paragraph -->
 				</div>
 				<!-- /wp:group -->

@@ -82,9 +82,15 @@
 				<!-- wp:html -->
 				<div class="kern-brief-plugin-placeholder" style="padding:2.5rem;background:var(--wp--preset--color--studio-ground);border:2px dashed var(--wp--preset--color--studio-rule);text-align:center;">
 					<p style="font-family:var(--wp--preset--font-family--jakarta, sans-serif);font-size:0.875rem;color:var(--wp--preset--color--studio-mid);margin:0;">
-						<strong style="display:block;margin-bottom:0.5rem;color:var(--wp--preset--color--studio-press);">⬤ Replace this block with your form plugin</strong>
-						Insert a Contact Form 7, WPForms, Gravity Forms, or Jetpack Forms block here.<br>
-						The <code>kern-brief-form</code> wrapper applies consistent label and input styling automatically.
+						<strong style="display:block;margin-bottom:0.5rem;color:var(--wp--preset--color--studio-press);">⬤ <?php esc_html_e( 'Replace this block with your form plugin', 'kern' ); ?></strong>
+						<?php esc_html_e( 'Insert a Contact Form 7, WPForms, Gravity Forms, or Jetpack Forms block here.', 'kern' ); ?><br>
+						<?php
+						printf(
+							/* translators: %s: the kern-brief-form CSS wrapper class name, shown in a code tag. */
+							esc_html__( 'The %s wrapper applies consistent label and input styling automatically.', 'kern' ),
+							'<code>kern-brief-form</code>'
+						);
+						?>
 					</p>
 				</div>
 				<!-- /wp:html -->

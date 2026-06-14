@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the Kern package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Kern 1.6148\n"
+"Project-Id-Version: Kern 1.6163.2229\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/kern\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-06-04T00:00:00+00:00\n"
+"POT-Creation-Date: 2026-06-13T00:00:00+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.x\n"
 "X-Domain: kern\n"
@@ -19,7 +19,7 @@ msgid "Kern"
 msgstr ""
 
 #. Theme URI of the theme
-msgid "https://thisismyurl.com/kern/"
+msgid "https://thisismyurl.com/colophon"
 msgstr ""
 
 #. Description of the theme
@@ -52,6 +52,18 @@ msgstr ""
 msgid "Built with the %s theme."
 msgstr ""
 
+#: inc/setup.php
+msgid "Primary Navigation"
+msgstr ""
+
+#: inc/setup.php
+msgid "Footer Navigation"
+msgstr ""
+
+#: inc/setup.php
+msgid "Skip to content"
+msgstr ""
+
 #: inc/skin.php
 msgid "Eyebrow label"
 msgstr ""
@@ -70,6 +82,38 @@ msgstr ""
 
 #: inc/skin.php
 msgid "Specimen display"
+msgstr ""
+
+#: inc/skin.php
+msgid "Kern: Studio"
+msgstr ""
+
+#: inc/skin.php
+msgid "Studio identity and homepage patterns."
+msgstr ""
+
+#: inc/skin.php
+msgid "Kern: Work"
+msgstr ""
+
+#: inc/skin.php
+msgid "Portfolio, case studies, and works-directory patterns."
+msgstr ""
+
+#: inc/skin.php
+msgid "Kern: Type"
+msgstr ""
+
+#: inc/skin.php
+msgid "Type-specimen and typeface-showcase patterns — Kern's signature feature."
+msgstr ""
+
+#: inc/skin.php
+msgid "Kern: Contact"
+msgstr ""
+
+#: inc/skin.php
+msgid "Enquiry and brief-form patterns."
 msgstr ""
 
 #: inc/admin.php
@@ -115,6 +159,137 @@ msgstr ""
 msgid "For developers"
 msgstr ""
 
+#: inc/admin.php
+#. translators: %s: theme name.
+msgid "%s is a free, full-site-editing theme built to get out of the way of your content. Here is how to make it yours."
+msgstr ""
+
+#: inc/admin.php
+msgid "Choose what people land on."
+msgstr ""
+
+#: inc/admin.php
+msgid "Give people a way around."
+msgstr ""
+
+#: inc/admin.php
+msgid "A site without a menu is a room without doors. Open the Site Editor, edit the header, and assign your menu to Primary Navigation."
+msgstr ""
+
+#: inc/admin.php
+msgid "Start from a pattern, not a blank page."
+msgstr ""
+
+#: inc/admin.php
+msgid "In any page or post, open the block inserter, choose Patterns, and find this theme's group. Drop one in and change the words."
+msgstr ""
+
+#: inc/admin.php
+msgid "Make it sound like you."
+msgstr ""
+
+#: inc/admin.php
+msgid "In the Site Editor, open Styles to change colours and typefaces. Nothing you do there can break the theme — experiment freely."
+msgstr ""
+
+#: inc/admin.php
+msgid "It meets WCAG 2.2 AA — real focus outlines, a skip link, sensible heading order, and motion that respects a reduce-motion setting. Keep your own copy and images to that bar and the whole site stays welcoming."
+msgstr ""
+
+#: inc/admin.php
+#. translators: %s: linked "developer guide" label.
+msgid "This theme is built on Colophon, a small documented core meant to be reused. The %s walks through how to build your own theme on it."
+msgstr ""
+
+#: inc/admin.php
+msgid "developer guide"
+msgstr ""
+
+#: patterns/brief.php
+msgid "Start a Brief"
+msgstr ""
+
+#: patterns/brief.php
+msgid "Every project begins with a brief."
+msgstr ""
+
+#: patterns/brief.php
+msgid "Tell us what you're building. The more context you give, the better we can assess fit. We respond to every brief within two business days."
+msgstr ""
+
+#: patterns/brief.php
+msgid "Replace this block with your form plugin"
+msgstr ""
+
+#: patterns/brief.php
+msgid "Insert a Contact Form 7, WPForms, Gravity Forms, or Jetpack Forms block here."
+msgstr ""
+
+#: patterns/brief.php
+#. translators: %s: the kern-brief-form CSS wrapper class name, shown in a code tag.
+msgid "The %s wrapper applies consistent label and input styling automatically."
+msgstr ""
+
+#: patterns/case-study-lead.php
+msgid "Case Study"
+msgstr ""
+
+#: patterns/case-study-lead.php
+msgid "Project Title"
+msgstr ""
+
+#: patterns/case-study-lead.php
+msgid "A short summary of the project — what was the brief, what was the design challenge, what did we make. Two to three sentences. The full story continues below the hero image."
+msgstr ""
+
+#: patterns/case-study-lead.php
+msgid "Client"
+msgstr ""
+
+#: patterns/case-study-lead.php
+msgid "Client Name"
+msgstr ""
+
+#: patterns/case-study-lead.php
+msgid "Year"
+msgstr ""
+
+#: patterns/case-study-lead.php
+msgid "Services"
+msgstr ""
+
+#: patterns/case-study-lead.php
+msgid "Brand Identity, Type Direction, Collateral"
+msgstr ""
+
+#: patterns/case-study-lead.php
+msgid "Project hero image — replace with your case study photography"
+msgstr ""
+
+#: patterns/contact-cta.php
+msgid "Let’s work together."
+msgstr ""
+
+#: patterns/contact-cta.php
+msgid "Tell us about the type you need, the identity you’re building, or the problem the letterforms have to solve."
+msgstr ""
+
+#: patterns/contact-cta.php
+msgid "Start a project"
+msgstr ""
+
+#: patterns/display-hero.php
+msgid "Type as thought."
+msgstr ""
+
+#: patterns/display-hero.php
+msgid "A typography studio shaping letterforms, identities, and the systems that hold them together."
+msgstr ""
+
+#: patterns/mark-presentation.php
+msgid "The Mark"
+msgstr ""
+
 #: patterns/mark-presentation.php
 msgid "Your studio mark — replace this image"
 msgstr ""
@@ -123,6 +298,148 @@ msgstr ""
 msgid "Studio mark — replace with your mark image"
 msgstr ""
 
-#: patterns/case-study-lead.php
-msgid "Project hero image — replace with your case study photography"
+#: patterns/specimen-director.php
+msgid "Brand Identity · Type · Design"
+msgstr ""
+
+#: patterns/main-navigation.php
+#: patterns/studio-bio.php
+msgid "Studio"
+msgstr ""
+
+#: patterns/studio-bio.php
+msgid "An independent type and brand studio. We work with publishers, cultural institutions, and independent brands to build visual languages that last. Each project begins with the letterform and works outward."
+msgstr ""
+
+#: patterns/studio-bio.php
+#: patterns/works-directory.php
+msgid "Selected Work"
+msgstr ""
+
+#: patterns/studio-bio.php
+msgid "Meridian Quarterly · The Folio Press · North Type · Common Ground Books"
+msgstr ""
+
+#: patterns/studio-bio.php
+msgid "Based in"
+msgstr ""
+
+#: patterns/studio-bio.php
+msgid "Your City"
+msgstr ""
+
+#: patterns/studio-footer.php
+msgid "Kern Type Studio"
+msgstr ""
+
+#: patterns/studio-footer.php
+msgid "Toronto, Canada · Drawing letters since 2009"
+msgstr ""
+
+#: patterns/studio-footer.php
+msgid "© 2026 Kern Type Studio. All letterforms drawn in-house."
+msgstr ""
+
+#: patterns/typeface-pairing.php
+msgid "Type System"
+msgstr ""
+
+#: patterns/typeface-pairing.php
+msgid "Fraunces × Plus Jakarta Sans"
+msgstr ""
+
+#: patterns/typeface-pairing.php
+msgid "Display / Light"
+msgstr ""
+
+#: patterns/typeface-pairing.php
+msgid "Fraunces · Weight 300 · −0.02em tracking · Studio name, page titles, pull quotes"
+msgstr ""
+
+#: patterns/typeface-pairing.php
+msgid "SIL OFL 1.1"
+msgstr ""
+
+#: patterns/typeface-pairing.php
+msgid "Section Heading / Regular"
+msgstr ""
+
+#: patterns/typeface-pairing.php
+msgid "Fraunces · Weight 400 · −0.01em tracking · H2, H3, post titles in archives"
+msgstr ""
+
+#: patterns/typeface-pairing.php
+msgid "Variable · wght 100–900"
+msgstr ""
+
+#: patterns/typeface-pairing.php
+msgid "Body copy lives here — Jakarta at base size, 1.7 line-height, studio-ink colour. Long-form prose in a design studio context should still prioritise readability. The font earns its rate at 1.7. Never drop it below 1.6 for paragraph text."
+msgstr ""
+
+#: patterns/typeface-pairing.php
+msgid "Plus Jakarta Sans · Weight 400 · 1.7 line-height · Body, navigation, labels"
+msgstr ""
+
+#: patterns/typeface-pairing.php
+msgid "Variable · wght 200–800"
+msgstr ""
+
+#: patterns/typeface-pairing.php
+msgid "Section Label / Eyebrow"
+msgstr ""
+
+#: patterns/typeface-pairing.php
+msgid "Jakarta · Weight 600 · 0.12em tracking · Uppercase · Category labels, section eyebrows"
+msgstr ""
+
+#: patterns/typeface-pairing.php
+msgid "kern-eyebrow block style"
+msgstr ""
+
+#: patterns/works-directory.php
+msgid "All projects →"
+msgstr ""
+
+#: patterns/works-directory.php
+msgid "No work published yet. Add posts to populate the works directory."
+msgstr ""
+
+#: patterns/works-grid.php
+msgid "Selected work"
+msgstr ""
+
+#: patterns/works-grid.php
+msgid "Typeface Design"
+msgstr ""
+
+#: patterns/works-grid.php
+msgid "Marot Display"
+msgstr ""
+
+#: patterns/works-grid.php
+msgid "Brand Identity"
+msgstr ""
+
+#: patterns/works-grid.php
+msgid "Atelier Voss"
+msgstr ""
+
+#: patterns/works-grid.php
+msgid "Lettering"
+msgstr ""
+
+#: patterns/works-grid.php
+msgid "Ribbon & Press"
+msgstr ""
+
+#: patterns/main-navigation.php
+msgid "Work"
+msgstr ""
+
+#: patterns/main-navigation.php
+msgid "Type"
+msgstr ""
+
+#: patterns/main-navigation.php
+msgid "Contact"
 msgstr ""

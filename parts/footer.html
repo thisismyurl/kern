@@ -35,8 +35,11 @@
 		<!-- wp:paragraph {"className":"kern-copyright","style":{"typography":{"fontFamily":"var:preset|font-family|jakarta","fontSize":"var:preset|font-size|2xs","letterSpacing":"0.06em"},"color":{"text":"var:preset|color|studio-rule"}},"metadata":{"bindings":{"content":{"source":"kern/copyright"}}}} -->
 		<p class="kern-copyright has-studio-rule-color has-text-color" style="font-family:var(--wp--preset--font-family--jakarta);font-size:var(--wp--preset--font-size--2xs);letter-spacing:0.06em"></p>
 		<!-- /wp:paragraph -->
-		<!-- wp:paragraph {"style":{"typography":{"fontFamily":"var:preset|font-family|jakarta","fontSize":"var:preset|font-size|2xs","letterSpacing":"0.06em"},"color":{"text":"var:preset|color|studio-rule"}}} -->
-		<p class="has-studio-rule-color has-text-color" style="font-family:var(--wp--preset--font-family--jakarta);font-size:var(--wp--preset--font-size--2xs);letter-spacing:0.06em">Built with <a href="https://wordpress.org" style="color:inherit">WordPress</a> &amp; Kern</p>
+		<!-- Footer credit bound to the kern/footer-credit source (WP 6.5+ block
+		     bindings, registered in inc/bindings.php). The text is translatable
+		     and filterable via the kern/footer_credit filter — no hardcoded prose. -->
+		<!-- wp:paragraph {"style":{"typography":{"fontFamily":"var:preset|font-family|jakarta","fontSize":"var:preset|font-size|2xs","letterSpacing":"0.06em"},"color":{"text":"var:preset|color|studio-rule"}},"metadata":{"bindings":{"content":{"source":"kern/footer-credit"}}}} -->
+		<p class="has-studio-rule-color has-text-color" style="font-family:var(--wp--preset--font-family--jakarta);font-size:var(--wp--preset--font-size--2xs);letter-spacing:0.06em"></p>
 		<!-- /wp:paragraph -->
 	</div>
 	<!-- /wp:group -->

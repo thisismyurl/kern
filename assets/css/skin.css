@@ -177,6 +177,20 @@ body {
 		color: var(--wp--preset--color--studio-mid) !important;
 	}
 
+	/* Band-aware eyebrow colour. The base eyebrow colour (studio-mid) is tuned
+	   for the light page ground and falls below 4.5:1 on the dark bands. The
+	   eyebrow block style sets that colour with !important, so an inline override
+	   in the pattern markup cannot win; these higher-specificity band rules
+	   re-assert a colour that clears WCAG AA on each band's own background:
+	   studio-rule on the dark press band (>=4.84:1 across all variations),
+	   studio-press on the press-tint band (>=5.56:1 across all variations). */
+	.kern-band--press .is-style-kern-eyebrow {
+		color: var(--wp--preset--color--studio-rule) !important;
+	}
+	.kern-band--press-tint .is-style-kern-eyebrow {
+		color: var(--wp--preset--color--studio-press) !important;
+	}
+
 	/* ---------------------------------------------------------------
 	   Specimen annotation (is-style-kern-annotation)
 	   Small, tracked, muted — design notes in specimen patterns.

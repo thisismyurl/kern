@@ -14,7 +14,7 @@
 <section class="wp-block-group alignfull kern-works-grid has-studio-ground-background-color has-background" style="padding-top:var(--wp--preset--spacing--16);padding-bottom:var(--wp--preset--spacing--16);padding-left:var(--wp--preset--spacing--6);padding-right:var(--wp--preset--spacing--6)">
 
 	<!-- wp:heading {"level":2,"className":"kern-works-grid__title","style":{"typography":{"fontWeight":"400","lineHeight":"1.1","letterSpacing":"-0.02em"},"spacing":{"margin":{"top":"0","bottom":"var:preset|spacing|9"}}},"textColor":"studio-black","fontSize":"2xl","fontFamily":"fraunces"} -->
-	<h2 class="wp-block-heading kern-works-grid__title has-studio-black-color has-text-color has-fraunces-font-family has-2-xl-font-size" style="margin-top:0;margin-bottom:var(--wp--preset--spacing--9);font-weight:400;letter-spacing:-0.02em;line-height:1.1">Selected work</h2>
+	<h2 class="wp-block-heading kern-works-grid__title has-studio-black-color has-text-color has-fraunces-font-family has-2-xl-font-size" style="margin-top:0;margin-bottom:var(--wp--preset--spacing--9);font-weight:400;letter-spacing:-0.02em;line-height:1.1"><?php esc_html_e( 'Selected work', 'kern' ); ?></h2>
 	<!-- /wp:heading -->
 
 	<!-- wp:columns {"className":"kern-works-grid__row","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|9","left":"var:preset|spacing|6"}}}} -->
@@ -27,11 +27,11 @@
 			<!-- /wp:image -->
 
 			<!-- wp:paragraph {"className":"kern-works-grid__type","style":{"typography":{"fontWeight":"600","letterSpacing":"0.12em","textTransform":"uppercase","lineHeight":"1.4"},"spacing":{"margin":{"top":"var:preset|spacing|5","bottom":"var:preset|spacing|3"}}},"textColor":"studio-mid","fontSize":"2xs","fontFamily":"jakarta"} -->
-			<p class="kern-works-grid__type has-studio-mid-color has-text-color has-jakarta-font-family has-2-xs-font-size" style="margin-top:var(--wp--preset--spacing--5);margin-bottom:var(--wp--preset--spacing--3);font-weight:600;letter-spacing:0.12em;line-height:1.4;text-transform:uppercase">Typeface Design</p>
+			<p class="kern-works-grid__type has-studio-mid-color has-text-color has-jakarta-font-family has-2-xs-font-size" style="margin-top:var(--wp--preset--spacing--5);margin-bottom:var(--wp--preset--spacing--3);font-weight:600;letter-spacing:0.12em;line-height:1.4;text-transform:uppercase"><?php esc_html_e( 'Typeface Design', 'kern' ); ?></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:heading {"level":3,"className":"kern-works-grid__name","style":{"typography":{"fontWeight":"400","lineHeight":"1.15","letterSpacing":"-0.01em"},"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"studio-black","fontSize":"lg","fontFamily":"fraunces"} -->
-			<h3 class="wp-block-heading kern-works-grid__name has-studio-black-color has-text-color has-fraunces-font-family has-lg-font-size" style="margin-top:0;margin-bottom:0;font-weight:400;letter-spacing:-0.01em;line-height:1.15">Marot Display</h3>
+			<h3 class="wp-block-heading kern-works-grid__name has-studio-black-color has-text-color has-fraunces-font-family has-lg-font-size" style="margin-top:0;margin-bottom:0;font-weight:400;letter-spacing:-0.01em;line-height:1.15"><?php esc_html_e( 'Marot Display', 'kern' ); ?></h3>
 			<!-- /wp:heading -->
 		</div>
 		<!-- /wp:column -->
@@ -43,11 +43,11 @@
 			<!-- /wp:image -->
 
 			<!-- wp:paragraph {"className":"kern-works-grid__type","style":{"typography":{"fontWeight":"600","letterSpacing":"0.12em","textTransform":"uppercase","lineHeight":"1.4"},"spacing":{"margin":{"top":"var:preset|spacing|5","bottom":"var:preset|spacing|3"}}},"textColor":"studio-mid","fontSize":"2xs","fontFamily":"jakarta"} -->
-			<p class="kern-works-grid__type has-studio-mid-color has-text-color has-jakarta-font-family has-2-xs-font-size" style="margin-top:var(--wp--preset--spacing--5);margin-bottom:var(--wp--preset--spacing--3);font-weight:600;letter-spacing:0.12em;line-height:1.4;text-transform:uppercase">Brand Identity</p>
+			<p class="kern-works-grid__type has-studio-mid-color has-text-color has-jakarta-font-family has-2-xs-font-size" style="margin-top:var(--wp--preset--spacing--5);margin-bottom:var(--wp--preset--spacing--3);font-weight:600;letter-spacing:0.12em;line-height:1.4;text-transform:uppercase"><?php esc_html_e( 'Brand Identity', 'kern' ); ?></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:heading {"level":3,"className":"kern-works-grid__name","style":{"typography":{"fontWeight":"400","lineHeight":"1.15","letterSpacing":"-0.01em"},"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"studio-black","fontSize":"lg","fontFamily":"fraunces"} -->
-			<h3 class="wp-block-heading kern-works-grid__name has-studio-black-color has-text-color has-fraunces-font-family has-lg-font-size" style="margin-top:0;margin-bottom:0;font-weight:400;letter-spacing:-0.01em;line-height:1.15">Atelier Voss</h3>
+			<h3 class="wp-block-heading kern-works-grid__name has-studio-black-color has-text-color has-fraunces-font-family has-lg-font-size" style="margin-top:0;margin-bottom:0;font-weight:400;letter-spacing:-0.01em;line-height:1.15"><?php esc_html_e( 'Atelier Voss', 'kern' ); ?></h3>
 			<!-- /wp:heading -->
 		</div>
 		<!-- /wp:column -->
@@ -59,11 +59,11 @@
 			<!-- /wp:image -->
 
 			<!-- wp:paragraph {"className":"kern-works-grid__type","style":{"typography":{"fontWeight":"600","letterSpacing":"0.12em","textTransform":"uppercase","lineHeight":"1.4"},"spacing":{"margin":{"top":"var:preset|spacing|5","bottom":"var:preset|spacing|3"}}},"textColor":"studio-mid","fontSize":"2xs","fontFamily":"jakarta"} -->
-			<p class="kern-works-grid__type has-studio-mid-color has-text-color has-jakarta-font-family has-2-xs-font-size" style="margin-top:var(--wp--preset--spacing--5);margin-bottom:var(--wp--preset--spacing--3);font-weight:600;letter-spacing:0.12em;line-height:1.4;text-transform:uppercase">Lettering</p>
+			<p class="kern-works-grid__type has-studio-mid-color has-text-color has-jakarta-font-family has-2-xs-font-size" style="margin-top:var(--wp--preset--spacing--5);margin-bottom:var(--wp--preset--spacing--3);font-weight:600;letter-spacing:0.12em;line-height:1.4;text-transform:uppercase"><?php esc_html_e( 'Lettering', 'kern' ); ?></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:heading {"level":3,"className":"kern-works-grid__name","style":{"typography":{"fontWeight":"400","lineHeight":"1.15","letterSpacing":"-0.01em"},"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"studio-black","fontSize":"lg","fontFamily":"fraunces"} -->
-			<h3 class="wp-block-heading kern-works-grid__name has-studio-black-color has-text-color has-fraunces-font-family has-lg-font-size" style="margin-top:0;margin-bottom:0;font-weight:400;letter-spacing:-0.01em;line-height:1.15">Ribbon &amp; Press</h3>
+			<h3 class="wp-block-heading kern-works-grid__name has-studio-black-color has-text-color has-fraunces-font-family has-lg-font-size" style="margin-top:0;margin-bottom:0;font-weight:400;letter-spacing:-0.01em;line-height:1.15"><?php echo esc_html__( 'Ribbon & Press', 'kern' ); ?></h3>
 			<!-- /wp:heading -->
 		</div>
 		<!-- /wp:column -->

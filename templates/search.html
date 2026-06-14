@@ -14,10 +14,9 @@
 	<!-- wp:group {"className":"kern-search-header","style":{"spacing":{"blockGap":"var:preset|spacing|4","padding":{"bottom":"var:preset|spacing|10"},"margin":{"bottom":"var:preset|spacing|10"}},"border":{"bottom":{"color":"var:preset|color|studio-rule","style":"solid","width":"1px"}}},"layout":{"type":"default"}} -->
 	<div class="wp-block-group kern-search-header" style="padding-bottom:var(--wp--preset--spacing--10);margin-bottom:var(--wp--preset--spacing--10);border-bottom:1px solid var(--wp--preset--color--studio-rule)">
 
-		<!-- wp:paragraph {"className":"is-style-kern-eyebrow"} -->
-		<p class="is-style-kern-eyebrow">Search Results</p>
-		<!-- /wp:paragraph -->
-
+		<!-- The query-title block below renders WordPress's own localized
+		     "Search results for: <term>" string at level:1 — no hardcoded
+		     eyebrow prose, so non-English sites see translated output. -->
 		<!-- wp:query-title {"type":"search","level":1,"textAlign":"left","style":{"typography":{"fontFamily":"var:preset|font-family|fraunces","fontWeight":"300","fontSize":"var:preset|font-size|3xl","letterSpacing":"-0.02em","lineHeight":"1.1"},"color":{"text":"var:preset|color|studio-black"}}} /-->
 
 	</div>
@@ -39,13 +38,12 @@
 
 		<!-- /wp:post-template -->
 
-		<!-- No results: re-offer the search form with a plain-language message -->
+		<!-- No-results state: re-offer the search form as the next action -->
 		<!-- wp:query-no-results -->
 			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10"},"blockGap":"var:preset|spacing|6"}},"layout":{"type":"default"}} -->
 			<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10)">
-				<!-- wp:paragraph {"className":"is-style-kern-annotation"} -->
-				<p class="is-style-kern-annotation">No results found. Try a different term, or browse the works directory.</p>
-				<!-- /wp:paragraph -->
+				<!-- No hardcoded no-results prose: the search form is re-offered
+				     as the next action, using core block strings only. -->
 				<!-- wp:search {"label":"Search","buttonText":"Search","buttonUseIcon":true,"style":{"typography":{"fontFamily":"var:preset|font-family|jakarta"}}} /-->
 			</div>
 			<!-- /wp:group -->

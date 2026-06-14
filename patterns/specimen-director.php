@@ -30,7 +30,7 @@
 
 		<!-- Eyebrow: the discipline label reads as a category, not a headline -->
 		<!-- wp:paragraph {"className":"is-style-kern-eyebrow kern-eyebrow"} -->
-		<p class="is-style-kern-eyebrow kern-eyebrow">Brand Identity &middot; Type &middot; Design</p>
+		<p class="is-style-kern-eyebrow kern-eyebrow"><?php esc_html_e( 'Brand Identity · Type · Design', 'kern' ); ?></p>
 		<!-- /wp:paragraph -->
 
 		<!-- The specimen headline: site title at display scale. This is the whole
