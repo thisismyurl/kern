@@ -3,7 +3,7 @@ Contributors: thisismyurl
 Requires at least: 7.0
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 1.6162.1430
+Stable tag: 1.6265.1630
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, news, one-column, three-columns, four-columns, full-site-editing, block-patterns, editor-style, custom-colors, custom-logo, custom-menu, featured-images, translation-ready, rtl-language-support, wide-blocks, threaded-comments
@@ -87,6 +87,22 @@ In the Site Editor, open the Footer template part and delete the credit paragrap
 To build your own theme on the same Colophon core, see GUIDE.md in the theme folder.
 
 == Changelog ==
+
+= 1.6265.1630 =
+Synced two fixes from Colophon core (1.6265.1620), found during independent
+wp-expert reviews of Kerf and Halyard, since this theme was still running
+the pre-fix core:
+
+* functions.php gained the file_exists() guard on the WP-CLI require that a
+  separate regression had dropped (inc/cli.php isn't present in this theme;
+  a wp-cli command against it would otherwise fatal). inc/bindings.php also
+  now registers the kern/footer-credit source, available if a future
+  revision adds a credit line back — this theme's own footer intentionally
+  carries none today, so nothing currently renders from it.
+* settings.typography.defaultFontSizes and
+  settings.spacing.defaultSpacingSizes set to false, matching the rest of the
+  collection, so the editor's own auto-generated presets stop merging with
+  this theme's own curated set.
 
 = 1.6162.1430 =
 * Re-skinned from the Colophon core for literary and culture magazines.

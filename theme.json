@@ -29,6 +29,7 @@
 			"fluid": true,
 			"dropCap": false,
 			"customFontSize": false,
+			"defaultFontSizes": false,
 			"lineHeight": true,
 			"letterSpacing": true,
 			"textTransform": true,
@@ -107,6 +108,7 @@
 		"spacing": {
 			"_comment": "[CORE structure / SKIN values] A linear step scale, unchanged from the Colophon default — Kern's generosity comes from how the templates spend these steps, not from a different scale.",
 			"customSpacingSize": false,
+			"defaultSpacingSizes": false,
 			"spacingSizes": [
 				{ "name": "1",  "slug": "1",  "size": "0.25rem" },
 				{ "name": "2",  "slug": "2",  "size": "0.5rem" },

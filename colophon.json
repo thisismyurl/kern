@@ -3,7 +3,7 @@
     "slug": "kern",
     "namespace": "kern",
     "prefix": "kn",
-    "version": "1.6162.1430",
+    "version": "1.6265.1630",
     "colophon_version": "1.6150",
     "is_core": false,
     "overrides": []
