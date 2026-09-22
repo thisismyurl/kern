@@ -1,18 +1,40 @@
-<!-- wp:group {"tagName":"div","className":"cl-header","metadata":{"name":"Header"},"layout":{"type":"constrained","contentSize":"1100px"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|5","bottom":"var:preset|spacing|5","left":"var:preset|spacing|5","right":"var:preset|spacing|5"}}}} -->
-<div class="wp-block-group cl-header" style="padding-top:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--5);padding-left:var(--wp--preset--spacing--5);padding-right:var(--wp--preset--spacing--5)">
+<!-- The masthead: three stacked rows, the way a print magazine's front
+     matter runs — a quiet utility line, the nameplate, then the section
+     nav. This structure is Kern's identity; see assets/css/skin.css
+     @layer components for the full rationale. -->
+<!-- wp:group {"tagName":"div","className":"kn-masthead","metadata":{"name":"Masthead"},"layout":{"type":"constrained","contentSize":"1320px"}} -->
+<div class="wp-block-group kn-masthead">
 
-	<!-- wp:group {"className":"cl-header__inner","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
-	<div class="wp-block-group cl-header__inner">
+	<!-- Row 1 — utility bar: search on the left, Archive / Subscribe on the
+	     right. Kept out of the main navigation menu so an editor can build
+	     the section nav (Row 3) without these two links crowding it. -->
+	<!-- wp:group {"tagName":"div","className":"kn-masthead__utility","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
+	<div class="wp-block-group kn-masthead__utility">
 
-		<!-- wp:group {"className":"cl-header__branding","layout":{"type":"flex","verticalAlignment":"center"}} -->
-		<div class="wp-block-group cl-header__branding">
-			<!-- wp:site-logo {"width":48} /-->
-			<!-- wp:site-title {"level":0,"isLink":true} /-->
-		</div>
-		<!-- /wp:group -->
+		<!-- wp:search {"label":"","buttonText":"Search","buttonUseIcon":true,"buttonPosition":"button-only"} /-->
 
-		<!-- wp:navigation {"label":"Primary","overlayMenu":"mobile","layout":{"type":"flex","justifyContent":"right","flexWrap":"wrap"}} /-->
+		<!-- wp:navigation {"overlayMenu":"never","layout":{"type":"flex","justifyContent":"right"}} -->
+		<!-- wp:navigation-link {"label":"Archive","url":"#","kind":"custom"} /-->
+		<!-- wp:navigation-link {"label":"Subscribe","url":"#","kind":"custom"} /-->
+		<!-- /wp:navigation -->
 
+	</div>
+	<!-- /wp:group -->
+
+	<!-- Row 2 — nameplate: the wordmark, centred and set large in Newsreader. -->
+	<!-- wp:group {"tagName":"div","className":"kn-masthead__nameplate","layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
+	<div class="wp-block-group kn-masthead__nameplate">
+		<!-- wp:site-title {"level":0,"isLink":true} /-->
+		<!-- wp:site-tagline /-->
+	</div>
+	<!-- /wp:group -->
+
+	<!-- Row 3 — section nav: left-aligned, small tracked caps. Editors add
+	     Kern's sections (Fiction, Poetry, Essays, Interviews, Reviews …)
+	     here from Appearance → Editor → Navigation. -->
+	<!-- wp:group {"tagName":"div","className":"kn-masthead__nav","layout":{"type":"flex","justifyContent":"left"}} -->
+	<div class="wp-block-group kn-masthead__nav">
+		<!-- wp:navigation {"label":"Primary","overlayMenu":"mobile","layout":{"type":"flex","justifyContent":"left","flexWrap":"wrap"}} /-->
 	</div>
 	<!-- /wp:group -->
 

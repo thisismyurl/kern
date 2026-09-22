@@ -2,7 +2,7 @@
     "name": "kern",
     "slug": "kern",
     "namespace": "kern",
-    "prefix": "ke",
+    "prefix": "kn",
     "version": "1.6162.1430",
     "colophon_version": "1.6150",
     "is_core": false,

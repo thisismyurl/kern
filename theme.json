@@ -1,30 +1,33 @@
 {
 	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
 	"version": 3,
-	"_comment_architecture": "[CORE structure] The top-level keys, the settings shape, and the templateParts/customTemplates skeleton are the portable scaffold every theme in the line keeps. [SKIN values] The palette, fontFamilies, fontSizes, spacing values, and the whole styles block are design — re-authored per theme. Colophon's own skin is a warm literary design (EB Garamond + Spectral, ink-on-paper palette). The CLI does not auto-merge this file; `colophon doctor` reports drift in the core-owned settings keys instead.",
+	"_comment_architecture": "[CORE structure] The top-level keys, the settings shape, and the templateParts/customTemplates skeleton are the portable scaffold every theme in the line keeps. [SKIN values] The palette, fontFamilies, fontSizes, spacing values, and the whole styles block are Kern's own re-authoring. Kern is a literary/culture-magazine skin: Newsreader (a transitional serif built for long-form reading, optical-sized) for headlines and body, Plus Jakarta Sans (a quiet grotesque) for navigation, bylines and category rubrics. Palette is near-monochrome — ink on paper — with one editorial accent: a deep rubric red, named for the print convention of setting a heading in red ink. The CLI does not auto-merge this file; `colophon doctor` reports drift in the core-owned settings keys instead.",
 	"settings": {
 		"appearanceTools": true,
 		"useRootPaddingAwareAlignments": true,
 		"color": {
-			"_comment": "[SKIN] Warm literary palette — ink-on-paper, one library-cloth teal accent. All text/background pairs clear WCAG AA. defaultPalette off so the editor offers only the theme's tokens.",
+			"_comment": "[SKIN] Near-monochrome editorial palette: true black for display type, a softer ink for reading copy, four muted steps for hierarchy, two paper tones, two hairline-rule tones, and one accent — rubric red — used only on category labels, hover states and the odd editorial flourish. Every text/background pair below clears WCAG AA; ink-faint is documented large-text-only. defaultPalette off so the editor offers only Kern's own tokens.",
 			"defaultPalette": false,
 			"defaultGradients": false,
 			"defaultDuotone": false,
 			"palette": [
-				{ "slug": "ink",         "color": "#1c1917", "name": "Ink" },
-				{ "slug": "ink-soft",    "color": "#433e3b", "name": "Ink Soft" },
-				{ "slug": "ink-muted",   "color": "#6b6460", "name": "Ink Muted" },
-				{ "slug": "ink-deep",    "color": "#0f0d0c", "name": "Ink Deep" },
-				{ "slug": "line",        "color": "#dedad3", "name": "Hairline" },
-				{ "slug": "accent",      "color": "#3d6b5e", "name": "Accent" },
-				{ "slug": "accent-soft", "color": "#e8f0ed", "name": "Accent Soft" },
-				{ "slug": "paper-soft",  "color": "#f2f0eb", "name": "Paper Soft" },
-				{ "slug": "paper",       "color": "#faf9f6", "name": "Paper" }
+				{ "slug": "ink-deep",    "color": "#000000", "name": "Ink Deep" },
+				{ "slug": "ink",         "color": "#1a1a1a", "name": "Ink" },
+				{ "slug": "ink-soft",    "color": "#3f3f3f", "name": "Ink Soft" },
+				{ "slug": "ink-muted",   "color": "#6b6b6b", "name": "Ink Muted" },
+				{ "slug": "ink-faint",   "color": "#9a9a9a", "name": "Ink Faint" },
+				{ "slug": "line",        "color": "#dcdcda", "name": "Hairline" },
+				{ "slug": "line-strong", "color": "#000000", "name": "Rule" },
+				{ "slug": "rubric",      "color": "#8c1512", "name": "Rubric" },
+				{ "slug": "rubric-soft", "color": "#f6e8e6", "name": "Rubric Soft" },
+				{ "slug": "paper-soft",  "color": "#f7f6f4", "name": "Paper Soft" },
+				{ "slug": "paper",       "color": "#ffffff", "name": "Paper" }
 			]
 		},
 		"typography": {
-			"_comment": "[SKIN] EB Garamond (headings/display) and Spectral (body/reading) — both SIL OFL 1.1, self-hosted under assets/fonts/. System stacks kept as fallbacks; the starter inherits them until a re-skin swaps them out.",
+			"_comment": "[SKIN] Newsreader (headings + body, variable optical-size 6-72/weight 200-800, both SIL OFL 1.1) paired with Plus Jakarta Sans (nav, meta, bylines, rubric labels, also SIL OFL 1.1) — both self-hosted under assets/fonts/. Core drop cap is switched off; Kern registers its own drop-cap treatment in skin.css keyed to Newsreader's cap proportions.",
 			"fluid": true,
+			"dropCap": false,
 			"customFontSize": false,
 			"lineHeight": true,
 			"letterSpacing": true,
@@ -32,58 +35,44 @@
 			"textDecoration": true,
 			"fontFamilies": [
 				{
-					"name": "EB Garamond",
-					"slug": "eb-garamond",
-					"fontFamily": "'EB Garamond', Georgia, 'Times New Roman', Times, serif",
+					"name": "Newsreader",
+					"slug": "newsreader",
+					"fontFamily": "'Newsreader', Georgia, 'Times New Roman', Times, serif",
 					"fontFace": [
 						{
-							"fontFamily": "EB Garamond",
-							"fontWeight": "400 700",
+							"fontFamily": "Newsreader",
+							"fontWeight": "200 800",
 							"fontStyle": "normal",
 							"fontDisplay": "swap",
-							"src": [ "file:./assets/fonts/eb-garamond/eb-garamond-normal-latin-ext.woff2", "file:./assets/fonts/eb-garamond/eb-garamond-normal.woff2" ]
+							"src": [ "file:./assets/fonts/newsreader/newsreader-variable.woff2" ]
 						},
 						{
-							"fontFamily": "EB Garamond",
-							"fontWeight": "400 500",
+							"fontFamily": "Newsreader",
+							"fontWeight": "200 800",
 							"fontStyle": "italic",
 							"fontDisplay": "swap",
-							"src": [ "file:./assets/fonts/eb-garamond/eb-garamond-italic-latin-ext.woff2", "file:./assets/fonts/eb-garamond/eb-garamond-italic.woff2" ]
+							"src": [ "file:./assets/fonts/newsreader/newsreader-italic-variable.woff2" ]
 						}
 					]
 				},
 				{
-					"name": "Spectral",
-					"slug": "spectral",
-					"fontFamily": "'Spectral', Georgia, 'Times New Roman', Times, serif",
+					"name": "Plus Jakarta Sans",
+					"slug": "jakarta",
+					"fontFamily": "'Plus Jakarta Sans', 'Helvetica Neue', Arial, sans-serif",
 					"fontFace": [
 						{
-							"fontFamily": "Spectral",
-							"fontWeight": "300",
+							"fontFamily": "Plus Jakarta Sans",
+							"fontWeight": "200 800",
 							"fontStyle": "normal",
 							"fontDisplay": "swap",
-							"src": [ "file:./assets/fonts/spectral/spectral-300-latin-ext.woff2", "file:./assets/fonts/spectral/spectral-300.woff2" ]
+							"src": [ "file:./assets/fonts/plus-jakarta-sans/plus-jakarta-sans-variable.woff2" ]
 						},
 						{
-							"fontFamily": "Spectral",
-							"fontWeight": "400",
-							"fontStyle": "normal",
-							"fontDisplay": "swap",
-							"src": [ "file:./assets/fonts/spectral/spectral-400-latin-ext.woff2", "file:./assets/fonts/spectral/spectral-400.woff2" ]
-						},
-						{
-							"fontFamily": "Spectral",
-							"fontWeight": "400",
+							"fontFamily": "Plus Jakarta Sans",
+							"fontWeight": "200 800",
 							"fontStyle": "italic",
 							"fontDisplay": "swap",
-							"src": [ "file:./assets/fonts/spectral/spectral-400-italic-latin-ext.woff2", "file:./assets/fonts/spectral/spectral-400-italic.woff2" ]
-						},
-						{
-							"fontFamily": "Spectral",
-							"fontWeight": "600",
-							"fontStyle": "normal",
-							"fontDisplay": "swap",
-							"src": [ "file:./assets/fonts/spectral/spectral-600-latin-ext.woff2", "file:./assets/fonts/spectral/spectral-600.woff2" ]
+							"src": [ "file:./assets/fonts/plus-jakarta-sans/plus-jakarta-sans-italic-variable.woff2" ]
 						}
 					]
 				},
@@ -104,19 +93,19 @@
 				}
 			],
 			"fontSizes": [
-				{ "name": "X-Small",  "slug": "xs",      "size": "0.75rem",                                                                    "fluid": false },
-				{ "name": "Small",    "slug": "sm",      "size": "clamp(0.875rem, 0.85rem + 0.12vw, 0.9375rem)",  "fluid": { "min": "0.875rem",  "max": "0.9375rem" } },
-				{ "name": "Base",     "slug": "base",    "size": "clamp(1.0625rem, 1rem + 0.25vw, 1.125rem)",      "fluid": { "min": "1.0625rem", "max": "1.125rem" } },
-				{ "name": "Medium",   "slug": "md",      "size": "clamp(1.2rem, 1.1rem + 0.4vw, 1.45rem)",         "fluid": { "min": "1.2rem",    "max": "1.45rem" } },
-				{ "name": "Large",    "slug": "lg",      "size": "clamp(1.5rem, 1.3rem + 0.9vw, 2rem)",            "fluid": { "min": "1.5rem",    "max": "2rem" } },
-				{ "name": "X-Large",  "slug": "xl",      "size": "clamp(2rem, 1.6rem + 1.8vw, 3rem)",              "fluid": { "min": "2rem",      "max": "3rem" } },
-				{ "name": "2X-Large", "slug": "2xl",     "size": "clamp(2.5rem, 1.9rem + 3vw, 4.5rem)",            "fluid": { "min": "2.5rem",    "max": "4.5rem" } },
-				{ "name": "3X-Large", "slug": "3xl",     "size": "clamp(3rem, 2.2rem + 4vw, 5rem)",                "fluid": { "min": "3rem",      "max": "5rem" } },
-				{ "name": "Display",  "slug": "display", "size": "clamp(3rem, 1.8rem + 6vw, 7rem)",                "fluid": { "min": "3rem",      "max": "7rem" } }
+				{ "name": "X-Small",  "slug": "xs",      "size": "0.6875rem",                                                                     "fluid": false },
+				{ "name": "Small",    "slug": "sm",      "size": "clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem)",   "fluid": { "min": "0.8125rem", "max": "0.875rem" } },
+				{ "name": "Base",     "slug": "base",    "size": "clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem)",    "fluid": { "min": "1.0625rem", "max": "1.1875rem" } },
+				{ "name": "Medium",   "slug": "md",      "size": "clamp(1.25rem, 1.15rem + 0.4vw, 1.5rem)",       "fluid": { "min": "1.25rem",   "max": "1.5rem" } },
+				{ "name": "Large",    "slug": "lg",      "size": "clamp(1.75rem, 1.5rem + 1vw, 2.25rem)",         "fluid": { "min": "1.75rem",   "max": "2.25rem" } },
+				{ "name": "X-Large",  "slug": "xl",      "size": "clamp(2.25rem, 1.8rem + 2vw, 3.25rem)",         "fluid": { "min": "2.25rem",   "max": "3.25rem" } },
+				{ "name": "2X-Large", "slug": "2xl",     "size": "clamp(3rem, 2.2rem + 3.5vw, 5rem)",             "fluid": { "min": "3rem",      "max": "5rem" } },
+				{ "name": "3X-Large", "slug": "3xl",     "size": "clamp(3.5rem, 2.4rem + 5vw, 6.5rem)",           "fluid": { "min": "3.5rem",    "max": "6.5rem" } },
+				{ "name": "Display",  "slug": "display", "size": "clamp(4rem, 2.5rem + 7vw, 8.5rem)",             "fluid": { "min": "4rem",      "max": "8.5rem" } }
 			]
 		},
 		"spacing": {
-			"_comment": "[CORE structure / SKIN values] A linear step scale.",
+			"_comment": "[CORE structure / SKIN values] A linear step scale, unchanged from the Colophon default — Kern's generosity comes from how the templates spend these steps, not from a different scale.",
 			"customSpacingSize": false,
 			"spacingSizes": [
 				{ "name": "1",  "slug": "1",  "size": "0.25rem" },
@@ -133,9 +122,9 @@
 			]
 		},
 		"layout": {
-			"_comment": "[CORE structure / SKIN values] contentSize = reading measure; wideSize = the band width.",
-			"contentSize": "720px",
-			"wideSize": "1100px"
+			"_comment": "[CORE structure / SKIN values] contentSize is a tighter reading measure than the Colophon default — Newsreader's transitional proportions read best at ~68-72 characters. wideSize is wider than the default so the story grid and lead-story hero get real editorial air.",
+			"contentSize": "700px",
+			"wideSize": "1320px"
 		},
 		"border": { "color": true, "radius": true, "style": true, "width": true },
 		"dimensions": { "minHeight": true, "aspectRatio": true },
@@ -146,15 +135,15 @@
 		}
 	},
 	"styles": {
-		"_comment": "[SKIN] Warm literary design. EB Garamond for headings, Spectral for body — ink-on-paper palette. A theme built on Colophon replaces this whole block.",
+		"_comment": "[SKIN] High-fashion editorial minimalism: pure paper ground, near-black reading ink, true-black display type, rubric red used nowhere but category labels and link states.",
 		"color": {
 			"background": "var(--wp--preset--color--paper)",
 			"text": "var(--wp--preset--color--ink)"
 		},
 		"typography": {
-			"fontFamily": "var(--wp--preset--font-family--spectral)",
+			"fontFamily": "var(--wp--preset--font-family--newsreader)",
 			"fontSize": "var(--wp--preset--font-size--base)",
-			"lineHeight": "1.72"
+			"lineHeight": "1.65"
 		},
 		"spacing": {
 			"blockGap": "var(--wp--preset--spacing--6)",
@@ -165,55 +154,56 @@
 		},
 		"elements": {
 			"h1": {
-				"typography": { "fontFamily": "var(--wp--preset--font-family--eb-garamond)", "fontSize": "var(--wp--preset--font-size--2xl)", "fontWeight": "700", "lineHeight": "1.12", "letterSpacing": "-0.02em", "fontStyle": "normal" },
+				"typography": { "fontFamily": "var(--wp--preset--font-family--newsreader)", "fontSize": "var(--wp--preset--font-size--2xl)", "fontWeight": "500", "lineHeight": "1.05", "letterSpacing": "-0.02em", "fontStyle": "normal" },
 				"color": { "text": "var(--wp--preset--color--ink-deep)" }
 			},
 			"h2": {
-				"typography": { "fontFamily": "var(--wp--preset--font-family--eb-garamond)", "fontSize": "var(--wp--preset--font-size--xl)", "fontWeight": "700", "lineHeight": "1.2", "letterSpacing": "-0.015em", "fontStyle": "normal" },
-				"color": { "text": "var(--wp--preset--color--ink)" }
+				"typography": { "fontFamily": "var(--wp--preset--font-family--newsreader)", "fontSize": "var(--wp--preset--font-size--xl)", "fontWeight": "500", "lineHeight": "1.1", "letterSpacing": "-0.015em", "fontStyle": "normal" },
+				"color": { "text": "var(--wp--preset--color--ink-deep)" }
 			},
 			"h3": {
-				"typography": { "fontFamily": "var(--wp--preset--font-family--eb-garamond)", "fontSize": "var(--wp--preset--font-size--lg)", "fontWeight": "500", "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontStyle": "normal" },
+				"typography": { "fontFamily": "var(--wp--preset--font-family--newsreader)", "fontSize": "var(--wp--preset--font-size--lg)", "fontWeight": "500", "lineHeight": "1.18", "letterSpacing": "-0.01em", "fontStyle": "normal" },
 				"color": { "text": "var(--wp--preset--color--ink)" }
 			},
 			"h4": {
-				"typography": { "fontFamily": "var(--wp--preset--font-family--eb-garamond)", "fontSize": "var(--wp--preset--font-size--md)", "fontWeight": "500", "lineHeight": "1.35", "fontStyle": "normal" },
+				"typography": { "fontFamily": "var(--wp--preset--font-family--newsreader)", "fontSize": "var(--wp--preset--font-size--md)", "fontWeight": "500", "lineHeight": "1.25", "fontStyle": "normal" },
 				"color": { "text": "var(--wp--preset--color--ink)" }
 			},
 			"h5": {
-				"typography": { "fontFamily": "var(--wp--preset--font-family--spectral)", "fontSize": "var(--wp--preset--font-size--sm)", "fontWeight": "600", "lineHeight": "1.4", "letterSpacing": "0.04em", "fontStyle": "normal" },
+				"typography": { "fontFamily": "var(--wp--preset--font-family--jakarta)", "fontSize": "var(--wp--preset--font-size--sm)", "fontWeight": "600", "lineHeight": "1.4", "letterSpacing": "0.06em", "textTransform": "uppercase", "fontStyle": "normal" },
 				"color": { "text": "var(--wp--preset--color--ink-soft)" }
 			},
 			"h6": {
-				"typography": { "fontFamily": "var(--wp--preset--font-family--spectral)", "fontSize": "var(--wp--preset--font-size--xs)", "fontWeight": "600", "lineHeight": "1.5", "letterSpacing": "0.06em", "fontStyle": "normal" },
+				"typography": { "fontFamily": "var(--wp--preset--font-family--jakarta)", "fontSize": "var(--wp--preset--font-size--xs)", "fontWeight": "600", "lineHeight": "1.5", "letterSpacing": "0.08em", "textTransform": "uppercase", "fontStyle": "normal" },
 				"color": { "text": "var(--wp--preset--color--ink-muted)" }
 			},
 			"link": {
-				"color": { "text": "var(--wp--preset--color--accent)" },
+				"color": { "text": "var(--wp--preset--color--ink)" },
 				"typography": { "textDecoration": "underline" },
-				":hover": { "color": { "text": "var(--wp--preset--color--ink)" } },
-				":focus": { "color": { "text": "var(--wp--preset--color--ink)" } }
+				":hover": { "color": { "text": "var(--wp--preset--color--rubric)" } },
+				":focus": { "color": { "text": "var(--wp--preset--color--rubric)" } }
 			},
 			"button": {
-				"color": { "background": "var(--wp--preset--color--ink)", "text": "var(--wp--preset--color--paper)" },
-				"typography": { "fontFamily": "var(--wp--preset--font-family--spectral)", "fontSize": "var(--wp--preset--font-size--sm)", "fontWeight": "400", "letterSpacing": "0.03em" },
-				"border": { "radius": "2px" },
-				"spacing": { "padding": { "top": "var(--wp--preset--spacing--2)", "bottom": "var(--wp--preset--spacing--2)", "left": "var(--wp--preset--spacing--4)", "right": "var(--wp--preset--spacing--4)" } },
-				":hover": { "color": { "background": "var(--wp--preset--color--accent)", "text": "var(--wp--preset--color--paper)" } },
-				":focus": { "color": { "background": "var(--wp--preset--color--accent)", "text": "var(--wp--preset--color--paper)" } }
+				"color": { "background": "var(--wp--preset--color--ink-deep)", "text": "var(--wp--preset--color--paper)" },
+				"typography": { "fontFamily": "var(--wp--preset--font-family--jakarta)", "fontSize": "var(--wp--preset--font-size--sm)", "fontWeight": "600", "letterSpacing": "0.06em", "textTransform": "uppercase" },
+				"border": { "radius": "0px" },
+				"spacing": { "padding": { "top": "var(--wp--preset--spacing--3)", "bottom": "var(--wp--preset--spacing--3)", "left": "var(--wp--preset--spacing--5)", "right": "var(--wp--preset--spacing--5)" } },
+				":hover": { "color": { "background": "var(--wp--preset--color--rubric)", "text": "var(--wp--preset--color--paper)" } },
+				":focus": { "color": { "background": "var(--wp--preset--color--rubric)", "text": "var(--wp--preset--color--paper)" } }
 			}
 		},
 		"blocks": {
 			"core/paragraph": {
-				"typography": { "fontFamily": "var(--wp--preset--font-family--spectral)", "fontSize": "var(--wp--preset--font-size--base)", "lineHeight": "1.72" }
+				"typography": { "fontFamily": "var(--wp--preset--font-family--newsreader)", "fontSize": "var(--wp--preset--font-size--base)", "lineHeight": "1.65" }
 			},
 			"core/pullquote": {
-				"typography": { "fontFamily": "var(--wp--preset--font-family--eb-garamond)", "fontSize": "var(--wp--preset--font-size--lg)", "fontStyle": "italic", "lineHeight": "1.5" },
-				"color": { "text": "var(--wp--preset--color--ink)", "background": "transparent" }
+				"typography": { "fontFamily": "var(--wp--preset--font-family--newsreader)", "fontSize": "var(--wp--preset--font-size--lg)", "fontStyle": "italic", "lineHeight": "1.3" },
+				"color": { "text": "var(--wp--preset--color--ink-deep)", "background": "transparent" }
 			},
 			"core/quote": {
-				"typography": { "fontFamily": "var(--wp--preset--font-family--eb-garamond)", "fontSize": "var(--wp--preset--font-size--md)", "fontStyle": "italic", "lineHeight": "1.6" },
+				"typography": { "fontFamily": "var(--wp--preset--font-family--newsreader)", "fontSize": "var(--wp--preset--font-size--md)", "fontStyle": "italic", "lineHeight": "1.45" },
 				"color": { "text": "var(--wp--preset--color--ink-soft)" },
+				"border": { "left": { "color": "var(--wp--preset--color--line-strong)", "width": "2px", "style": "solid" } },
 				"spacing": { "padding": { "left": "var(--wp--preset--spacing--5)" } }
 			},
 			"core/code": {
@@ -221,31 +211,31 @@
 				"color": { "background": "var(--wp--preset--color--paper-soft)", "text": "var(--wp--preset--color--ink)" }
 			},
 			"core/post-title": {
-				"typography": { "fontFamily": "var(--wp--preset--font-family--eb-garamond)", "fontWeight": "700", "lineHeight": "1.12", "letterSpacing": "-0.02em", "textDecoration": "none" },
+				"typography": { "fontFamily": "var(--wp--preset--font-family--newsreader)", "fontWeight": "500", "lineHeight": "1.05", "letterSpacing": "-0.02em", "textDecoration": "none" },
 				"color": { "text": "var(--wp--preset--color--ink-deep)" }
 			},
 			"core/post-excerpt": {
-				"typography": { "fontFamily": "var(--wp--preset--font-family--spectral)", "fontSize": "var(--wp--preset--font-size--base)", "lineHeight": "1.7" },
+				"typography": { "fontFamily": "var(--wp--preset--font-family--newsreader)", "fontSize": "var(--wp--preset--font-size--base)", "lineHeight": "1.55" },
 				"color": { "text": "var(--wp--preset--color--ink-soft)" }
 			},
 			"core/post-date": {
-				"typography": { "fontFamily": "var(--wp--preset--font-family--spectral)", "fontSize": "var(--wp--preset--font-size--sm)" },
+				"typography": { "fontFamily": "var(--wp--preset--font-family--jakarta)", "fontSize": "var(--wp--preset--font-size--xs)", "letterSpacing": "0.04em" },
 				"color": { "text": "var(--wp--preset--color--ink-muted)" }
 			},
 			"core/post-terms": {
-				"typography": { "fontFamily": "var(--wp--preset--font-family--spectral)", "fontSize": "var(--wp--preset--font-size--sm)", "fontWeight": "600", "letterSpacing": "0.08em", "textTransform": "uppercase" },
-				"color": { "text": "var(--wp--preset--color--accent)" }
+				"typography": { "fontFamily": "var(--wp--preset--font-family--jakarta)", "fontSize": "var(--wp--preset--font-size--xs)", "fontWeight": "700", "letterSpacing": "0.1em", "textTransform": "uppercase" },
+				"color": { "text": "var(--wp--preset--color--rubric)" }
 			},
 			"core/site-title": {
-				"typography": { "fontFamily": "var(--wp--preset--font-family--eb-garamond)", "fontSize": "var(--wp--preset--font-size--lg)", "fontWeight": "700", "textDecoration": "none" },
-				"color": { "text": "var(--wp--preset--color--ink)" }
+				"typography": { "fontFamily": "var(--wp--preset--font-family--newsreader)", "fontSize": "var(--wp--preset--font-size--xl)", "fontWeight": "500", "letterSpacing": "0.01em", "textDecoration": "none" },
+				"color": { "text": "var(--wp--preset--color--ink-deep)" }
 			},
 			"core/site-tagline": {
-				"typography": { "fontFamily": "var(--wp--preset--font-family--spectral)", "fontSize": "var(--wp--preset--font-size--sm)", "letterSpacing": "0.06em", "textTransform": "uppercase" },
+				"typography": { "fontFamily": "var(--wp--preset--font-family--jakarta)", "fontSize": "var(--wp--preset--font-size--xs)", "letterSpacing": "0.1em", "textTransform": "uppercase" },
 				"color": { "text": "var(--wp--preset--color--ink-muted)" }
 			},
 			"core/navigation": {
-				"typography": { "fontFamily": "var(--wp--preset--font-family--spectral)", "fontSize": "var(--wp--preset--font-size--sm)", "fontWeight": "400", "letterSpacing": "0.04em" }
+				"typography": { "fontFamily": "var(--wp--preset--font-family--jakarta)", "fontSize": "var(--wp--preset--font-size--sm)", "fontWeight": "600", "letterSpacing": "0.06em", "textTransform": "uppercase" }
 			},
 			"core/separator": {
 				"color": { "text": "var(--wp--preset--color--line)" }

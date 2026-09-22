@@ -3,7 +3,7 @@ Theme Name:         Kern
 Theme URI:          https://thisismyurl.com/kern/
 Author:             Christopher Ross
 Author URI:         https://thisismyurl.com/
-Description:        The shared starter core behind the This Is My URL free theme line. A deliberately plain, technically exacting full-site-editing base built to be copied and re-skinned — not inherited. Zero front-end JavaScript, self-hostable OFL fonts, WCAG 2.2 AA accessibility scaffolding, a six-layer CSS cascade contract, and a one-file re-prefixing point. The bones; bring your own skin.
+Description:        A full-site-editing theme for literary and culture magazines run by more than one byline — poetry journals, small presses, university reviews, arts and culture quarterlies. Kern takes its name from the typesetting term for the space set between two specific letters: the kind of decision only someone who actually sets type ever makes. The masthead runs in three rows the way a print front matter does; the Masthead Page pattern is a real colophon — role, then name — not a marketing "meet the team" grid. Newsreader and Plus Jakarta Sans, both self-hosted OFL, carry a near-monochrome palette with one editorial accent: rubric red, named for the print convention of setting a heading in red ink. Zero front-end JavaScript, WCAG 2.2 AA accessibility scaffolding, full WooCommerce compatibility.
 Version:            1.6162.1430
 Requires at least:  7.0
 Tested up to:       7.1
@@ -11,7 +11,7 @@ Requires PHP:       8.1
 License:            GNU General Public License v2 or later
 License URI:        https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain:        kern
-Tags:               blog, one-column, two-columns, full-site-editing, block-patterns, editor-style, custom-colors, custom-logo, custom-menu, featured-images, translation-ready, rtl-language-support, wide-blocks, threaded-comments
+Tags:               blog, news, one-column, three-columns, four-columns, full-site-editing, block-patterns, editor-style, custom-colors, custom-logo, custom-menu, featured-images, translation-ready, rtl-language-support, wide-blocks, threaded-comments
 
 This is the theme HEADER ONLY. Colophon's real styles are enqueued in cascade
 order from inc/assets.php: assets/css/core/* (synced, portable) then

@@ -1,29 +1,30 @@
 <!-- wp:template-part {"slug":"header","tagName":"header"} /-->
 
-<!-- wp:group {"tagName":"main","className":"cl-main","metadata":{"name":"Main"},"layout":{"type":"constrained","contentSize":"1100px"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|12","bottom":"var:preset|spacing|16"}}}} -->
-<main id="main-content" class="wp-block-group cl-main" style="padding-top:var(--wp--preset--spacing--12);padding-bottom:var(--wp--preset--spacing--16)">
+<!-- wp:group {"tagName":"main","className":"kn-main","metadata":{"name":"Main"},"layout":{"type":"constrained","contentSize":"1100px"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|12","bottom":"var:preset|spacing|16"}}}} -->
+<main id="main-content" class="wp-block-group kn-main" style="padding-top:var(--wp--preset--spacing--12);padding-bottom:var(--wp--preset--spacing--16)">
 
-	<!-- The author bio block above the stream — same component used in single.html's
-	     article footer, hoisted here so the archive opens with the writer, not the list. -->
-	<!-- wp:group {"className":"cl-author-box","layout":{"type":"constrained","contentSize":"720px"},"style":{"spacing":{"padding":{"bottom":"var:preset|spacing|10"},"blockGap":"var:preset|spacing|4"},"border":{"bottom":{"color":"var:preset|color|line","width":"1px"}}}} -->
-	<div class="wp-block-group cl-author-box" style="border-bottom-color:var(--wp--preset--color--line);border-bottom-width:1px;padding-bottom:var(--wp--preset--spacing--10)">
-		<!-- wp:paragraph {"className":"is-style-cl-eyebrow cl-eyebrow"} -->
-		<p class="is-style-cl-eyebrow cl-eyebrow">Author</p>
+	<!-- The contributor's own bio above their stream — same shape as the
+	     article-footer author box in single.html, hoisted here so an
+	     author archive opens with who they are, not the list. -->
+	<!-- wp:group {"className":"kn-author-box","layout":{"type":"constrained","contentSize":"720px"},"style":{"spacing":{"padding":{"bottom":"var:preset|spacing|10"},"blockGap":"var:preset|spacing|4"},"border":{"bottom":{"color":"var:preset|color|line-strong","width":"2px"}}}} -->
+	<div class="wp-block-group kn-author-box" style="border-bottom-color:var(--wp--preset--color--line-strong);border-bottom-width:2px;padding-bottom:var(--wp--preset--spacing--10)">
+		<!-- wp:paragraph {"className":"is-style-kn-rubric"} -->
+		<p class="is-style-kn-rubric">Contributor</p>
 		<!-- /wp:paragraph -->
 		<!-- wp:query-title {"type":"author","level":1,"fontSize":"2xl"} /-->
 		<!-- wp:term-description /-->
 	</div>
 	<!-- /wp:group -->
 
-	<!-- wp:group {"className":"cl-author-stream","style":{"spacing":{"margin":{"top":"var:preset|spacing|10"}}},"layout":{"type":"constrained","contentSize":"720px"}} -->
-	<div class="wp-block-group cl-author-stream" style="margin-top:var(--wp--preset--spacing--10)">
+	<!-- wp:group {"className":"kn-author-stream","style":{"spacing":{"margin":{"top":"var:preset|spacing|10"}}},"layout":{"type":"constrained","contentSize":"720px"}} -->
+	<div class="wp-block-group kn-author-stream" style="margin-top:var(--wp--preset--spacing--10)">
 
 		<!-- wp:query {"queryId":0,"query":{"perPage":10,"postType":"post","order":"desc","orderBy":"date","inherit":true},"layout":{"type":"default"}} -->
 		<div class="wp-block-query">
 
-			<!-- wp:post-template {"className":"cl-index-loop","style":{"spacing":{"blockGap":"var:preset|spacing|10"}}} -->
-				<!-- wp:group {"className":"cl-story","style":{"spacing":{"padding":{"bottom":"var:preset|spacing|8"}},"border":{"bottom":{"color":"var:preset|color|line","width":"1px"}}},"layout":{"type":"default"}} -->
-				<div class="wp-block-group cl-story" style="border-bottom-color:var(--wp--preset--color--line);border-bottom-width:1px;padding-bottom:var(--wp--preset--spacing--8)">
+			<!-- wp:post-template {"className":"kn-index-loop","style":{"spacing":{"blockGap":"var:preset|spacing|10"}}} -->
+				<!-- wp:group {"className":"kn-story","layout":{"type":"default"}} -->
+				<div class="wp-block-group kn-story">
 					<!-- wp:post-terms {"term":"category"} /-->
 					<!-- wp:post-title {"level":2,"isLink":true,"fontSize":"lg"} /-->
 					<!-- wp:post-excerpt {"moreText":"Continue reading"} /-->
@@ -34,7 +35,7 @@
 
 			<!-- wp:query-no-results -->
 				<!-- wp:paragraph {"style":{"spacing":{"padding":{"top":"var:preset|spacing|12","bottom":"var:preset|spacing|12"}}}} -->
-				<p style="padding-top:var(--wp--preset--spacing--12);padding-bottom:var(--wp--preset--spacing--12)">No posts from this author yet.</p>
+				<p style="padding-top:var(--wp--preset--spacing--12);padding-bottom:var(--wp--preset--spacing--12)">No posts from this contributor yet.</p>
 				<!-- /wp:paragraph -->
 			<!-- /wp:query-no-results -->
 

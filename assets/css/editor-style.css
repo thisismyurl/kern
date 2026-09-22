@@ -1,20 +1,15 @@
 /* =====================================================================
-   [SKIN] editor-style.css — the slice of personality the block editor needs
-   that theme.json can't express.
+   [SKIN] editor-style.css — the slice of Kern's personality the block
+   editor needs that theme.json can't express.
    ---------------------------------------------------------------------
    theme.json already gives the editor canvas the palette, type, and global
    styles, so the editor mirrors the front end for free. This file carries
    only what theme.json has no key for:
    - font-variant-ligatures and font-variant-numeric (OpenType features)
    - text-wrap: pretty (orphan prevention)
-   - pull-quote bracket rules and italic treatment
-   - the eyebrow paragraph style
-   - the card lift (already present from the original stub)
-
-   Note: the front-end p+p text-indent convention lives in skin.css
-   @layer blocks. In the block editor each Paragraph block is wrapped in
-   its own container, so the adjacent-sibling selector does not fire in
-   the editing canvas — intentionally left out here to avoid confusion.
+   - the pull-quote bracket rules and italic treatment
+   - the rubric, standfirst and drop-cap paragraph styles
+   - the card hover state
 
    Loaded via add_editor_style() in inc/setup.php.
    ===================================================================== */
@@ -29,38 +24,62 @@
 
 /* Pull quote — mirrored so the editor preview matches the front end. */
 .editor-styles-wrapper .wp-block-pullquote {
-	border-block:  2px solid var(--wp--preset--color--line);
+	border-block:  2px solid var(--wp--preset--color--line-strong);
 	padding-block: var(--wp--preset--spacing--8);
 	text-align:    center;
 }
 .editor-styles-wrapper .wp-block-pullquote blockquote p {
-	font-family:            var(--wp--preset--font-family--eb-garamond), Georgia, serif;
-	font-style:             italic;
-	font-size:              clamp(1.25rem, 2.5vw, 1.75rem);
-	line-height:            1.35;
-	font-variant-ligatures: common-ligatures;
-	text-indent:            0;
+	font-family:            var(--wp--preset--font-family--newsreader);
+	font-style:              italic;
+	font-size:               clamp(1.5rem, 3vw, 2.25rem);
+	line-height:             1.25;
+	font-variant-ligatures:  common-ligatures;
 }
 .editor-styles-wrapper .wp-block-pullquote cite {
 	display:        block;
-	margin-top:     0.75em;
-	font-size:      0.8125rem;
+	margin-top:     0.9em;
+	font-family:    var(--wp--preset--font-family--jakarta);
+	font-size:      var(--wp--preset--font-size--xs);
 	font-style:     normal;
-	letter-spacing: 0.06em;
+	font-weight:    600;
+	letter-spacing: 0.08em;
 	text-transform: uppercase;
 	color:          var(--wp--preset--color--ink-muted);
 }
 
-/* Eyebrow paragraph style — lets editors see the treatment at write-time. */
-.editor-styles-wrapper .is-style-cl-eyebrow {
-	font-size:      0.75rem;
-	font-weight:    400;
+/* Rubric (category label) — the one place the accent touches running text. */
+.editor-styles-wrapper .is-style-kn-rubric {
+	display:        block;
+	font-family:    var(--wp--preset--font-family--jakarta);
+	font-size:      var(--wp--preset--font-size--xs);
+	font-weight:    700;
 	letter-spacing: 0.12em;
 	text-transform: uppercase;
-	color:          var(--wp--preset--color--ink-muted);
+	color:          var(--wp--preset--color--rubric);
+}
+
+/* Standfirst — the dek/lede line under a headline. */
+.editor-styles-wrapper .is-style-kn-standfirst {
+	font-family: var(--wp--preset--font-family--newsreader);
+	font-size:   var(--wp--preset--font-size--md);
+	font-weight: 350;
+	line-height: 1.4;
+	color:       var(--wp--preset--color--ink-soft);
+}
+
+/* Drop cap — previewed at write-time so an editor sees the treatment. */
+.editor-styles-wrapper .is-style-kn-dropcap::first-letter {
+	font-family:        var(--wp--preset--font-family--newsreader);
+	font-size:          3.2em;
+	font-weight:        500;
+	line-height:        0.82;
+	float:              left;
+	margin-inline-end:  0.07em;
+	margin-block-start: 0.03em;
+	color:              var(--wp--preset--color--ink-deep);
 }
 
 /* Card lift — mirrored so the editor preview matches the front end. */
-.editor-styles-wrapper .cl-card {
-	transition: transform 200ms cubic-bezier(0.4, 0, 0.2, 1);
+.editor-styles-wrapper .kn-card {
+	transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1);
 }

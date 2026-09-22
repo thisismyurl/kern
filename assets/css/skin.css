@@ -1,93 +1,149 @@
 /* =====================================================================
-   [SKIN] skin.css — Colophon's own personality, and the worked example of
-   how a skin slots into the core cascade.
+   [SKIN] skin.css — Kern's own personality.
    ---------------------------------------------------------------------
-   Two jobs:
-   1. BIND the --cl-* semantic tokens that core/base.css references, drawing
-      from this theme's theme.json palette. These live in an UNLAYERED :root
-      block on purpose — unlayered declarations beat layered ones, so they
-      reliably override the neutral fallbacks core ships. (This is the same
-      cascade-layer rule that bites people when WordPress core's own unlayered
-      CSS wins; here we use it deliberately.)
-   2. POPULATE @layer layout / components / blocks / utilities — the four
-      skin layers in the order reset.css declared. The bones (reset, base) are
-      core; everything you see below is design, and it's yours to rewrite.
+   Kern is built for multi-contributor literary and culture magazines:
+   poetry journals, small presses, university reviews, arts quarterlies.
+   The design language is high-fashion editorial minimalism — pure paper,
+   near-black ink, one accent used almost nowhere. Typography and
+   photography carry the page; there is nothing here for decoration's own
+   sake. See PILLARS.md pillar 8 (Kodawari) — every value below that looks
+   arbitrary has a reason recorded next to it.
 
-   `colophon sync` never touches this file. Make it loud; make it yours.
+   Two jobs, same as every Colophon skin:
+   1. BIND the --cl-* semantic tokens core/base.css references.
+   2. POPULATE @layer layout / components / blocks / utilities.
+
+   `colophon sync` never touches this file.
    ===================================================================== */
 
 /* ---- 1. Token bindings (unlayered, so they win over core defaults) ---- */
 :root {
-	--cl-focus-ring:         var(--wp--preset--color--accent);
+	--cl-focus-ring:         var(--wp--preset--color--ink-deep);
 	--cl-focus-ring-inverse: var(--wp--preset--color--paper);
-	--cl-skip-bg:            var(--wp--preset--color--ink);
+	--cl-skip-bg:            var(--wp--preset--color--ink-deep);
 	--cl-skip-fg:            var(--wp--preset--color--paper);
 
 	/* Skin runtime tokens — no theme.json equivalent exists for these. */
-	--cl-gutter:      clamp(1.25rem, 5vw, 3rem);
-	--cl-section-gap: clamp(3rem, 8vw, 6rem);
-	--cl-transition:  200ms cubic-bezier(0.4, 0, 0.2, 1);
+	--kn-gutter:      clamp(1.25rem, 5vw, 3rem);
+	--kn-section-gap: clamp(3.5rem, 9vw, 7rem);
+	--kn-transition:  200ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ---- 2. The skin layers ---- */
 @layer layout {
 
-	.cl-main { isolation: isolate; }
+	.kn-main { isolation: isolate; }
 
-	/* Sticky header: warm paper tint with frosted-glass blur.
-	   rgba(250, 249, 246) is paper (#faf9f6) at 95% opacity — pure white
-	   would fight the warm literary palette. z-index sits below core's
-	   mobile-nav overlay (100000) so the menu always paints over the header. */
-	.cl-header {
-		position: sticky;
-		inset-block-start: 0;
-		z-index: 100;
-		background: rgba(250, 249, 246, 0.95);
-		-webkit-backdrop-filter: blur(8px);
-		backdrop-filter: blur(8px);
-		border-block-end: 1px solid var(--wp--preset--color--line, #dedad3);
+	.kn-section {
+		padding-block: var(--kn-section-gap);
+		padding-inline: var(--kn-gutter);
 	}
+	.kn-section--tight { padding-block: clamp(2rem, 5vw, 3.5rem); }
 
-	.cl-section {
-		padding-block: var(--cl-section-gap);
-		padding-inline: var(--cl-gutter);
-	}
-	.cl-section--soft { background: var(--wp--preset--color--paper-soft, #f2f0eb); }
-	.cl-section--ink {
-		background: var(--wp--preset--color--ink-deep, #0f0d0c);
-		color: var(--wp--preset--color--paper, #faf9f6);
+	/* Ink band — used sparingly (the subscribe CTA, the masthead-page
+	   footer strip). A magazine's one moment of true black-on-white
+	   inversion, not a repeating section treatment. */
+	.kn-section--ink {
+		background: var(--wp--preset--color--ink-deep);
+		color: var(--wp--preset--color--paper);
 	}
 }
 
 @layer components {
 
-	/* Header nav: ink at rest, accent on interaction. Type comes from theme.json
-	   core/navigation; colour and underline behaviour are skin. */
-	.cl-header .wp-block-navigation a {
-		color: var(--wp--preset--color--ink-soft, #433e3b);
+	/* -------------------------------------------------------------- */
+	/* MASTHEAD — three stacked rows: utility bar, nameplate, section  */
+	/* nav. This structure IS Kern's identity; every sibling theme in  */
+	/* the line has a different header shape because every publishing  */
+	/* discipline reads its own masthead differently.                  */
+	/* -------------------------------------------------------------- */
+
+	.kn-masthead {
+		background: var(--wp--preset--color--paper);
+		border-block-end: 1px solid var(--wp--preset--color--line-strong, #000);
+	}
+
+	/* Row 1 — utility bar: search left, Archive / Subscribe right.
+	   Deliberately quiet: xs size, muted ink, no rubric colour here —
+	   the accent is reserved for category labels only. */
+	.kn-masthead__utility {
+		padding-block: var(--wp--preset--spacing--3);
+		border-block-end: 1px solid var(--wp--preset--color--line);
+	}
+	.kn-masthead__utility .wp-block-navigation a,
+	.kn-masthead__utility .wp-block-search__button {
+		font-family: var(--wp--preset--font-family--jakarta);
+		font-size: var(--wp--preset--font-size--xs);
+		font-weight: 600;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: var(--wp--preset--color--ink-soft);
+	}
+	.kn-masthead__utility .wp-block-navigation a:hover,
+	.kn-masthead__utility .wp-block-navigation a:focus,
+	.kn-masthead__utility .wp-block-search__button:hover {
+		color: var(--wp--preset--color--rubric);
+	}
+	/* Icon-only search: the WordPress search block's icon button, sized to
+	   a real 44px tap target without visually ballooning next to 11px text. */
+	.kn-masthead__utility .wp-block-search {
+		align-items: center;
+	}
+	.kn-masthead__utility .wp-block-search__button-only .wp-block-search__button {
+		min-inline-size: 44px;
+		min-block-size: 44px;
+		padding: 0;
+		background: transparent;
+		border: none;
+		color: var(--wp--preset--color--ink);
+	}
+	.kn-masthead__utility .wp-block-search__button-only .wp-block-search__button svg {
+		fill: currentColor;
+	}
+
+	/* Row 2 — nameplate: the wordmark, centred, tall and tracked. This is
+	   the single largest piece of type on the page apart from a lead
+	   headline, which is the point: the magazine's name is the first thing
+	   read, the way a masthead is on newsprint. */
+	.kn-masthead__nameplate {
+		padding-block: clamp(1.5rem, 4vw, 2.75rem);
+		text-align: center;
+	}
+	.kn-masthead__nameplate .wp-block-site-title a {
+		font-family: var(--wp--preset--font-family--newsreader);
+		font-size: clamp(2.25rem, 3.5vw, 3.5rem);
+		font-weight: 500;
+		letter-spacing: 0.02em;
+		color: var(--wp--preset--color--ink-deep);
 		text-decoration: none;
 	}
-	.cl-header .wp-block-navigation a:hover,
-	.cl-header .wp-block-navigation a:focus {
-		color: var(--wp--preset--color--accent, #3d6b5e);
+	.kn-masthead__nameplate .wp-block-site-tagline {
+		margin-block-start: var(--wp--preset--spacing--1);
 	}
 
-	/* Footer sits on the ink-deep band; paper text clears contrast there. */
-	.cl-footer .wp-block-navigation a,
-	.cl-footer__bottom a {
-		color: var(--wp--preset--color--paper, #faf9f6);
+	/* Row 3 — section nav: left-aligned, small tracked caps, hairline
+	   above only (the utility bar already drew the line below the
+	   nameplate). Matches the reference layout's section-link row. */
+	.kn-masthead__nav {
+		padding-block: var(--wp--preset--spacing--3);
 	}
-	.cl-footer .wp-block-navigation a:hover,
-	.cl-footer .wp-block-navigation a:focus,
-	.cl-footer__bottom a:hover,
-	.cl-footer__bottom a:focus {
-		text-decoration: underline;
-		text-underline-offset: 0.15em;
+	.kn-masthead__nav .wp-block-navigation a {
+		padding-inline: var(--wp--preset--spacing--3);
+	}
+	.kn-masthead__nav .wp-block-navigation a:first-child { padding-inline-start: 0; }
+	.kn-masthead__nav .wp-block-navigation__submenu-container {
+		border: 1px solid var(--wp--preset--color--line-strong);
+		border-radius: 0;
+		background: var(--wp--preset--color--paper);
+	}
+	.kn-masthead__nav .wp-block-navigation-item a:hover,
+	.kn-masthead__nav .wp-block-navigation-item a:focus {
+		color: var(--wp--preset--color--rubric);
 	}
 
-	/* Tap targets reach the 44px floor: footer nav links and the mobile-nav
-	   open/close toggles. */
-	.cl-footer .wp-block-navigation a {
+	/* Tap targets reach the 44px floor across the whole masthead + footer. */
+	.kn-masthead .wp-block-navigation a,
+	.kn-footer .wp-block-navigation a {
 		min-block-size: 44px;
 		display: inline-flex;
 		align-items: center;
@@ -101,143 +157,251 @@
 		justify-content: center;
 	}
 
-	/* On dark bands the accent focus ring fails 3:1, so use the inverse token
-	   core left us for exactly this. */
-	.cl-section--ink :where(a, button, input, textarea, select, summary, [tabindex]):focus-visible,
-	.cl-footer :where(a, button, input, textarea, select, summary, [tabindex]):focus-visible {
-		outline-color: var(--cl-focus-ring-inverse, #faf9f6);
+	/* -------------------------------------------------------------- */
+	/* FOOTER                                                           */
+	/* -------------------------------------------------------------- */
+	.kn-footer .wp-block-navigation a,
+	.kn-footer__bottom a {
+		color: var(--wp--preset--color--paper);
+	}
+	.kn-footer .wp-block-navigation a:hover,
+	.kn-footer .wp-block-navigation a:focus,
+	.kn-footer__bottom a:hover,
+	.kn-footer__bottom a:focus {
+		color: var(--wp--preset--color--paper);
+		text-decoration: underline;
+		text-underline-offset: 0.15em;
 	}
 
-	/* Card hover — a quiet lift, neutralised for reduced-motion by core/reset. */
-	.cl-card {
-		transition: transform var(--cl-transition);
+	/* On the ink band the default focus ring (ink-deep) is invisible;
+	   the inverse token core reserved for exactly this swaps it to paper. */
+	.kn-section--ink :where(a, button, input, textarea, select, summary, [tabindex]):focus-visible,
+	.kn-footer :where(a, button, input, textarea, select, summary, [tabindex]):focus-visible {
+		outline-color: var(--cl-focus-ring-inverse, #fff);
 	}
-	.cl-card:hover,
-	.cl-card:focus-within {
-		transform: translateY(-4px);
+
+	/* Card lift — a quiet, editorial-appropriate hover, neutralised for
+	   reduced-motion by core/reset. */
+	.kn-card {
+		transition: opacity var(--kn-transition);
+	}
+	.kn-card:hover,
+	.kn-card:focus-within {
+		opacity: 0.82;
 	}
 }
 
 @layer blocks {
 
 	/* Reading-column link underline offset. */
-	.cl-main :where(p, li) a { text-underline-offset: 0.15em; }
+	.kn-main :where(p, li) a { text-underline-offset: 0.15em; }
 
 	/* ------------------------------------------------------------------ */
-	/* LITERARY READING REFINEMENTS                                         */
-	/* theme.json expresses typefaces, weights, and sizes. CSS handles the  */
-	/* micro-typographic features theme.json has no key for: font-variant-* */
-	/* properties, text-wrap, hanging punctuation, and the paragraph indent  */
-	/* convention. These are the details that make body text feel like a     */
-	/* book rather than a web page.                                          */
+	/* READING REFINEMENTS — theme.json expresses typefaces, weights and   */
+	/* sizes; this handles the micro-typography theme.json has no key for: */
+	/* font-variant-* features, text-wrap, hanging punctuation.             */
 	/* ------------------------------------------------------------------ */
-
-	/* OpenType features and reading comfort for prose columns.
-	   common-ligatures gives fi/fl/ff joins; oldstyle-nums drops numerals
-	   below the baseline like lowercase letters — both are Garamond-school
-	   conventions that Spectral was designed to support. */
-	.cl-prose :is(p, li) {
+	.kn-prose :is(p, li) {
 		font-variant-ligatures: common-ligatures;
 		font-variant-numeric:   oldstyle-nums;
-		text-wrap:              pretty;             /* multi-line orphan prevention */
+		text-wrap:              pretty;
 		hanging-punctuation:    first allow-end last;
 	}
 
-	/* Paragraph rhythm: indent continuation paragraphs instead of spacing them.
-	   This is the printed-prose convention used in literary magazines (n+1,
-	   Ploughshares, NYRB). The first paragraph after a heading is never indented
-	   — only genuine continuation paragraphs.
-	   To revert to the more common margin-gap approach: remove the p+p block. */
-	.cl-prose p {
-		text-indent: 0;
+	/* -------------------------------------------------------------- */
+	/* RUBRIC — the category label. "Rubric" names the print convention  */
+	/* of setting a heading in red ink; here it is the one place Kern's  */
+	/* single accent colour touches running text.                        */
+	/* -------------------------------------------------------------- */
+	.is-style-kn-rubric,
+	.kn-rubric {
+		display: block;
+		font-family: var(--wp--preset--font-family--jakarta);
+		font-size: var(--wp--preset--font-size--xs);
+		font-weight: 700;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		color: var(--wp--preset--color--rubric);
+		margin-block-end: var(--wp--preset--spacing--2);
 	}
-	.cl-prose p + p {
-		text-indent:        1.5em;
-		margin-block-start: 0;
-	}
-	.cl-prose :is(h2, h3, h4, h5, h6) + p {
-		text-indent: 0;
-	}
-	/* Blockquotes and list items never inherit the indent. */
-	.cl-prose blockquote p,
-	.cl-prose li > p {
-		text-indent: 0;
+	/* On the ink band (subscribe CTA, masthead-page footer) the rubric red
+	   fails contrast against black, so it swaps to paper there. */
+	.kn-section--ink .is-style-kn-rubric,
+	.kn-section--ink .kn-rubric {
+		color: var(--wp--preset--color--paper);
 	}
 
-	/* Drop cap: the first letter of the opening paragraph on single posts.
-	   EB Garamond's classical cut needs the 0.05em block-start nudge to
-	   sit its baseline flush with the body text — a quirk of the font's
-	   cap-height proportion.
-	   The .no-dropcap class on .cl-prose suppresses it when a post opens
-	   with a heading or when the design calls for a plain open. */
-	.single .cl-prose:not(.no-dropcap) > .wp-block-post-content > p:first-of-type::first-letter,
-	.cl-prose.cl-dropcap > p:first-of-type::first-letter {
-		font-family:        var(--wp--preset--font-family--eb-garamond), Georgia, serif;
-		font-size:          3.4em;
+	/* -------------------------------------------------------------- */
+	/* STANDFIRST — the dek/lede line under a headline. Larger and       */
+	/* lighter than body copy, never italic (italic is reserved for the  */
+	/* pull quote so the two devices stay visually distinct).            */
+	/* -------------------------------------------------------------- */
+	.is-style-kn-standfirst,
+	.kn-standfirst {
+		font-family: var(--wp--preset--font-family--newsreader);
+		font-size: var(--wp--preset--font-size--md);
+		font-weight: 350;
+		line-height: 1.4;
+		color: var(--wp--preset--color--ink-soft);
+	}
+
+	/* -------------------------------------------------------------- */
+	/* DROP CAP — Kern's own, keyed to Newsreader's cap-height.          */
+	/* Core's dropCap setting is off (theme.json) so this is the only    */
+	/* control; applied via the kn-dropcap paragraph style or the        */
+	/* kn-prose > first paragraph convention on single articles.         */
+	/* -------------------------------------------------------------- */
+	.single .kn-prose:not(.no-dropcap) > .wp-block-post-content > p:first-of-type::first-letter,
+	.is-style-kn-dropcap::first-letter,
+	.kn-prose.kn-dropcap > p:first-of-type::first-letter {
+		font-family:        var(--wp--preset--font-family--newsreader);
+		font-size:          3.2em;
 		font-weight:        500;
-		line-height:        0.78;
+		line-height:        0.82;
 		float:              left;
-		margin-inline-end:  0.06em;
-		margin-block-start: 0.05em;
-		color:              var(--wp--preset--color--ink);
+		margin-inline-end:  0.07em;
+		margin-block-start: 0.03em;
+		color:              var(--wp--preset--color--ink-deep);
 	}
 
-	/* Pull quote: the magazine standout — centred, EB Garamond italic,
-	   bracketed by rules at the weight of a separator, not a border. */
+	/* -------------------------------------------------------------- */
+	/* PULL QUOTE — the magazine standout. Centred, Newsreader italic,   */
+	/* bracketed by true-black rules (line-strong, not the light          */
+	/* hairline) — this is the one place a rule reads as a deliberate    */
+	/* frame rather than a subtle divider.                                */
+	/* -------------------------------------------------------------- */
 	.wp-block-pullquote {
-		border-block:  2px solid var(--wp--preset--color--line);
+		border-block: 2px solid var(--wp--preset--color--line-strong);
 		padding-block: var(--wp--preset--spacing--8);
-		text-align:    center;
+		text-align: center;
 	}
 	.wp-block-pullquote blockquote p {
-		font-family:            var(--wp--preset--font-family--eb-garamond), Georgia, serif;
-		font-style:             italic;
-		font-size:              clamp(1.25rem, 2.5vw, 1.75rem);
-		line-height:            1.35;
-		font-variant-ligatures: common-ligatures;
-		text-indent:            0; /* reset the p+p convention inside pull quotes */
+		font-family:            var(--wp--preset--font-family--newsreader);
+		font-style:              italic;
+		font-size:               clamp(1.5rem, 3vw, 2.25rem);
+		line-height:             1.25;
+		font-variant-ligatures:  common-ligatures;
 	}
 	.wp-block-pullquote cite {
 		display:        block;
-		margin-top:     0.75em;
-		font-size:      0.8125rem;
+		margin-top:     0.9em;
+		font-family:    var(--wp--preset--font-family--jakarta);
+		font-size:      var(--wp--preset--font-size--xs);
 		font-style:     normal;
-		letter-spacing: 0.06em;
+		font-weight:    600;
+		letter-spacing: 0.08em;
 		text-transform: uppercase;
 		color:          var(--wp--preset--color--ink-muted);
 	}
 
-	/* Story card: the atom of every index and archive loop. */
-	.cl-story {
+	/* Story row — the atom of the single-column index, search and author
+	   streams (as distinct from .kn-card, the atom of the grid layouts). */
+	.kn-story {
 		padding-block-end: var(--wp--preset--spacing--8);
-		border-block-end:  1px solid var(--wp--preset--color--line);
+		border-block-end: 1px solid var(--wp--preset--color--line);
 	}
 
-	/* Byline strip: the author name and date cap under a post title. */
-	.cl-byline .wp-block-post-author__name {
-		font-size:      0.875rem;
-		letter-spacing: 0.02em;
-		color:          var(--wp--preset--color--ink-soft);
+	/* -------------------------------------------------------------- */
+	/* STORY GRID + CARD — the atom of the homepage and every archive.   */
+	/* Portrait 4:5 crop (kern-card image size) so a dense multi-column   */
+	/* row still reads as a contact sheet, not a wall of landscape tiles. */
+	/* -------------------------------------------------------------- */
+	.kn-grid {
+		row-gap: var(--wp--preset--spacing--10);
 	}
-	.cl-byline .wp-block-post-date {
-		font-size: 0.875rem;
-		color:     var(--wp--preset--color--ink-muted);
+	.kn-card__media {
+		margin-block-end: var(--wp--preset--spacing--3);
+		background: var(--wp--preset--color--paper-soft);
+	}
+	.kn-card .kn-rubric { margin-block-end: var(--wp--preset--spacing--1); }
+	.kn-card .wp-block-post-title,
+	.kn-card .wp-block-post-title a {
+		font-size: var(--wp--preset--font-size--md);
+		line-height: 1.2;
+	}
+	.kn-card .wp-block-post-date {
+		font-family: var(--wp--preset--font-family--jakarta);
+		font-size: var(--wp--preset--font-size--xs);
+		color: var(--wp--preset--color--ink-muted);
 	}
 
-	/* Eyebrow label: the small uppercase line above a section heading.
-	   Registered as a block style (core/paragraph → is-style-cl-eyebrow)
-	   so editors can apply it from the block toolbar. */
-	.is-style-cl-eyebrow,
-	.cl-eyebrow {
-		font-size:      0.75rem;
-		font-weight:    400;
-		letter-spacing: 0.12em;
+	/* -------------------------------------------------------------- */
+	/* LEAD STORY HERO — image one side, headline stack the other.       */
+	/* -------------------------------------------------------------- */
+	.kn-hero__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.kn-hero .wp-block-post-title,
+	.kn-hero h1 {
+		font-size: var(--wp--preset--font-size--3xl);
+		line-height: 0.98;
+	}
+
+	/* -------------------------------------------------------------- */
+	/* BYLINE — the author strip under a headline, and the contributor   */
+	/* byline pattern used at the top of a piece. kn-byline__role is the  */
+	/* small tracked tag ("Contributing Editor, Poetry") that names what   */
+	/* this contributor does for the magazine — the detail a masthead      */
+	/* pattern and a byline share.                                         */
+	/* -------------------------------------------------------------- */
+	.kn-byline {
+		font-family: var(--wp--preset--font-family--jakarta);
+	}
+	.kn-byline .wp-block-post-author__name,
+	.kn-byline__name {
+		font-size: var(--wp--preset--font-size--sm);
+		font-weight: 600;
+		letter-spacing: 0.01em;
+		color: var(--wp--preset--color--ink);
+	}
+	.kn-byline .wp-block-post-date,
+	.kn-byline__date {
+		font-size: var(--wp--preset--font-size--xs);
+		color: var(--wp--preset--color--ink-muted);
+	}
+	.kn-byline__role {
+		display: block;
+		font-size: var(--wp--preset--font-size--xs);
+		font-weight: 700;
+		letter-spacing: 0.08em;
 		text-transform: uppercase;
-		color:          var(--wp--preset--color--ink-muted);
+		color: var(--wp--preset--color--rubric);
+	}
+
+	/* -------------------------------------------------------------- */
+	/* MASTHEAD PAGE — the print colophon/staff-list page, Kern's         */
+	/* signature pattern. Each line reads "Role — Name"; the role is      */
+	/* the bold run set in Newsreader (not a separate tracked label,      */
+	/* because a printed masthead sets the whole line in one family —     */
+	/* only its weight distinguishes role from name).                      */
+	/* -------------------------------------------------------------- */
+	.kn-masthead-page__roles p {
+		font-family: var(--wp--preset--font-family--newsreader);
+		font-size: var(--wp--preset--font-size--md);
+		color: var(--wp--preset--color--ink-deep);
+	}
+	.kn-masthead-page__roles p strong {
+		font-weight: 600;
+	}
+
+	/* -------------------------------------------------------------- */
+	/* ISSUE LIST — the compact "Featured in this issue" pattern.         */
+	/* -------------------------------------------------------------- */
+	.kn-issue-list li {
+		padding-block: var(--wp--preset--spacing--4);
+		border-block-end: 1px solid var(--wp--preset--color--line);
+	}
+	.kn-issue-list li:first-child { padding-block-start: 0; }
+	.kn-issue-list__index {
+		font-family: var(--wp--preset--font-family--jakarta);
+		font-size: var(--wp--preset--font-size--sm);
+		color: var(--wp--preset--color--ink-faint);
 	}
 }
 
 @layer utilities {
-	.cl-text-center { text-align: center; }
-	.cl-no-motion   { animation: none !important; transition: none !important; }
+	.kn-text-center { text-align: center; }
+	.kn-no-motion   { animation: none !important; transition: none !important; }
 }
