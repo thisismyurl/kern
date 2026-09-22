@@ -2,141 +2,162 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=1440">
-<title>Colophon — Article</title>
+<meta name="viewport" content="width=1320">
+<title>The Last Ferry to Pelee: Fiction, The Understory</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..900;1,8..60,300..900&family=Inter:wght@100..900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="colophon-preview.css">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="kern-preview.css">
 </head>
 <body>
 
-<header class="co-header">
-  <div class="co-header__inner">
-    <a class="co-site-name" href="#">Adrienne Holloway</a>
-    <nav class="co-nav">
-      <a href="#" class="current">Writing</a>
-      <a href="#">Projects</a>
-      <a href="#">Talks</a>
-      <a href="#">About</a>
+<a class="kn-skip-link" href="#main-content">Skip to content</a>
+
+<header class="kn-masthead">
+  <div class="kn-masthead__utility">
+    <form class="kn-search" role="search" aria-label="Search the magazine">
+      <label class="kn-sr-only" for="s">Search</label>
+      <input type="search" id="s" placeholder="Search…">
+      <button type="submit" class="kn-search-btn" aria-label="Search">&#128269;</button>
+    </form>
+    <nav aria-label="Utility">
+      <a href="03-archive.html">Archive</a>
+      <a href="#">Subscribe</a>
     </nav>
-    <a class="co-cta-btn" href="#">Subscribe</a>
+  </div>
+  <div class="kn-masthead__nameplate">
+    <a href="01-front-page.html">The Understory</a>
+    <p class="kn-masthead__tagline">Fiction, Poetry &amp; Criticism: Quarterly</p>
+  </div>
+  <div class="kn-masthead__nav">
+    <nav aria-label="Primary">
+      <a href="03-archive.html" aria-current="page">Fiction</a>
+      <a href="03-archive.html">Poetry</a>
+      <a href="03-archive.html">Essays &amp; Criticism</a>
+      <a href="03-archive.html">Interviews</a>
+      <a href="03-archive.html">Reviews</a>
+      <a href="04-masthead.html">Masthead</a>
+    </nav>
   </div>
 </header>
 
-<main>
-  <!-- Article header -->
-  <div class="co-section co-section--white" style="padding-block: 4rem; border-bottom: 1px solid var(--wp--preset--color--rule);">
-    <div class="co-wrap">
-      <div style="max-width: var(--co-measure);">
-        <div class="co-eyebrow co-eyebrow--accent">Technology Policy</div>
-        <h1 style="font-family: var(--wp--preset--font-family--serif); font-size: clamp(2.25rem, 4vw, 3.75rem); font-weight: 300; letter-spacing: -0.025em; line-height: 1.1; color: var(--wp--preset--color--ink-deep); margin-bottom: 1.25rem;">The Undersea Cable Map Nobody Wants You to See</h1>
-        <p style="font-family: var(--wp--preset--font-family--serif); font-style: italic; font-size: 1.1875rem; line-height: 1.6; color: var(--wp--preset--color--ink-secondary); margin-bottom: 1.75rem;">How the geography of internet infrastructure — seventeen cables carrying 99% of intercontinental traffic — became a geopolitical fault line.</p>
-        <div style="display: flex; align-items: center; gap: 1.5rem; font-family: var(--wp--preset--font-family--sans); font-size: 0.8125rem; color: var(--wp--preset--color--ink-muted); padding-block: 1.25rem; border-block: 1px solid var(--wp--preset--color--rule);">
-          <span>Adrienne Holloway</span>
-          <span style="color: var(--wp--preset--color--ink-faint);">·</span>
-          <span>May 28, 2025</span>
-          <span style="color: var(--wp--preset--color--ink-faint);">·</span>
-          <span>16 min read</span>
-          <span style="color: var(--wp--preset--color--ink-faint);">·</span>
-          <span style="color: var(--wp--preset--color--accent); font-weight: 500;">Technology Policy</span>
+<main id="main-content">
+  <div class="kn-wrap" style="padding-top:var(--wp--preset--spacing--12);padding-bottom:var(--wp--preset--spacing--16)">
+    <article class="kn-wrap--narrow" style="padding-inline:0">
+
+      <a class="kn-rubric" href="03-archive.html">Fiction</a>
+      <h1 style="font-size:var(--wp--preset--font-size--2-xl)">The Last Ferry to Pelee</h1>
+      <p class="kn-standfirst">Every August the Vosloo family closes the cottage the same weekend, and every August someone insists on taking the last boat instead of the first. This year it's Owen, and he isn't alone.</p>
+
+      <div class="kn-byline" style="justify-content:space-between;margin-block:var(--wp--preset--spacing--4)">
+        <a class="kn-byline__name" href="04-masthead.html">Bram Vosloo</a>
+        <span class="kn-byline__date">September 2, 2026</span>
+      </div>
+
+      <hr style="border:none;border-block-start:2px solid var(--wp--preset--color--line-strong);margin-block-end:var(--wp--preset--spacing--6)">
+
+      <!-- Featured image, 16:9, kern-hero image size (templates/single.html) -->
+      <div style="aspect-ratio:16/9;background:var(--wp--preset--color--paper-soft);margin-block-end:var(--wp--preset--spacing--10)">
+        <div class="kn-ph kn-ph--dusk" style="height:100%"><span class="kn-ph__cap">The Pelee Islander II, dusk crossing, wake catching the last light</span></div>
+      </div>
+
+      <!-- Article prose, kn-prose. Drop cap on the first paragraph
+           (kn-dropcap), keyed to Newsreader's cap-height rather than
+           core's default dropCap (switched off in theme.json). -->
+      <div class="kn-prose kn-dropcap">
+
+        <p>The dock at Leamington smelled the way it always did in the last week of August: diesel and whitefish and the particular sweetness of a season ending on schedule. Owen had made this crossing eleven times, always on the nine o'clock, always with his mother's cooler wedged between his knees. This year the cooler was empty and his mother was three weeks gone and the nine o'clock had left without him, which was how he came to be standing on the dock at quarter to seven in the evening, waiting for the last ferry of the day, watching a woman he had never met feed gulls from a paper bag like she owned the wind.</p>
+
+        <p>"You'll want to stand on the port side," she said, not looking at him. "The sun does something to the water past the lighthouse. My father used to say it was the only thing on this lake worth being on time for, and he was late for everything else."</p>
+
+        <p>Owen said nothing, because he had learned that year that saying nothing was usually the correct response to a stranger who already knew something true about you. She had a way of talking that assumed you'd been listening the whole time, the way his mother used to, mid-thought, as though the conversation had started somewhere in her head an hour before either of you arrived.</p>
+
+        <p>The ferry's horn sounded twice, the second call, the one that meant the deckhands were already coiling the last of the rope. He climbed the gangway behind her, and it was only once they were both leaning on the port rail, the harbour lights starting to blink on behind them, that he understood why the crossing felt different this time. It wasn't the boat, and it wasn't the hour. It was that for the first time in eleven summers, nobody on this deck was waiting for him to be someone other than exactly who he was standing there being.</p>
+
+      </div>
+
+      <!-- Pull Quote Feature, kern/pull-quote-feature, embedded mid-piece
+           where the story earns a moment of pause. -->
+      <blockquote class="kn-pullquote">
+        <p>Nobody on this deck was waiting for him to be someone other than exactly who he was standing there being.</p>
+        <cite>From the piece above</cite>
+      </blockquote>
+
+      <div class="kn-prose">
+        <p>They didn't speak again until the lighthouse. When it came, small, then sudden, then gone, the water did exactly what she said it would: it turned the colour of something you'd want to bottle and couldn't, a gold that had no business surviving a lake this cold. Owen thought of his mother's half-torn-up kitchen, the studs still bare where the cabinets used to hang, and understood for the first time that grief was not the absence of a person but the sudden, specific accuracy of a stranger's prediction about the light.</p>
+
+        <p>"She'd have liked this crossing," he said finally, to no one in particular, to the rail, to the gold water, to the woman who hadn't asked.</p>
+
+        <p>"They usually do," she said. "The ones who wait for the last boat instead of the first."</p>
+      </div>
+
+      <div style="margin-block:var(--wp--preset--spacing--12);padding-top:var(--wp--preset--spacing--8);border-top:1px solid var(--wp--preset--color--line)">
+        <p style="font-family:var(--wp--preset--font-family--jakarta);font-size:var(--wp--preset--font-size--xs);color:var(--wp--preset--color--ink-muted)">Tagged: <a href="03-archive.html">Fiction</a>, <a href="03-archive.html">Great Lakes</a>, <a href="03-archive.html">Grief</a></p>
+
+        <!-- Contributor Byline, kern/byline-contributor, placed as the
+             article-footer "who wrote this" credit. kn-byline__role is
+             the same tracked, rubric-coloured tag the Masthead Page
+             pattern uses for the full staff list, applied here to one
+             contributor. -->
+        <div class="kn-byline" style="margin-block-start:var(--wp--preset--spacing--8);align-items:flex-start;flex-direction:column;gap:var(--wp--preset--spacing--1)">
+          <span class="kn-byline__role">Contributing Writer, Fiction</span>
+          <span class="kn-byline__name" style="text-decoration:none">Bram Vosloo</span>
+          <p class="kn-byline__bio">Bram's short fiction has appeared in two anthologies and one very small literary magazine he is too polite to name. He spends his summers on Lake Erie and his winters wishing he still were.</p>
         </div>
       </div>
-    </div>
-  </div>
 
-  <section class="co-section co-section--white">
-    <div class="co-wrap">
-      <div class="co-cols-2-1">
-        <!-- Article body -->
-        <article class="co-article">
-          <div style="background: var(--wp--preset--color--ground); aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; font-family: var(--wp--preset--font-family--sans); font-size: 0.75rem; color: var(--wp--preset--color--ink-faint); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.5rem;">Lead Image</div>
-          <p style="font-family: var(--wp--preset--font-family--sans); font-size: 0.75rem; color: var(--wp--preset--color--ink-muted); font-style: italic; margin-bottom: 2rem;">The TeleGeography undersea cable map, 2025 edition. (Courtesy TeleGeography)</p>
+    </article>
 
-          <p>On the floor of the Atlantic Ocean, at a depth of roughly 3,000 metres, a bundle of optical fibres carries the emails, the TikToks, the bank transfers, and the classified government communications of the Western world. It is not classified. You can look up the route on TeleGeography's public cable map. The coordinates of the landing stations are known. And yet, for most of the last two decades, governments acted as if the cables were not there.</p>
+    <nav class="kn-wrap--narrow" style="padding-inline:0;display:flex;justify-content:space-between;flex-wrap:wrap;gap:var(--wp--preset--spacing--4);margin-block-start:var(--wp--preset--spacing--10);font-family:var(--wp--preset--font-family--jakarta);font-size:var(--wp--preset--font-size--sm)">
+      <a href="#">&larr; What the River Keeps</a>
+      <a href="#">Harbor, Unfinished &rarr;</a>
+    </nav>
 
-          <p>That changed sometime around 2022, when the sabotage of the Nord Stream pipeline made European security establishments think seriously about what else runs under the sea. The answer — for anyone who cared to look — was everything. Ninety-nine percent of intercontinental internet traffic moves through seventeen active cable systems. All of them are privately owned. Most are co-owned by Google, Meta, and three or four national telecoms. None have meaningful military protection.</p>
-
-          <blockquote>"We don't think of cables as infrastructure the way we think of highways or power lines, because we don't see them. But remove them and the global economy stops in minutes, not days."</blockquote>
-
-          <h2>The Ownership Problem</h2>
-
-          <p>The governance of undersea cables has never caught up with their strategic importance. The cables are regulated as telecommunications equipment. They are permitted under UNCLOS, which treats the seabed as a shared commons. Repairs are handled by a small cartel of specialized ships — there are roughly fifty capable vessels worldwide. There is no meaningful international framework for protecting them.</p>
-
-          <p>When a fishing trawler dragged its anchor across a cable off Taiwan in 2006, it severed connections between Taiwan and the Philippines and slowed internet speeds across Southeast Asia for weeks. When the Houthi movement damaged cables in the Red Sea in early 2024, the event was treated primarily as a logistics story. The strategic implications received less attention.</p>
-
-          <h2>What Governments Are Actually Doing</h2>
-
-          <p>The policy response has been fragmentary but real. The US has begun scrutinizing cable landing licenses more closely, blocking Huawei Marine from participating in projects connecting American landing stations. The EU has put cables on its critical infrastructure list, though without corresponding enforcement mechanisms. Australia has passed legislation requiring cable operators to notify the government of maintenance work — a measure so minimal it reads as performative.</p>
-
-          <p>The serious work is happening at the national intelligence level, not the policy level. NATO has begun coordinating cable monitoring activities. The UK has established a joint government-industry cable protection group. These are useful, quiet steps. They are not a substitute for a coherent international framework.</p>
-        </article>
-
-        <!-- Sidebar -->
-        <aside style="display: flex; flex-direction: column; gap: 2rem;">
-          <div class="co-newsletter" style="padding: 2rem;">
-            <div class="co-eyebrow co-eyebrow--accent">Newsletter</div>
-            <div class="co-newsletter__heading" style="font-size: 1.25rem;">Essays by email</div>
-            <p class="co-newsletter__desc">Long-form pieces on technology and policy, sent when they're ready. Not weekly.</p>
-            <form>
-              <input type="email" placeholder="your@email.com">
-              <button type="submit" class="co-newsletter__btn">Subscribe</button>
-            </form>
-          </div>
-
-          <div style="border: 1px solid var(--wp--preset--color--rule); padding: 2rem;">
-            <div style="font-family: var(--wp--preset--font-family--sans); font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--wp--preset--color--ink-muted); margin-bottom: 1.25rem; padding-bottom: 0.875rem; border-bottom: 1px solid var(--wp--preset--color--rule);">More in Technology Policy</div>
-            <div style="display: flex; flex-direction: column; gap: 1.25rem;">
-              <div>
-                <a href="#" style="font-family: var(--wp--preset--font-family--serif); font-size: 1rem; font-weight: 400; line-height: 1.35; color: var(--wp--preset--color--ink-deep); text-decoration: none;">Water Utilities and the Software They Can't Afford to Patch</a>
-                <div style="font-family: var(--wp--preset--font-family--sans); font-size: 0.75rem; color: var(--wp--preset--color--ink-faint); margin-top: 0.25rem;">May 14, 2025</div>
-              </div>
-              <hr class="co-divider" style="margin-block: 0;">
-              <div>
-                <a href="#" style="font-family: var(--wp--preset--font-family--serif); font-size: 1rem; font-weight: 400; line-height: 1.35; color: var(--wp--preset--color--ink-deep); text-decoration: none;">Regulating Models You Can't Inspect</a>
-                <div style="font-family: var(--wp--preset--font-family--sans); font-size: 0.75rem; color: var(--wp--preset--color--ink-faint); margin-top: 0.25rem;">Apr 9, 2025</div>
-              </div>
-              <hr class="co-divider" style="margin-block: 0;">
-              <div>
-                <a href="#" style="font-family: var(--wp--preset--font-family--serif); font-size: 1rem; font-weight: 400; line-height: 1.35; color: var(--wp--preset--color--ink-deep); text-decoration: none;">Spectrum Auctions and the Myth of Neutral Connectivity</a>
-                <div style="font-family: var(--wp--preset--font-family--sans); font-size: 0.75rem; color: var(--wp--preset--color--ink-faint); margin-top: 0.25rem;">Apr 18, 2025</div>
-              </div>
-            </div>
-          </div>
-        </aside>
+    <section class="kn-wrap--narrow" style="padding-inline:0;margin-block-start:var(--wp--preset--spacing--12)">
+      <h2 style="font-size:var(--wp--preset--font-size--lg)">Responses</h2>
+      <div style="margin-block-start:var(--wp--preset--spacing--6);display:flex;flex-direction:column;gap:var(--wp--preset--spacing--6)">
+        <div style="border-block-end:1px solid var(--wp--preset--color--line);padding-block-end:var(--wp--preset--spacing--5)">
+          <p style="font-family:var(--wp--preset--font-family--jakarta);font-weight:600;font-size:var(--wp--preset--font-size--sm)">June Halloran-Petit <span style="font-weight:400;color:var(--wp--preset--color--ink-muted)">, September 3, 2026</span></p>
+          <p style="margin-top:var(--wp--preset--spacing--2)">The line about the studs still bare where the cabinets used to hang stopped me cold. This is the best thing you've published all year, Bram.</p>
+        </div>
       </div>
-    </div>
-  </section>
+      <form style="margin-block-start:var(--wp--preset--spacing--8);display:flex;flex-direction:column;gap:var(--wp--preset--spacing--3);max-width:480px">
+        <label for="comment" style="font-family:var(--wp--preset--font-family--jakarta);font-size:var(--wp--preset--font-size--sm);font-weight:600">Leave a response</label>
+        <textarea id="comment" rows="4" style="border:1px solid var(--wp--preset--color--line);padding:var(--wp--preset--spacing--3);font-family:var(--wp--preset--font-family--newsreader)"></textarea>
+        <button type="submit" class="kn-button" style="align-self:flex-start">Post Comment</button>
+      </form>
+    </section>
+  </div>
 </main>
 
-<footer class="co-footer">
-  <div class="co-footer__inner">
+<footer class="kn-footer">
+  <div class="kn-wrap kn-footer__inner">
     <div>
-      <div class="co-footer__name">Adrienne Holloway</div>
-      <p class="co-footer__desc">Writing on technology, infrastructure, and policy. Published in The Atlantic, MIT Technology Review, and Rest of World.</p>
+      <a href="01-front-page.html" style="font-family:var(--wp--preset--font-family--newsreader);font-size:1.5rem;color:var(--wp--preset--color--paper);text-decoration:none">The Understory</a>
+      <p class="kn-footer__desc">A quarterly of fiction, poetry, essays and criticism. Edit this line in the Site Editor.</p>
     </div>
     <div>
-      <div class="co-footer__heading">Writing</div>
-      <nav class="co-footer__links">
-        <a href="#">Technology Policy</a>
-        <a href="#">Infrastructure</a>
-        <a href="#">Urban Tech</a>
-        <a href="#">AI Policy</a>
+      <h2>Sections</h2>
+      <nav aria-label="Footer sections">
+        <a href="03-archive.html">Fiction</a>
+        <a href="03-archive.html">Poetry</a>
+        <a href="03-archive.html">Essays &amp; Criticism</a>
+        <a href="03-archive.html">Interviews</a>
+        <a href="03-archive.html">Reviews</a>
       </nav>
     </div>
     <div>
-      <div class="co-footer__heading">Connect</div>
-      <nav class="co-footer__links">
-        <a href="#">Newsletter</a>
-        <a href="#">Twitter / X</a>
-        <a href="#">Mastodon</a>
-        <a href="#">Contact</a>
-      </nav>
+      <h2>The Magazine</h2>
+      <ul>
+        <li><a href="04-masthead.html">Masthead &amp; contributors</a></li>
+        <li><a href="#">Submissions</a></li>
+        <li><a href="#">Subscribe</a></li>
+      </ul>
     </div>
   </div>
-  <div class="co-footer__bottom">
-    <span>&copy; 2025 Adrienne Holloway</span>
-    <span>Built with WordPress &amp; <a href="https://thisismyurl.com/colophon/">Colophon</a></span>
+  <div class="kn-wrap kn-footer__bottom">
+    <p>&copy; 2026 The Understory</p>
+    <p>Built with the <a href="https://thisismyurl.com/kern" rel="nofollow">Kern</a> theme.</p>
   </div>
 </footer>
 

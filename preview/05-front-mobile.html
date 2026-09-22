@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kern: Front Page (Mobile), The Understory</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="kern-preview.css">
+<style>
+  /* Mobile masthead: utility bar collapses to search + hamburger; the
+     tracked section nav (row 3) becomes the overlay menu, matching
+     core/navigation's overlayMenu:"mobile" setting on kn-masthead__nav. */
+  .kn-masthead__nav nav { display: none; }
+  .kn-hero-grid { grid-template-columns: 1fr !important; }
+  .kn-grid-4 { grid-template-columns: repeat(2, 1fr) !important; }
+</style>
+</head>
+<body>
+
+<a class="kn-skip-link" href="#main-content">Skip to content</a>
+
+<header class="kn-masthead">
+  <div class="kn-masthead__utility">
+    <form class="kn-search" role="search" aria-label="Search the magazine">
+      <label class="kn-sr-only" for="s">Search</label>
+      <input type="search" id="s" placeholder="Search…" style="width:9rem">
+      <button type="submit" class="kn-search-btn" aria-label="Search">&#128269;</button>
+    </form>
+    <nav aria-label="Utility">
+      <a href="#">Subscribe</a>
+    </nav>
+  </div>
+  <div class="kn-masthead__nameplate" style="padding-block:1.25rem">
+    <a href="01-front-page.html" style="font-size:1.75rem">The Understory</a>
+    <p class="kn-masthead__tagline">Fiction &amp; Poetry, Quarterly</p>
+  </div>
+  <div class="kn-masthead__nav" style="justify-content:center">
+    <button class="kn-hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main-content">
+
+  <div class="kn-section kn-section--tight" style="padding-block:var(--wp--preset--spacing--8)">
+    <div class="kn-wrap kn-hero-grid">
+      <div class="kn-hero__media">
+        <div class="kn-ph kn-ph--moss"><span class="kn-ph__cap">Photograph: a kitchen table, morning light, half-cleared</span></div>
+      </div>
+      <div class="kn-hero__content">
+        <a class="kn-rubric" href="03-archive.html">Fiction</a>
+        <h1 class="kn-hero__title" style="font-size:var(--wp--preset--font-size--xl)"><a href="02-article.html">What the River Keeps</a></h1>
+        <p class="kn-standfirst" style="font-size:var(--wp--preset--font-size--base)">A daughter returns to the house her mother left mid-renovation and finds the past waiting exactly where she left it.</p>
+        <div class="kn-byline">
+          <a class="kn-byline__name" href="04-masthead.html">Danielle Okonkwo-Reyes</a>
+          <span class="kn-byline__date">Sep 14</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="kn-section" style="padding-top:0;padding-block-end:var(--wp--preset--spacing--8)">
+    <div class="kn-wrap">
+
+      <div class="kn-section-header">
+        <h2 style="font-size:var(--wp--preset--font-size--md)">From the Current Issue</h2>
+        <a href="03-archive.html">View all &rarr;</a>
+      </div>
+
+      <div class="kn-grid-4">
+
+        <div class="kn-card">
+          <a class="kn-card__media" href="02-article.html"><div class="kn-ph kn-ph--sepia"><span class="kn-ph__cap">Notebook, coffee ring</span></div></a>
+          <a class="kn-rubric" href="03-archive.html">Poetry</a>
+          <h3 style="font-size:var(--wp--preset--font-size--sm)"><a href="02-article.html">Notes for an Elegy I Haven't Finished</a></h3>
+          <span class="kn-card__date">N. Achebe-Voss</span>
+        </div>
+
+        <div class="kn-card">
+          <a class="kn-card__media" href="02-article.html"><div class="kn-ph kn-ph--clay"><span class="kn-ph__cap">A dock, low tide</span></div></a>
+          <a class="kn-rubric" href="03-archive.html">Fiction</a>
+          <h3 style="font-size:var(--wp--preset--font-size--sm)"><a href="02-article.html">The Last Ferry to Pelee</a></h3>
+          <span class="kn-card__date">B. Vosloo</span>
+        </div>
+
+        <div class="kn-card">
+          <a class="kn-card__media" href="02-article.html"><div class="kn-ph kn-ph--slate"><span class="kn-ph__cap">A reading chair</span></div></a>
+          <a class="kn-rubric" href="03-archive.html">Essays &amp; Criticism</a>
+          <h3 style="font-size:var(--wp--preset--font-size--sm)"><a href="02-article.html">On Reading Slowly in a Fast Century</a></h3>
+          <span class="kn-card__date">R. Tanaka-Furst</span>
+        </div>
+
+        <div class="kn-card">
+          <a class="kn-card__media" href="02-article.html"><div class="kn-ph kn-ph--dusk"><span class="kn-ph__cap">A harbour wall</span></div></a>
+          <a class="kn-rubric" href="03-archive.html">Poetry</a>
+          <h3 style="font-size:var(--wp--preset--font-size--sm)"><a href="02-article.html">Harbor, Unfinished</a></h3>
+          <span class="kn-card__date">M. Fuentes-Lindqvist</span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="kn-section--ink" style="padding-block:var(--wp--preset--spacing--10);text-align:center">
+    <div class="kn-wrap">
+      <p class="kn-rubric" style="text-align:center">Four Issues a Year</p>
+      <h2 style="color:var(--wp--preset--color--paper);font-size:var(--wp--preset--font-size--md)">Print, mailed quarterly. No app, no algorithm, no ads.</h2>
+      <p style="margin-top:var(--wp--preset--spacing--5)">
+        <a class="kn-button" style="background:var(--wp--preset--color--paper);color:var(--wp--preset--color--ink-deep)" href="#">Subscribe</a>
+      </p>
+    </div>
+  </div>
+
+</main>
+
+<footer class="kn-footer">
+  <div class="kn-wrap kn-footer__inner">
+    <div>
+      <a href="01-front-page.html" style="font-family:var(--wp--preset--font-family--newsreader);font-size:1.5rem;color:var(--wp--preset--color--paper);text-decoration:none">The Understory</a>
+      <p class="kn-footer__desc">A quarterly of fiction, poetry, essays and criticism.</p>
+    </div>
+    <div>
+      <h2>Sections</h2>
+      <nav aria-label="Footer sections">
+        <a href="03-archive.html">Fiction</a>
+        <a href="03-archive.html">Poetry</a>
+        <a href="03-archive.html">Essays &amp; Criticism</a>
+      </nav>
+    </div>
+  </div>
+  <div class="kn-wrap kn-footer__bottom">
+    <p>&copy; 2026 The Understory</p>
+    <p>Built with the <a href="https://thisismyurl.com/kern" rel="nofollow">Kern</a> theme.</p>
+  </div>
+</footer>
+
+</body>
+</html>

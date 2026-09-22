@@ -2,106 +2,192 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=1200">
-<title>Colophon — Front Page (WP.org 1200×900)</title>
+<meta name="viewport" content="width=1320">
+<title>Kern: Front Page, The Understory</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..900;1,8..60,300..900&family=Inter:wght@100..900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="colophon-preview.css">
-<style>
-  /* Constrain to WP.org 1200×900 — show two content sections in viewport */
-  body { overflow: hidden; }
-  .co-hero { padding-block: 3.5rem; }
-  .co-hero__title { font-size: 5rem; }
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="kern-preview.css">
 </head>
 <body>
 
-<header class="co-header">
-  <div class="co-header__inner">
-    <a class="co-site-name" href="#">Adrienne Holloway</a>
-    <nav class="co-nav">
-      <a href="#" class="current">Writing</a>
-      <a href="#">Projects</a>
-      <a href="#">Talks</a>
-      <a href="#">About</a>
+<a class="kn-skip-link" href="#main-content">Skip to content</a>
+
+<!-- Row 1, utility bar: search left; Archive / Subscribe right.
+     Kept out of the main navigation so an editor can build the section
+     nav (Row 3) without these two links crowding it. -->
+<header class="kn-masthead">
+  <div class="kn-masthead__utility">
+    <form class="kn-search" role="search" aria-label="Search the magazine">
+      <label class="kn-sr-only" for="s">Search</label>
+      <input type="search" id="s" placeholder="Search…">
+      <button type="submit" class="kn-search-btn" aria-label="Search">&#128269;</button>
+    </form>
+    <nav aria-label="Utility">
+      <a href="03-archive.html">Archive</a>
+      <a href="#">Subscribe</a>
     </nav>
-    <a class="co-cta-btn" href="#">Get in Touch</a>
+  </div>
+
+  <!-- Row 2, nameplate: the wordmark, centred, set large in Newsreader. -->
+  <div class="kn-masthead__nameplate">
+    <a href="01-front-page.html">The Understory</a>
+    <p class="kn-masthead__tagline">Fiction, Poetry &amp; Criticism: Quarterly</p>
+  </div>
+
+  <!-- Row 3, section nav: left-aligned in the theme; centred here since
+       this is the front page and there is no adjacent utility content. -->
+  <div class="kn-masthead__nav">
+    <nav aria-label="Primary">
+      <a href="03-archive.html">Fiction</a>
+      <a href="03-archive.html">Poetry</a>
+      <a href="03-archive.html">Essays &amp; Criticism</a>
+      <a href="03-archive.html">Interviews</a>
+      <a href="03-archive.html">Reviews</a>
+      <a href="04-masthead.html">Masthead</a>
+    </nav>
   </div>
 </header>
 
-<section class="co-hero">
-  <div class="co-hero__inner">
-    <h1 class="co-hero__title">Writing and research at the edge of technology and policy</h1>
-    <p class="co-hero__sub">Essays, analysis, and long-form reporting on how infrastructure shapes communities. Published in The Atlantic, MIT Technology Review, and Rest of World.</p>
-    <div class="co-hero__actions">
-      <a class="co-cta-btn" href="#">Read the Latest</a>
-      <a class="co-cta-btn co-cta-btn--outline" href="#">Subscribe</a>
-    </div>
-  </div>
-</section>
+<main id="main-content">
 
-<!-- Latest posts -->
-<section class="co-section co-section--white" style="padding-block: 3rem;">
-  <div class="co-wrap">
-    <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--wp--preset--color--rule);">
-      <h2 style="font-family: var(--wp--preset--font-family--serif); font-size: 1.25rem; font-weight: 400; letter-spacing: -0.01em;">Recent Writing</h2>
-      <a href="#" style="font-family: var(--wp--preset--font-family--sans); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; color: var(--wp--preset--color--ink-muted);">All posts →</a>
-    </div>
-
-    <!-- Feature post (2/3 + 1/3 grid) -->
-    <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 3rem; margin-bottom: 2.5rem; padding-bottom: 2.5rem; border-bottom: 1px solid var(--wp--preset--color--rule);">
-      <div class="co-post-card">
-        <div class="co-post-card__img co-post-card__img--3-2">Feature image placeholder</div>
-        <a class="co-post-card__category" href="#">Technology Policy</a>
-        <a class="co-post-card__title co-post-card__title--lg" href="#">The Undersea Cable Map Nobody Wants You to See</a>
-        <p class="co-post-card__excerpt">How the geography of internet infrastructure — seventeen cables carrying 99% of intercontinental traffic — became a geopolitical fault line that governments are only now beginning to manage.</p>
-        <div class="co-post-card__meta"><span>May 28, 2025</span><span class="sep">·</span><span>16 min read</span></div>
+  <!-- Lead Story Hero, kern/hero-lead-story. Bound in the real theme to a
+       one-item Query Loop (queryId 401) so this is always whatever post
+       was most recently published, not a static placeholder. -->
+  <div class="kn-section kn-section--tight">
+    <div class="kn-wrap kn-hero-grid">
+      <div class="kn-hero__media">
+        <div class="kn-ph kn-ph--moss"><span class="kn-ph__cap">Photograph: a kitchen table, morning light, half-cleared</span></div>
       </div>
-      <div style="display: flex; flex-direction: column; gap: 2rem;">
-        <div class="co-post-card">
-          <a class="co-post-card__category" href="#">Infrastructure</a>
-          <a class="co-post-card__title co-post-card__title--sm" href="#">Water Utilities and the Software They Can't Afford to Patch</a>
-          <div class="co-post-card__meta"><span>May 14, 2025</span><span class="sep">·</span><span>9 min</span></div>
+      <div class="kn-hero__content">
+        <a class="kn-rubric" href="03-archive.html">Fiction</a>
+        <h1 class="kn-hero__title"><a href="02-article.html">What the River Keeps</a></h1>
+        <p class="kn-standfirst">A daughter returns to the house her mother left mid-renovation and finds the past waiting exactly where she left it, under the floorboards, still breathing.</p>
+        <div class="kn-byline">
+          <a class="kn-byline__name" href="04-masthead.html">Danielle Okonkwo-Reyes</a>
+          <span class="kn-byline__date">September 14, 2026</span>
         </div>
-        <hr class="co-divider" style="margin-block: 0;">
-        <div class="co-post-card">
-          <a class="co-post-card__category" href="#">Urban Tech</a>
-          <a class="co-post-card__title co-post-card__title--sm" href="#">Sidewalk Labs Is Gone. Its Ideas Won't Die.</a>
-          <div class="co-post-card__meta"><span>Apr 30, 2025</span><span class="sep">·</span><span>12 min</span></div>
-        </div>
-        <hr class="co-divider" style="margin-block: 0;">
-        <div class="co-post-card">
-          <a class="co-post-card__category" href="#">Policy</a>
-          <a class="co-post-card__title co-post-card__title--sm" href="#">Spectrum Auctions and the Myth of Neutral Connectivity</a>
-          <div class="co-post-card__meta"><span>Apr 18, 2025</span><span class="sep">·</span><span>14 min</span></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 3-col grid -->
-    <div class="co-cols-3">
-      <div class="co-post-card">
-        <div class="co-post-card__img co-post-card__img--3-2">Placeholder</div>
-        <a class="co-post-card__category" href="#">AI Policy</a>
-        <a class="co-post-card__title co-post-card__title--sm" href="#">Regulating Models You Can't Inspect</a>
-        <div class="co-post-card__meta"><span>Apr 9, 2025</span><span class="sep">·</span><span>11 min</span></div>
-      </div>
-      <div class="co-post-card">
-        <div class="co-post-card__img co-post-card__img--3-2">Placeholder</div>
-        <a class="co-post-card__category" href="#">Infrastructure</a>
-        <a class="co-post-card__title co-post-card__title--sm" href="#">The Last Mile Problem Is a Governance Problem</a>
-        <div class="co-post-card__meta"><span>Mar 25, 2025</span><span class="sep">·</span><span>8 min</span></div>
-      </div>
-      <div class="co-post-card">
-        <div class="co-post-card__img co-post-card__img--3-2">Placeholder</div>
-        <a class="co-post-card__category" href="#">Urban Tech</a>
-        <a class="co-post-card__title co-post-card__title--sm" href="#">Who Owns the Curb? The Battle for the Street Edge</a>
-        <div class="co-post-card__meta"><span>Mar 12, 2025</span><span class="sep">·</span><span>10 min</span></div>
       </div>
     </div>
   </div>
-</section>
+
+  <!-- Section Header + Story Grid, kern/section-header, kern/story-grid.
+       8 cards, portrait 4:5 crops (kern-card image size) so a dense row
+       reads as a contact sheet, not a wall of landscape thumbnails. -->
+  <div class="kn-section" style="padding-top:0">
+    <div class="kn-wrap">
+
+      <div class="kn-section-header">
+        <h2>From the Current Issue</h2>
+        <a href="03-archive.html">View all &rarr;</a>
+      </div>
+
+      <div class="kn-grid-4">
+
+        <div class="kn-card">
+          <a class="kn-card__media" href="02-article.html"><div class="kn-ph kn-ph--sepia"><span class="kn-ph__cap">Notebook, coffee ring, loose pages</span></div></a>
+          <a class="kn-rubric" href="03-archive.html">Poetry</a>
+          <h3><a href="02-article.html">Notes for an Elegy I Haven't Finished</a></h3>
+          <span class="kn-card__date">Naomi Achebe-Voss</span>
+        </div>
+
+        <div class="kn-card">
+          <a class="kn-card__media" href="02-article.html"><div class="kn-ph kn-ph--slate"><span class="kn-ph__cap">A reading chair by a north window</span></div></a>
+          <a class="kn-rubric" href="03-archive.html">Essays &amp; Criticism</a>
+          <h3><a href="02-article.html">On Reading Slowly in a Fast Century</a></h3>
+          <span class="kn-card__date">Régine Tanaka-Furst</span>
+        </div>
+
+        <div class="kn-card">
+          <a class="kn-card__media" href="02-article.html"><div class="kn-ph kn-ph--dusk"><span class="kn-ph__cap">Portrait, studio light, three-quarter turn</span></div></a>
+          <a class="kn-rubric" href="03-archive.html">Interviews</a>
+          <h3><a href="02-article.html">A Conversation with Translator Ingrid Castellano-Marsh</a></h3>
+          <span class="kn-card__date">Owen Marchetti</span>
+        </div>
+
+        <div class="kn-card">
+          <a class="kn-card__media" href="02-article.html"><div class="kn-ph kn-ph--clay"><span class="kn-ph__cap">A dock, low tide, an island in the distance</span></div></a>
+          <a class="kn-rubric" href="03-archive.html">Fiction</a>
+          <h3><a href="02-article.html">The Last Ferry to Pelee</a></h3>
+          <span class="kn-card__date">Bram Vosloo</span>
+        </div>
+
+        <div class="kn-card">
+          <a class="kn-card__media" href="02-article.html"><div class="kn-ph kn-ph--moss"><span class="kn-ph__cap">Three book spines, stacked, catching light</span></div></a>
+          <a class="kn-rubric" href="03-archive.html">Reviews</a>
+          <h3><a href="02-article.html">Three Debut Story Collections, Reviewed</a></h3>
+          <span class="kn-card__date">Tobias Ekwueme</span>
+        </div>
+
+        <div class="kn-card">
+          <a class="kn-card__media" href="02-article.html"><div class="kn-ph kn-ph--dusk"><span class="kn-ph__cap">A harbour wall, unfinished, a crane in silhouette</span></div></a>
+          <a class="kn-rubric" href="03-archive.html">Poetry</a>
+          <h3><a href="02-article.html">Harbor, Unfinished</a></h3>
+          <span class="kn-card__date">Mathias Fuentes-Lindqvist</span>
+        </div>
+
+        <div class="kn-card">
+          <a class="kn-card__media" href="02-article.html"><div class="kn-ph kn-ph--sepia"><span class="kn-ph__cap">A desk lamp, an unfinished manuscript</span></div></a>
+          <a class="kn-rubric" href="03-archive.html">Essays &amp; Criticism</a>
+          <h3><a href="02-article.html">The Case for the Long Sentence</a></h3>
+          <span class="kn-card__date">June Halloran-Petit</span>
+        </div>
+
+        <div class="kn-card">
+          <a class="kn-card__media" href="02-article.html"><div class="kn-ph kn-ph--clay"><span class="kn-ph__cap">An orchard row, bare branches, early frost</span></div></a>
+          <a class="kn-rubric" href="03-archive.html">Fiction</a>
+          <h3><a href="02-article.html">What the Orchard Remembers</a></h3>
+          <span class="kn-card__date">Desmond Achterberg</span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Subscribe CTA, kern/subscribe-cta. The theme's one moment of true
+       black-on-white inversion, used exactly once on the page. -->
+  <div class="kn-section--ink kn-section--tight" style="text-align:center">
+    <div class="kn-wrap" style="max-width:600px">
+      <p class="kn-rubric" style="text-align:center">Four Issues a Year</p>
+      <h2 style="color:var(--wp--preset--color--paper)">Print, mailed quarterly. No app, no algorithm, no ads.</h2>
+      <p style="margin-top:var(--wp--preset--spacing--6)">
+        <a class="kn-button" style="background:var(--wp--preset--color--paper);color:var(--wp--preset--color--ink-deep)" href="#">Subscribe</a>
+      </p>
+    </div>
+  </div>
+
+</main>
+
+<footer class="kn-footer">
+  <div class="kn-wrap kn-footer__inner">
+    <div>
+      <a href="01-front-page.html" style="font-family:var(--wp--preset--font-family--newsreader);font-size:1.5rem;color:var(--wp--preset--color--paper);text-decoration:none">The Understory</a>
+      <p class="kn-footer__desc">A quarterly of fiction, poetry, essays and criticism. Edit this line in the Site Editor.</p>
+    </div>
+    <div>
+      <h2>Sections</h2>
+      <nav aria-label="Footer sections">
+        <a href="03-archive.html">Fiction</a>
+        <a href="03-archive.html">Poetry</a>
+        <a href="03-archive.html">Essays &amp; Criticism</a>
+        <a href="03-archive.html">Interviews</a>
+        <a href="03-archive.html">Reviews</a>
+      </nav>
+    </div>
+    <div>
+      <h2>The Magazine</h2>
+      <ul>
+        <li><a href="04-masthead.html">Masthead &amp; contributors</a></li>
+        <li><a href="#">Submissions</a></li>
+        <li><a href="#">Subscribe</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="kn-wrap kn-footer__bottom">
+    <p>&copy; 2026 The Understory</p>
+    <p>Built with the <a href="https://thisismyurl.com/kern" rel="nofollow">Kern</a> theme.</p>
+  </div>
+</footer>
 
 </body>
 </html>
