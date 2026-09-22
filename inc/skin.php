@@ -18,10 +18,9 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Register this theme's image crop sizes.
  *
- * Two crops carry Kern's two dominant layouts: a wide duotone-ready hero for
- * the homepage lead story (matches the 16:9 hero the reference layout uses
- * for its lead image) and a tighter 3:2 card crop for the story grid, so
- * thumbnails in a four-column row stay visually level regardless of the
+ * Two crops carry Kern's two dominant layouts: a wide 8:5 hero for a
+ * full-measure lead image, and a 4:5 portrait card crop for the story grid,
+ * so thumbnails in a four-column row stay visually level regardless of the
  * source photo's native aspect ratio.
  *
  * Hooked on after_setup_theme (not the core setup() function) so a re-skin

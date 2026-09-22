@@ -130,7 +130,9 @@
 	.kn-masthead__nav .wp-block-navigation a {
 		padding-inline: var(--wp--preset--spacing--3);
 	}
-	.kn-masthead__nav .wp-block-navigation a:first-child { padding-inline-start: 0; }
+	/* Only the FIRST item sits flush with the measure. `a:first-child` would
+	   match every link, because each one is the first child of its own <li>. */
+	.kn-masthead__nav .wp-block-navigation-item:first-child > a { padding-inline-start: 0; }
 	.kn-masthead__nav .wp-block-navigation__submenu-container {
 		border: 1px solid var(--wp--preset--color--line-strong);
 		border-radius: 0;
@@ -195,6 +197,24 @@
 
 	/* Reading-column link underline offset. */
 	.kn-main :where(p, li) a { text-underline-offset: 0.15em; }
+
+	/* Core's reset strips list markers globally so navigation, page and social
+	   lists start unstyled. Editorial prose needs them back: a numbered list in
+	   an essay is meaning, not decoration. Scoped to the list BLOCK rather than
+	   to every ul/ol in the content, so a navigation or social-links block
+	   dropped into a post keeps its own marker-free styling. `revert` hands the
+	   list type back to the browser, so nesting (disc → circle → square) and a
+	   list's own `type` attribute both behave the way a reader expects. */
+	.wp-block-list {
+		list-style: revert;
+		padding-inline-start: 1.5em;
+	}
+	/* …except in the footer, where the list block is a column of links rather
+	   than a list of things to read. */
+	.kn-footer .wp-block-list {
+		list-style: none;
+		padding-inline-start: 0;
+	}
 
 	/* ------------------------------------------------------------------ */
 	/* READING REFINEMENTS — theme.json expresses typefaces, weights and   */
@@ -335,7 +355,8 @@
 	}
 	.kn-hero .wp-block-post-title,
 	.kn-hero h1 {
-		font-size: var(--wp--preset--font-size--3xl);
+		/* WordPress kebab-cases preset slugs: `3xl` becomes `3-xl` here. */
+		font-size: var(--wp--preset--font-size--3-xl);
 		line-height: 0.98;
 	}
 

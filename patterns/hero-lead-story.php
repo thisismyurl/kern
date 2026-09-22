@@ -55,8 +55,8 @@ defined( 'ABSPATH' ) || exit;
 
 	<!-- wp:query-no-results -->
 		<!-- The lead story needs at least one published post to bind to; this
-		     tells a brand-new install why the hero is quiet rather than showing
-		     a broken layout. -->
+		tells a brand-new install why the hero is quiet rather than showing a
+		broken layout. -->
 		<!-- wp:paragraph -->
 		<p><?php esc_html_e( 'Publish your first piece and it will lead the homepage here.', 'kern' ); ?></p>
 		<!-- /wp:paragraph -->

@@ -8,7 +8,14 @@
 		<!-- wp:paragraph {"className":"is-style-kn-rubric"} -->
 		<p class="is-style-kn-rubric">Latest</p>
 		<!-- /wp:paragraph -->
-		<!-- wp:query-title {"type":"archive","level":1,"fontSize":"xl"} /-->
+		<!-- The posts index is is_home(), not is_archive(), so a Query Title
+		     renders nothing here and the page ships without an H1. The heading
+		     binds to the theme's own site-strings source instead, which returns
+		     the title of the page assigned under Settings → Reading, or the
+		     fallback below when no posts page is set. -->
+		<!-- wp:heading {"level":1,"fontSize":"xl","metadata":{"bindings":{"content":{"source":"kern/site-strings","args":{"key":"posts-title"}}}}} -->
+		<h1 class="wp-block-heading has-xl-font-size">Latest news</h1>
+		<!-- /wp:heading -->
 	</div>
 	<!-- /wp:group -->
 

@@ -26,6 +26,11 @@
 /GUIDE.md
 /THEME-CHECK.md
 /tools
+# Static design previews published to GitHub Pages by
+# .github/workflows/deploy-preview-pages.yml. Development artefacts: HTML
+# mockups, PNG captures and a Python capture script, ~3.5 MB that has no
+# business inside an installed theme.
+/preview
 /composer.json
 /composer.lock
 /phpcs.xml.dist

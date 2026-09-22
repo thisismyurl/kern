@@ -3,16 +3,19 @@
 <!-- wp:group {"tagName":"main","className":"kn-main","metadata":{"name":"Main"},"layout":{"type":"constrained","contentSize":"1100px"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|12","bottom":"var:preset|spacing|16"}}}} -->
 <main id="main-content" class="wp-block-group kn-main" style="padding-top:var(--wp--preset--spacing--12);padding-bottom:var(--wp--preset--spacing--16)">
 
-	<!-- The contributor's own bio above their stream — same shape as the
-	     article-footer author box in single.html, hoisted here so an
-	     author archive opens with who they are, not the list. -->
+	<!-- The contributor's name above their stream, so an author archive opens
+	     with who they are rather than the list. The name comes from Query
+	     Title, which reads get_the_archive_title() — that covers an author
+	     archive as well as a term archive, so the type stays "archive".
+	     There is no core block that prints an author's biography outside the
+	     loop (Term Description reads taxonomy terms only, and Post Author
+	     Biography needs post context), so the bio is not rendered here. -->
 	<!-- wp:group {"className":"kn-author-box","layout":{"type":"constrained","contentSize":"720px"},"style":{"spacing":{"padding":{"bottom":"var:preset|spacing|10"},"blockGap":"var:preset|spacing|4"},"border":{"bottom":{"color":"var:preset|color|line-strong","width":"2px"}}}} -->
 	<div class="wp-block-group kn-author-box" style="border-bottom-color:var(--wp--preset--color--line-strong);border-bottom-width:2px;padding-bottom:var(--wp--preset--spacing--10)">
 		<!-- wp:paragraph {"className":"is-style-kn-rubric"} -->
 		<p class="is-style-kn-rubric">Contributor</p>
 		<!-- /wp:paragraph -->
-		<!-- wp:query-title {"type":"author","level":1,"fontSize":"2xl"} /-->
-		<!-- wp:term-description /-->
+		<!-- wp:query-title {"type":"archive","showPrefix":false,"level":1,"fontSize":"2xl"} /-->
 	</div>
 	<!-- /wp:group -->
 

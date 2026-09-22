@@ -25,7 +25,7 @@
 			]
 		},
 		"typography": {
-			"_comment": "[SKIN] Newsreader (headings + body, variable optical-size 6-72/weight 200-800, both SIL OFL 1.1) paired with Plus Jakarta Sans (nav, meta, bylines, rubric labels, also SIL OFL 1.1) — both self-hosted under assets/fonts/. Core drop cap is switched off; Kern registers its own drop-cap treatment in skin.css keyed to Newsreader's cap proportions.",
+			"_comment": "[SKIN] Newsreader (headings + body, variable optical-size 6-72/weight 200-800, both SIL OFL 1.1) paired with Plus Jakarta Sans (nav, meta, bylines, rubric labels, also SIL OFL 1.1) — both self-hosted under assets/fonts/. Core drop cap is switched off; Kern registers its own drop-cap treatment in skin.css keyed to Newsreader's cap proportions. NOTE on the digit-leading size slugs: WordPress kebab-cases every preset slug before it builds the custom property and the utility class, so slug `2xl` becomes `--wp--preset--font-size--2-xl` and `.has-2-xl-font-size`. Reference those sizes by the kebab-cased name in CSS — `var(--wp--preset--font-size--2xl)` resolves to nothing and the declaration is dropped.",
 			"fluid": true,
 			"dropCap": false,
 			"customFontSize": false,
@@ -130,8 +130,7 @@
 		"dimensions": { "minHeight": true, "aspectRatio": true },
 		"position": { "sticky": true },
 		"blocks": {
-			"core/button": { "border": { "radius": false } },
-			"core/post-featured-image": { "allowResize": false }
+			"core/button": { "border": { "radius": false } }
 		}
 	},
 	"styles": {
@@ -154,7 +153,7 @@
 		},
 		"elements": {
 			"h1": {
-				"typography": { "fontFamily": "var(--wp--preset--font-family--newsreader)", "fontSize": "var(--wp--preset--font-size--2xl)", "fontWeight": "500", "lineHeight": "1.05", "letterSpacing": "-0.02em", "fontStyle": "normal" },
+				"typography": { "fontFamily": "var(--wp--preset--font-family--newsreader)", "fontSize": "var(--wp--preset--font-size--2-xl)", "fontWeight": "500", "lineHeight": "1.05", "letterSpacing": "-0.02em", "fontStyle": "normal" },
 				"color": { "text": "var(--wp--preset--color--ink-deep)" }
 			},
 			"h2": {
